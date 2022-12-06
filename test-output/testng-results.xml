@@ -1,72 +1,473 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="73" passed="62" failed="10" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-23T15:57:30Z" name="Default suite" finished-at="2022-11-23T15:58:04Z" duration-ms="33922">
+  <suite started-at="2022-12-02T12:15:46Z" name="Default suite" finished-at="2022-12-02T12:56:12Z" duration-ms="2426883">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@7dfd3c81]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-11-23T15:57:30Z" name="Default test" finished-at="2022-11-23T15:58:04Z" duration-ms="33922">
+    <test started-at="2022-12-02T12:15:46Z" name="Default test" finished-at="2022-12-02T12:56:12Z" duration-ms="2426883">
       <class name="stepScenarios.MyTestRunnerNG">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:stepScenarios.MyTestRunnerNG@7dfd3c81]" started-at="2022-11-23T15:57:30Z" name="setUpClass" finished-at="2022-11-23T15:57:31Z" duration-ms="777" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:15:46Z" name="setUpClass" finished-at="2022-12-02T12:15:47Z" duration-ms="1041" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@7dfd3c81]" started-at="2022-11-23T15:57:31Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-11-23T15:58:00Z" duration-ms="28950" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:15:47Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:16:14Z" duration-ms="27150" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Print a file in General Files"]]>
+                <![CDATA["Add New Client"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Print]"]]>
+                <![CDATA["Optional[Add New Client Feature]"]]>
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:16:14Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:16:47Z" duration-ms="33082" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete a Client"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Add New Client Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:16:47Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:17:25Z" duration-ms="37741" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add New Contact and delete new contact"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Add New Contact]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:17:25Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:17:55Z" duration-ms="30055" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Choose From Existing contact and remove contact from client"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Add New Contact]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:17:55Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:18:22Z" duration-ms="27716" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add New Tag"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Add New Tag]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:18:22Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:18:37Z" duration-ms="14818" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check User Profile Dropdown"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Add New Client Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:18:37Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:18:59Z" duration-ms="21441" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Side bar links"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[All Workspaces page feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:18:59Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:19:29Z" duration-ms="30063" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check notification when Assigning a Staff"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Assign Staff]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:19:29Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:19:54Z" duration-ms="25102" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Assign then UnAssign a Staff"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Assign Staff]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:19:54Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:20:29Z" duration-ms="35567" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Assign Multiple Staff then Unassign"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Assign Staff]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:20:29Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:20:51Z" duration-ms="21864" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check Assigned staff counts if correct"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Assign Staff]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:20:51Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:21:17Z" duration-ms="26070" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check Notification Settings"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Notification Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:21:17Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:21:36Z" duration-ms="18772" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check Links"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Clients Portal]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:21:36Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:21:57Z" duration-ms="20789" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check files if displayed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Clients Portal]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:21:57Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:22:18Z" duration-ms="21138" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Download a folder on Clients portal"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Clients Portal]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:22:18Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:22:41Z" duration-ms="23482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Download multiple files on Clients Portal"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Clients Portal]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:22:41Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:23:22Z" duration-ms="40932" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check the latest message if posted"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Clients Portal]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:23:22Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:24:08Z" duration-ms="45390" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete a file in General Files"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Delete Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:24:08Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:24:53Z" duration-ms="44731" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete a file in Clients Workspace"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Delete Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:24:53Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:25:35Z" duration-ms="42541" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete a folder"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Delete Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:25:35Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:25:59Z" duration-ms="23502" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Download a file"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Download files]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:25:59Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:26:32Z" duration-ms="33298" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["download a folder from a client"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Download files]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[The step 'Click Print' and 1 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@When("Click Print")
-public void click_print() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("File should be ready for print")
-public void file_should_be_ready_for_print() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Folder 1')]"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61616}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 86a915dc8e9a24e764de5fea4cbc0740
+*** Element info: {Using=xpath, value=//a[contains(text(),'Folder 1')]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'Click Print' and 1 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@When("Click Print")
-public void click_print() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("File should be ready for print")
-public void file_should_be_ready_for_print() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'Folder 1')]"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61616}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 86a915dc8e9a24e764de5fea4cbc0740
+*** Element info: {Using=xpath, value=//a[contains(text(),'Folder 1')]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.page.DownloadPage.getFolderName(DownloadPage.java:76)
+at stepScenarios.DownloadSteps.user_download_folder(DownloadSteps.java:40)
+at ?.User download "Folder 1" folder(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/Download.feature:24)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:26:32Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:26:59Z" duration-ms="26892" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["download multitple files"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Download files]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:26:59Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:27:27Z" duration-ms="28689" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Preview a pdf file in General files"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[File Preview]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:27:27Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:27:34Z" duration-ms="6445" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Preview a pdf file in client workspace then check tags and Associated Clients"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[File Preview]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[got: <false>, expected: is <true>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: got: <false>, expected: is <true>
+at io.cucumber.testng.TestCaseResultObserver.lambda$assertTestCasePassed$1(TestCaseResultObserver.java:27)
+at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:66)
 at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
 at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:118)
 at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
 at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:114)
 at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at jdk.internal.reflect.GeneratedMethodAccessor141.invoke(Unknown Source)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -90,13 +491,1127 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.junit.AssumptionViolatedException: got: <false>, expected: is <true>
+at org.junit.Assume.assumeThat(Assume.java:106)
+at org.junit.Assume.assumeTrue(Assume.java:50)
+at stepScenarios.ApplicationHooks.skipScenario(ApplicationHooks.java:26)
 ]]>
             </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:stepScenarios.MyTestRunnerNG@7dfd3c81]" started-at="2022-11-23T15:58:00Z" name="tearDownClass" finished-at="2022-11-23T15:58:04Z" duration-ms="4174" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:27:34Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:28:09Z" duration-ms="35401" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Move a file through associated clients in client workspace"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[File Preview]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:28:09Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:28:54Z" duration-ms="44833" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Move a file through associated clients in General Folder"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[File Preview]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:28:54Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:29:47Z" duration-ms="52391" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Move a file through associated clients in Personal Files"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[File Preview]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='table-cell -pdf-80']/following::a[1]"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61883}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a9033d2834a22585a23653c6a611f36
+*** Element info: {Using=xpath, value=//div[@class='table-cell -pdf-80']/following::a[1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='table-cell -pdf-80']/following::a[1]"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61883}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a9033d2834a22585a23653c6a611f36
+*** Element info: {Using=xpath, value=//div[@class='table-cell -pdf-80']/following::a[1]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.page.FilePreviewPage.clickPDF_file(FilePreviewPage.java:32)
+at stepScenarios.FilePreviewSteps.user_clicks_a_pdf_file(FilePreviewSteps.java:21)
+at ?.User Clicks a PDF file(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/FilePreview.feature:46)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:29:47Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:30:43Z" duration-ms="55985" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check File Versions on General folder"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[File Versioning feature]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//i[@class='fas fa-copy -active']"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61938}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1dfca66cdaf7eb009db2cb96d92ca061
+*** Element info: {Using=xpath, value=//i[@class='fas fa-copy -active']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//i[@class='fas fa-copy -active']"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61938}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1dfca66cdaf7eb009db2cb96d92ca061
+*** Element info: {Using=xpath, value=//i[@class='fas fa-copy -active']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.page.FileVersionPage.clickFileVersioningIcon(FileVersionPage.java:60)
+at stepScenarios.FileVersionSteps.user_clicks_file_a_version_icon(FileVersionSteps.java:37)
+at ?.User clicks file a version icon(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/FileVersioning.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:30:43Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:31:10Z" duration-ms="27048" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check File Versions on Client Workspace"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[File Versioning feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:31:10Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:32:03Z" duration-ms="53525" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check File Versions on Personal folder"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[File Versioning feature]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//i[@class='fas fa-copy -active']"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62044}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ac933f23a4de2c19939a74283d70106c
+*** Element info: {Using=xpath, value=//i[@class='fas fa-copy -active']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//i[@class='fas fa-copy -active']"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62044}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ac933f23a4de2c19939a74283d70106c
+*** Element info: {Using=xpath, value=//i[@class='fas fa-copy -active']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.page.FileVersionPage.clickFileVersioningIcon(FileVersionPage.java:60)
+at stepScenarios.FileVersionSteps.user_clicks_file_a_version_icon(FileVersionSteps.java:37)
+at ?.User clicks file a version icon(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/FileVersioning.feature:45)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:32:03Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:32:31Z" duration-ms="27411" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Disabled File Versioning"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[File Versioning feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:32:31Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:32:58Z" duration-ms="27477" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Cancel firm Subscription"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Firm Settings]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:32:58Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:33:26Z" duration-ms="28399" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Activate firm subscription"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Firm Settings]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:33:26Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:33:50Z" duration-ms="23273" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check Firm Settings Page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Firm Settings]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:33:50Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:34:16Z" duration-ms="26241" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add New Template"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Folder Template]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:34:16Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:34:49Z" duration-ms="32812" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete Template"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Folder Template]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:34:49Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:35:25Z" duration-ms="36613" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Apply Folder Template on General Files"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Folder Template]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:35:25Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:36:03Z" duration-ms="37747" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Apply Folder Template on Client Workspace"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Folder Template]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:36:03Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:36:39Z" duration-ms="35696" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Apply Folder Template on Personal Files"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Folder Template]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:36:39Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:37:12Z" duration-ms="32912" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Invite Staff and delete staff"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Invite New Staff]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:37:12Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:37:26Z" duration-ms="13979" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Get Login page title"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Login Page Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:37:26Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:37:42Z" duration-ms="16261" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with correct credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Login Page Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:37:42Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:38:07Z" duration-ms="25431" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with Two Factor Authentication"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Login Page Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.UnhandledAlertException">
+            <message>
+              <![CDATA[unexpected alert open: {Alert text : Invalid Security Code}
+  (Session info: chrome=107.0.5304.122): Invalid Security Code
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62647}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8acad5e6824c12adda986eec7bf1f3d8
+*** Element info: {Using=xpath, value=//div[@class='-profile-info']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Invalid Security Code}
+  (Session info: chrome=107.0.5304.122): Invalid Security Code
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62647}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8acad5e6824c12adda986eec7bf1f3d8
+*** Element info: {Using=xpath, value=//div[@class='-profile-info']}
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.page.LoginPage.logOutUser(LoginPage.java:157)
+at stepScenarios.LoginPageSteps.user_turned_on_the_two_factor_authentication(LoginPageSteps.java:45)
+at ?.User turned on the Two Factor Authentication(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/LoginPage.feature:19)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:38:07Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:38:22Z" duration-ms="14356" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with incorrect credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Login Page Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:38:22Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:38:39Z" duration-ms="17151" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check login page components"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Login Page Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:38:39Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:39:44Z" duration-ms="64855" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Move a single File in General Files to Personal File"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Move Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:39:44Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:40:32Z" duration-ms="47839" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Move a single File in Personal File to General FIles"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Move Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:40:32Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:41:10Z" duration-ms="38811" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Navigate on Archive pages in General files"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Page Navigation]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:41:10Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:41:36Z" duration-ms="25508" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Print a file in General Files"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Print]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:41:36Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:42:15Z" duration-ms="38665" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Request files to General Files"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Request Files]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:42:15Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:42:50Z" duration-ms="35290" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Request files to Client Workspace"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Request Files]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:42:50Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:43:31Z" duration-ms="40966" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a new folder when choose a file upload location"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Request Files]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:43:31Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:44:34Z" duration-ms="63240" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Select file in General files for request signature"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Request Signature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:44:34Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:45:13Z" duration-ms="39429" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search a file and request for a Joint request signature"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Request Signature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:45:13Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:45:58Z" duration-ms="44889" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Open Signature Request from subtask Notify when viewed and completed toggle off"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Request Signature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:45:58Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:46:39Z" duration-ms="40394" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Request Signature for doxc file"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Request Signature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:46:39Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:47:22Z" duration-ms="43202" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Request Signature Indiviual Authentication"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Request Signature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:47:22Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:47:46Z" duration-ms="23594" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search a Client"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Search Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:47:46Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:48:10Z" duration-ms="24081" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Case sensitive test"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Search Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:48:10Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:48:33Z" duration-ms="23670" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search folder"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Search Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:48:33Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:49:00Z" duration-ms="26609" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search File"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Search Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError
+at org.junit.Assert.fail(Assert.java:87)
+at org.junit.Assert.assertTrue(Assert.java:42)
+at org.junit.Assert.assertTrue(Assert.java:53)
+at stepScenarios.SearchSteps.buttons_should_be_displayed(SearchSteps.java:116)
+at ?.buttons should be displayed(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/Search.feature:62)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:49:00Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:49:21Z" duration-ms="21252" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Navigate to General Files folder"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Share Files]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:49:21Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:50:16Z" duration-ms="55061" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Share a Single File on General Files using Question/Answer link setting"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Share Files]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'share file test.pdf')]/preceding::input[@type='checkbox'][1]"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63622}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c8d90915667ab5aed4f059889d2007c
+*** Element info: {Using=xpath, value=//a[contains(text(),'share file test.pdf')]/preceding::input[@type='checkbox'][1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'share file test.pdf')]/preceding::input[@type='checkbox'][1]"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63622}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c8d90915667ab5aed4f059889d2007c
+*** Element info: {Using=xpath, value=//a[contains(text(),'share file test.pdf')]/preceding::input[@type='checkbox'][1]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.page.ShareFilesPage.selectFile(ShareFilesPage.java:89)
+at stepScenarios.ShareFilesSteps.user_select_a_file(ShareFilesSteps.java:64)
+at ?.User Select a file "share file test.pdf"(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/ShareFiles.feature:29)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:50:16Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:51:11Z" duration-ms="54942" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Share a Single File on General Files using Direct Link in link setting"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Share Files]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'share file test.pdf')]/preceding::input[@type='checkbox'][1]"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63678}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 51d48e4b620eb35b455f8c74cd179188
+*** Element info: {Using=xpath, value=//a[contains(text(),'share file test.pdf')]/preceding::input[@type='checkbox'][1]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[contains(text(),'share file test.pdf')]/preceding::input[@type='checkbox'][1]"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63678}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 51d48e4b620eb35b455f8c74cd179188
+*** Element info: {Using=xpath, value=//a[contains(text(),'share file test.pdf')]/preceding::input[@type='checkbox'][1]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.page.ShareFilesPage.selectFile(ShareFilesPage.java:89)
+at stepScenarios.ShareFilesSteps.user_select_a_file(ShareFilesSteps.java:64)
+at ?.User Select a file "share file test.pdf"(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/ShareFiles.feature:43)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:51:11Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:51:39Z" duration-ms="27580" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Share a Single File on Clients Workspace"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Share Files]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <div class="css-1wy0on6 react-select__indicators">...</div> is not clickable at point (1022, 446). Other element would receive the click: <div class="css-151xaom-placeholder react-select__placeholder">...</div>
+  (Session info: chrome=107.0.5304.122)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 950584c288b500de795f4f10db0871c0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div class="css-1wy0on6 react-select__indicators">...</div> is not clickable at point (1022, 446). Other element would receive the click: <div class="css-151xaom-placeholder react-select__placeholder">...</div>
+  (Session info: chrome=107.0.5304.122)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 950584c288b500de795f4f10db0871c0
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at com.qa.util.DropDownUtil.linkSettings(DropDownUtil.java:28)
+at com.page.ShareFilesPage.enterLinkSettings(ShareFilesPage.java:154)
+at stepScenarios.ShareFilesSteps.user_enter_in_link_settings(ShareFilesSteps.java:91)
+at ?.User Enter in Link Settings(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/ShareFiles.feature:61)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:51:39Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:52:11Z" duration-ms="32651" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Upload a single file in General Files"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Upload Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:52:11Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:52:46Z" duration-ms="34187" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Upload  a single file in Client Workspace"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Upload Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:52:46Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:53:37Z" duration-ms="51628" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Upload a single file in Personal File"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Upload Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='table-cell -pdf-80']"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e528e5d6b75f3bb6ea78cc6f2585f393
+*** Element info: {Using=xpath, value=//div[@class='table-cell -pdf-80']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='table-cell -pdf-80']"}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAR-OCC-084', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e528e5d6b75f3bb6ea78cc6f2585f393
+*** Element info: {Using=xpath, value=//div[@class='table-cell -pdf-80']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at com.page.UploadPage.renameFile(UploadPage.java:60)
+at stepScenarios.UploadSteps.user_click_upload_new_files_button(UploadSteps.java:22)
+at ?.User click upload new files button(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/Upload.feature:33)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:53:37Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:54:10Z" duration-ms="32575" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Rename a file with invalid Characters in General Files"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Upload Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:54:10Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:54:46Z" duration-ms="36565" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Create a folder with invalid Characters in Client Workspace"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Upload Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:54:46Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:55:24Z" duration-ms="37291" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Default file upload Hidden"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Upload Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:55:24Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-12-02T12:56:00Z" duration-ms="36301" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Default file upload Visible"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Upload Feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:stepScenarios.MyTestRunnerNG@4dc27487]" started-at="2022-12-02T12:56:00Z" name="tearDownClass" finished-at="2022-12-02T12:56:12Z" duration-ms="12473" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

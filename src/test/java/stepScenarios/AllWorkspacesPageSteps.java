@@ -20,7 +20,7 @@ public class AllWorkspacesPageSteps {
 	private LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
 	private AllWorkspacesPage allWorkspacesPage = new AllWorkspacesPage(DriverFactory.getDriver());
 
-	@Given("User has already logged in to Imagine Time") // using
+	@Given("User has already logged in to Imagine Time")
 	public void user_has_already_logged_in_to_imagine_time(DataTable dataTable) throws InterruptedException {
 
 		URL url = new URL();
@@ -39,13 +39,13 @@ public class AllWorkspacesPageSteps {
 		loginPage.doLogin(emailAddress, password);
 	}
 
-	@Then("User Select a firm {string}") // using
+	@Then("User Select a firm {string}")
 	public void user_select_a_firm(String firmName) {
 
 		allWorkspacesPage.selectFirm(firmName);
 	}
 
-	@Then("Profile firm should be {string}") // using
+	@Then("Profile firm should be {string}")
 	public void profile_firm_should_be(String expectedFirmProfile) {
 		
 		System.out.println("Expected Firm Profile is: " + expectedFirmProfile);

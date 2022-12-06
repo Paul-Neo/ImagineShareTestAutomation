@@ -25,4 +25,4 @@ Then Notification settings should be displayed
 |Complete a signature request												|
 |View a signature request														|
 |Send a message																			|
-||Weekly reminder for incomplete signature requests	|
+

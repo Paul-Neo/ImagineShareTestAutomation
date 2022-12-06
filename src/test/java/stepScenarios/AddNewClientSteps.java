@@ -24,7 +24,7 @@ public class AddNewClientSteps {
 	public void user_is_on_client_settings_page() {
 
 		addNewClient.navigateToClientSettingsPage();
-
+		
 	}
 
 	@When("User clicks new client button")

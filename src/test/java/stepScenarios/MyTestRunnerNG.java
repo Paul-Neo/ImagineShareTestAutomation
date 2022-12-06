@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-		features = {"src/test/resources/stepScenarios/AddNewClient.feature"}, 
+		features = {"src/test/resources/stepScenarios"}, 
 		glue = {"stepScenarios"},
 //		tags = "@test4",
 		plugin = { "pretty", 

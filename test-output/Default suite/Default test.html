@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>62/10/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Nov 23 23:57:30 SGT 2022</td>
+<td>Started on:</td><td>Fri Dec 02 20:15:46 SGT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>33 seconds (33922 ms)</td>
+<tr><td>Total time:</td><td>2426 seconds (2426883 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,101 +75,947 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Print a file in General Files", "Optional[Print]"</td>
-<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Click Print&apos; and 1 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@When(&quot;Click Print&quot;)
-public void click_print() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;File should be ready for print&quot;)
-public void file_should_be_ready_for_print() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:118)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:114)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace847372226", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace847372226'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Click Print&apos; and 1 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@When(&quot;Click Print&quot;)
-public void click_print() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;File should be ready for print&quot;)
-public void file_should_be_ready_for_print() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:118)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:114)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "download a folder from a client", "Optional[Download files]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;Folder 1&apos;)]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61616}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 86a915dc8e9a24e764de5fea4cbc0740
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Folder 1&apos;)]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.DownloadPage.getFolderName(DownloadPage.java:76)
+	at stepScenarios.DownloadSteps.user_download_folder(DownloadSteps.java:40)
+	at ?.User download &quot;Folder 1&quot; folder(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/Download.feature:24)
+</pre></div><a href='#' onClick='toggleBox("stack-trace38578816", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace38578816'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;Folder 1&apos;)]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61616}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 86a915dc8e9a24e764de5fea4cbc0740
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Folder 1&apos;)]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.DownloadPage.getFolderName(DownloadPage.java:76)
+	at stepScenarios.DownloadSteps.user_download_folder(DownloadSteps.java:40)
+	at ?.User download &quot;Folder 1&quot; folder(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/Download.feature:24)
 </pre></div></td>
+<td>33</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Move a file through associated clients in Personal Files", "Optional[File Preview]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;table-cell -pdf-80&apos;]/following::a[1]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61883}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a9033d2834a22585a23653c6a611f36
+*** Element info: {Using=xpath, value=//div[@class=&apos;table-cell -pdf-80&apos;]/following::a[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.FilePreviewPage.clickPDF_file(FilePreviewPage.java:32)
+	at stepScenarios.FilePreviewSteps.user_clicks_a_pdf_file(FilePreviewSteps.java:21)
+	at ?.User Clicks a PDF file(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/FilePreview.feature:46)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1760347662", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1760347662'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;table-cell -pdf-80&apos;]/following::a[1]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61883}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9a9033d2834a22585a23653c6a611f36
+*** Element info: {Using=xpath, value=//div[@class=&apos;table-cell -pdf-80&apos;]/following::a[1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.FilePreviewPage.clickPDF_file(FilePreviewPage.java:32)
+	at stepScenarios.FilePreviewSteps.user_clicks_a_pdf_file(FilePreviewSteps.java:21)
+	at ?.User Clicks a PDF file(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/FilePreview.feature:46)
+</pre></div></td>
+<td>52</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check File Versions on General folder", "Optional[File Versioning feature]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//i[@class=&apos;fas fa-copy -active&apos;]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61938}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1dfca66cdaf7eb009db2cb96d92ca061
+*** Element info: {Using=xpath, value=//i[@class=&apos;fas fa-copy -active&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.FileVersionPage.clickFileVersioningIcon(FileVersionPage.java:60)
+	at stepScenarios.FileVersionSteps.user_clicks_file_a_version_icon(FileVersionSteps.java:37)
+	at ?.User clicks file a version icon(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/FileVersioning.feature:18)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1827133099", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1827133099'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//i[@class=&apos;fas fa-copy -active&apos;]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61938}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1dfca66cdaf7eb009db2cb96d92ca061
+*** Element info: {Using=xpath, value=//i[@class=&apos;fas fa-copy -active&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.FileVersionPage.clickFileVersioningIcon(FileVersionPage.java:60)
+	at stepScenarios.FileVersionSteps.user_clicks_file_a_version_icon(FileVersionSteps.java:37)
+	at ?.User clicks file a version icon(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/FileVersioning.feature:18)
+</pre></div></td>
+<td>55</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check File Versions on Personal folder", "Optional[File Versioning feature]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//i[@class=&apos;fas fa-copy -active&apos;]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62044}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ac933f23a4de2c19939a74283d70106c
+*** Element info: {Using=xpath, value=//i[@class=&apos;fas fa-copy -active&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.FileVersionPage.clickFileVersioningIcon(FileVersionPage.java:60)
+	at stepScenarios.FileVersionSteps.user_clicks_file_a_version_icon(FileVersionSteps.java:37)
+	at ?.User clicks file a version icon(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/FileVersioning.feature:45)
+</pre></div><a href='#' onClick='toggleBox("stack-trace573032493", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace573032493'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//i[@class=&apos;fas fa-copy -active&apos;]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62044}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ac933f23a4de2c19939a74283d70106c
+*** Element info: {Using=xpath, value=//i[@class=&apos;fas fa-copy -active&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.FileVersionPage.clickFileVersioningIcon(FileVersionPage.java:60)
+	at stepScenarios.FileVersionSteps.user_clicks_file_a_version_icon(FileVersionSteps.java:37)
+	at ?.User clicks file a version icon(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/FileVersioning.feature:45)
+</pre></div></td>
+<td>53</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Two Factor Authentication", "Optional[Login Page Feature]"</td>
+<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Invalid Security Code}
+  (Session info: chrome=107.0.5304.122): Invalid Security Code
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62647}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8acad5e6824c12adda986eec7bf1f3d8
+*** Element info: {Using=xpath, value=//div[@class=&apos;-profile-info&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.LoginPage.logOutUser(LoginPage.java:157)
+	at stepScenarios.LoginPageSteps.user_turned_on_the_two_factor_authentication(LoginPageSteps.java:45)
+	at ?.User turned on the Two Factor Authentication(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/LoginPage.feature:19)
+</pre></div><a href='#' onClick='toggleBox("stack-trace257303060", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace257303060'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Invalid Security Code}
+  (Session info: chrome=107.0.5304.122): Invalid Security Code
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62647}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8acad5e6824c12adda986eec7bf1f3d8
+*** Element info: {Using=xpath, value=//div[@class=&apos;-profile-info&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.LoginPage.logOutUser(LoginPage.java:157)
+	at stepScenarios.LoginPageSteps.user_turned_on_the_two_factor_authentication(LoginPageSteps.java:45)
+	at ?.User turned on the Two Factor Authentication(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/LoginPage.feature:19)
+</pre></div></td>
+<td>25</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search File", "Optional[Search Feature]"</td>
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepScenarios.SearchSteps.buttons_should_be_displayed(SearchSteps.java:116)
+	at ?.buttons should be displayed(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/Search.feature:62)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1226928554", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1226928554'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepScenarios.SearchSteps.buttons_should_be_displayed(SearchSteps.java:116)
+	at ?.buttons should be displayed(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/Search.feature:62)
+</pre></div></td>
+<td>26</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Share a Single File on General Files using Question/Answer link setting", "Optional[Share Files]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;share file test.pdf&apos;)]/preceding::input[@type=&apos;checkbox&apos;][1]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63622}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c8d90915667ab5aed4f059889d2007c
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;share file test.pdf&apos;)]/preceding::input[@type=&apos;checkbox&apos;][1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.ShareFilesPage.selectFile(ShareFilesPage.java:89)
+	at stepScenarios.ShareFilesSteps.user_select_a_file(ShareFilesSteps.java:64)
+	at ?.User Select a file &quot;share file test.pdf&quot;(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/ShareFiles.feature:29)
+</pre></div><a href='#' onClick='toggleBox("stack-trace164420916", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace164420916'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;share file test.pdf&apos;)]/preceding::input[@type=&apos;checkbox&apos;][1]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63622}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c8d90915667ab5aed4f059889d2007c
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;share file test.pdf&apos;)]/preceding::input[@type=&apos;checkbox&apos;][1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.ShareFilesPage.selectFile(ShareFilesPage.java:89)
+	at stepScenarios.ShareFilesSteps.user_select_a_file(ShareFilesSteps.java:64)
+	at ?.User Select a file &quot;share file test.pdf&quot;(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/ShareFiles.feature:29)
+</pre></div></td>
+<td>55</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Share a Single File on General Files using Direct Link in link setting", "Optional[Share Files]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;share file test.pdf&apos;)]/preceding::input[@type=&apos;checkbox&apos;][1]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63678}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 51d48e4b620eb35b455f8c74cd179188
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;share file test.pdf&apos;)]/preceding::input[@type=&apos;checkbox&apos;][1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.ShareFilesPage.selectFile(ShareFilesPage.java:89)
+	at stepScenarios.ShareFilesSteps.user_select_a_file(ShareFilesSteps.java:64)
+	at ?.User Select a file &quot;share file test.pdf&quot;(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/ShareFiles.feature:43)
+</pre></div><a href='#' onClick='toggleBox("stack-trace155464016", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace155464016'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(text(),&apos;share file test.pdf&apos;)]/preceding::input[@type=&apos;checkbox&apos;][1]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63678}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 51d48e4b620eb35b455f8c74cd179188
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;share file test.pdf&apos;)]/preceding::input[@type=&apos;checkbox&apos;][1]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.ShareFilesPage.selectFile(ShareFilesPage.java:89)
+	at stepScenarios.ShareFilesSteps.user_select_a_file(ShareFilesSteps.java:64)
+	at ?.User Select a file &quot;share file test.pdf&quot;(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/ShareFiles.feature:43)
+</pre></div></td>
+<td>54</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Share a Single File on Clients Workspace", "Optional[Share Files]"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;css-1wy0on6 react-select__indicators&quot;&gt;...&lt;/div&gt; is not clickable at point (1022, 446). Other element would receive the click: &lt;div class=&quot;css-151xaom-placeholder react-select__placeholder&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=107.0.5304.122)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 950584c288b500de795f4f10db0871c0
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.qa.util.DropDownUtil.linkSettings(DropDownUtil.java:28)
+	at com.page.ShareFilesPage.enterLinkSettings(ShareFilesPage.java:154)
+	at stepScenarios.ShareFilesSteps.user_enter_in_link_settings(ShareFilesSteps.java:91)
+	at ?.User Enter in Link Settings(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/ShareFiles.feature:61)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1621185605", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1621185605'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;div class=&quot;css-1wy0on6 react-select__indicators&quot;&gt;...&lt;/div&gt; is not clickable at point (1022, 446). Other element would receive the click: &lt;div class=&quot;css-151xaom-placeholder react-select__placeholder&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=107.0.5304.122)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 950584c288b500de795f4f10db0871c0
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.qa.util.DropDownUtil.linkSettings(DropDownUtil.java:28)
+	at com.page.ShareFilesPage.enterLinkSettings(ShareFilesPage.java:154)
+	at stepScenarios.ShareFilesSteps.user_enter_in_link_settings(ShareFilesSteps.java:91)
+	at ?.User Enter in Link Settings(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/ShareFiles.feature:61)
+</pre></div></td>
+<td>27</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Upload a single file in Personal File", "Optional[Upload Feature]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;table-cell -pdf-80&apos;]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e528e5d6b75f3bb6ea78cc6f2585f393
+*** Element info: {Using=xpath, value=//div[@class=&apos;table-cell -pdf-80&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.UploadPage.renameFile(UploadPage.java:60)
+	at stepScenarios.UploadSteps.user_click_upload_new_files_button(UploadSteps.java:22)
+	at ?.User click upload new files button(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/Upload.feature:33)
+</pre></div><a href='#' onClick='toggleBox("stack-trace558279906", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace558279906'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;table-cell -pdf-80&apos;]&quot;}
+  (Session info: chrome=107.0.5304.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.122, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e528e5d6b75f3bb6ea78cc6f2585f393
+*** Element info: {Using=xpath, value=//div[@class=&apos;table-cell -pdf-80&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.page.UploadPage.renameFile(UploadPage.java:60)
+	at stepScenarios.UploadSteps.user_click_upload_new_files_button(UploadSteps.java:22)
+	at ?.User click upload new files button(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/Upload.feature:33)
+</pre></div></td>
+<td>51</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add New Client", "Optional[Add New Client Feature]"</td>
+<td></td>
+<td>27</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete a Client", "Optional[Add New Client Feature]"</td>
+<td></td>
+<td>33</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add New Contact and delete new contact", "Optional[Add New Contact]"</td>
+<td></td>
+<td>37</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Choose From Existing contact and remove contact from client", "Optional[Add New Contact]"</td>
+<td></td>
+<td>30</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add New Tag", "Optional[Add New Tag]"</td>
+<td></td>
+<td>27</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check User Profile Dropdown", "Optional[Add New Client Feature]"</td>
+<td></td>
+<td>14</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Side bar links", "Optional[All Workspaces page feature]"</td>
+<td></td>
+<td>21</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check notification when Assigning a Staff", "Optional[Assign Staff]"</td>
+<td></td>
+<td>30</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Assign then UnAssign a Staff", "Optional[Assign Staff]"</td>
+<td></td>
+<td>25</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Assign Multiple Staff then Unassign", "Optional[Assign Staff]"</td>
+<td></td>
+<td>35</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check Assigned staff counts if correct", "Optional[Assign Staff]"</td>
+<td></td>
+<td>21</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check Notification Settings", "Optional[Notification Feature]"</td>
+<td></td>
+<td>26</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check Links", "Optional[Clients Portal]"</td>
+<td></td>
+<td>18</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check files if displayed", "Optional[Clients Portal]"</td>
+<td></td>
+<td>20</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Download a folder on Clients portal", "Optional[Clients Portal]"</td>
+<td></td>
+<td>21</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Download multiple files on Clients Portal", "Optional[Clients Portal]"</td>
+<td></td>
+<td>23</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check the latest message if posted", "Optional[Clients Portal]"</td>
+<td></td>
+<td>40</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete a file in General Files", "Optional[Delete Feature]"</td>
+<td></td>
+<td>45</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete a file in Clients Workspace", "Optional[Delete Feature]"</td>
+<td></td>
+<td>44</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete a folder", "Optional[Delete Feature]"</td>
+<td></td>
+<td>42</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Download a file", "Optional[Download files]"</td>
+<td></td>
+<td>23</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "download multitple files", "Optional[Download files]"</td>
+<td></td>
+<td>26</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Preview a pdf file in General files", "Optional[File Preview]"</td>
+<td></td>
 <td>28</td>
-<td>stepScenarios.MyTestRunnerNG@7dfd3c81</td></tr>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Move a file through associated clients in client workspace", "Optional[File Preview]"</td>
+<td></td>
+<td>35</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Move a file through associated clients in General Folder", "Optional[File Preview]"</td>
+<td></td>
+<td>44</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check File Versions on Client Workspace", "Optional[File Versioning feature]"</td>
+<td></td>
+<td>27</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Disabled File Versioning", "Optional[File Versioning feature]"</td>
+<td></td>
+<td>27</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cancel firm Subscription", "Optional[Firm Settings]"</td>
+<td></td>
+<td>27</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Activate firm subscription", "Optional[Firm Settings]"</td>
+<td></td>
+<td>28</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check Firm Settings Page", "Optional[Firm Settings]"</td>
+<td></td>
+<td>23</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add New Template", "Optional[Folder Template]"</td>
+<td></td>
+<td>26</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete Template", "Optional[Folder Template]"</td>
+<td></td>
+<td>32</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Apply Folder Template on General Files", "Optional[Folder Template]"</td>
+<td></td>
+<td>36</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Apply Folder Template on Client Workspace", "Optional[Folder Template]"</td>
+<td></td>
+<td>37</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Apply Folder Template on Personal Files", "Optional[Folder Template]"</td>
+<td></td>
+<td>35</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Invite Staff and delete staff", "Optional[Invite New Staff]"</td>
+<td></td>
+<td>32</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Get Login page title", "Optional[Login Page Feature]"</td>
+<td></td>
+<td>13</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with correct credentials", "Optional[Login Page Feature]"</td>
+<td></td>
+<td>16</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with incorrect credentials", "Optional[Login Page Feature]"</td>
+<td></td>
+<td>14</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check login page components", "Optional[Login Page Feature]"</td>
+<td></td>
+<td>17</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Move a single File in General Files to Personal File", "Optional[Move Feature]"</td>
+<td></td>
+<td>64</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Move a single File in Personal File to General FIles", "Optional[Move Feature]"</td>
+<td></td>
+<td>47</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate on Archive pages in General files", "Optional[Page Navigation]"</td>
+<td></td>
+<td>38</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Print a file in General Files", "Optional[Print]"</td>
+<td></td>
+<td>25</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Request files to General Files", "Optional[Request Files]"</td>
+<td></td>
+<td>38</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Request files to Client Workspace", "Optional[Request Files]"</td>
+<td></td>
+<td>35</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a new folder when choose a file upload location", "Optional[Request Files]"</td>
+<td></td>
+<td>40</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select file in General files for request signature", "Optional[Request Signature]"</td>
+<td></td>
+<td>63</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search a file and request for a Joint request signature", "Optional[Request Signature]"</td>
+<td></td>
+<td>39</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Open Signature Request from subtask Notify when viewed and completed toggle off", "Optional[Request Signature]"</td>
+<td></td>
+<td>44</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Request Signature for doxc file", "Optional[Request Signature]"</td>
+<td></td>
+<td>40</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Request Signature Indiviual Authentication", "Optional[Request Signature]"</td>
+<td></td>
+<td>43</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search a Client", "Optional[Search Feature]"</td>
+<td></td>
+<td>23</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Case sensitive test", "Optional[Search Feature]"</td>
+<td></td>
+<td>24</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search folder", "Optional[Search Feature]"</td>
+<td></td>
+<td>23</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navigate to General Files folder", "Optional[Share Files]"</td>
+<td></td>
+<td>21</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Upload a single file in General Files", "Optional[Upload Feature]"</td>
+<td></td>
+<td>32</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Upload  a single file in Client Workspace", "Optional[Upload Feature]"</td>
+<td></td>
+<td>34</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Rename a file with invalid Characters in General Files", "Optional[Upload Feature]"</td>
+<td></td>
+<td>32</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create a folder with invalid Characters in Client Workspace", "Optional[Upload Feature]"</td>
+<td></td>
+<td>36</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Default file upload Hidden", "Optional[Upload Feature]"</td>
+<td></td>
+<td>37</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Default file upload Visible", "Optional[Upload Feature]"</td>
+<td></td>
+<td>36</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Preview a pdf file in client workspace then check tags and Associated Clients", "Optional[File Preview]"</td>
+<td><div><pre>org.testng.SkipException: got: &lt;false&gt;, expected: is &lt;true&gt;
+	at io.cucumber.testng.TestCaseResultObserver.lambda$assertTestCasePassed$1(TestCaseResultObserver.java:27)
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:66)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:118)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:114)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
+	at jdk.internal.reflect.GeneratedMethodAccessor141.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.junit.AssumptionViolatedException: got: &lt;false&gt;, expected: is &lt;true&gt;
+	at org.junit.Assume.assumeThat(Assume.java:106)
+	at org.junit.Assume.assumeTrue(Assume.java:50)
+	at stepScenarios.ApplicationHooks.skipScenario(ApplicationHooks.java:26)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1242207182", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1242207182'><pre>org.testng.SkipException: got: &lt;false&gt;, expected: is &lt;true&gt;
+	at io.cucumber.testng.TestCaseResultObserver.lambda$assertTestCasePassed$1(TestCaseResultObserver.java:27)
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:66)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:118)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:114)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
+	at jdk.internal.reflect.GeneratedMethodAccessor141.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.junit.AssumptionViolatedException: got: &lt;false&gt;, expected: is &lt;true&gt;
+	at org.junit.Assume.assumeThat(Assume.java:106)
+	at org.junit.Assume.assumeTrue(Assume.java:50)
+	at stepScenarios.ApplicationHooks.skipScenario(ApplicationHooks.java:26)
+</pre></div></td>
+<td>6</td>
+<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
 </table><p>
 </body>
 </html>
