@@ -82,9 +82,11 @@ public class DownloadPage {
 		Thread.sleep(2000);
 	}
 	
-	public void clickToolBarButton() {
+	public void clickToolBarButton() throws InterruptedException {
+		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.findElement(toolBarDownloadButton).click();
+		Thread.sleep(5000);
 		
 	}
 	

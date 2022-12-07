@@ -15,7 +15,8 @@ public class PrintPage {
 	}
 	
 	private By printBtn = By.xpath("//span[text()=' Print ']");
-	private By printIframe = By.xpath("");
+	private By iframe = By.cssSelector("#preview-area-plugin-wrapper>iframe");
+	private By printTitle = By.xpath("/h1[text()='Print']");
 	
 	
 	public void clickPrintBtn() throws InterruptedException {
@@ -25,12 +26,11 @@ public class PrintPage {
 		
 	}
 	
-	public boolean isFileReadyForPrint() {
+	public void isFileReadyForPrint() {
 		
-		driver.switchTo().frame("");
+		 driver.switchTo().frame(0);
+
 		
-		
-		return true;
 	}
 	
 }

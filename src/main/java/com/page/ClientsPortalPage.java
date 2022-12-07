@@ -90,7 +90,7 @@ public class ClientsPortalPage {
 		return driver.findElement(latestMessagePost).getText();
 	}
 
-	public void clickMessagesTab() {
+	public void clickMessagesTab() throws InterruptedException {
 
 		// driver.findElement(messagesTab).click();
 
@@ -127,7 +127,7 @@ public class ClientsPortalPage {
 
 	}
 	
-	private void clickSelectedTab(String tabName) {
+	private void clickSelectedTab(String tabName) throws InterruptedException {
 
 		NavigateUtil nav = new NavigateUtil(driver);
 		nav.clickSelectedTab(tabName);

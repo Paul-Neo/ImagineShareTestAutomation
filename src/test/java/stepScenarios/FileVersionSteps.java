@@ -31,7 +31,7 @@ public class FileVersionSteps {
 		
 	}
 
-	@When("User clicks file a version icon")
+	@When("User clicks a file version icon")
 	public void user_clicks_file_a_version_icon() {
 
 		fileVersioning.clickFileVersioningIcon();

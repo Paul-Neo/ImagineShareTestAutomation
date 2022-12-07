@@ -53,7 +53,7 @@ public class DownloadSteps {
 	}
 
 	@When("Click download button")
-	public void click_download_button() {
+	public void click_download_button() throws InterruptedException {
 	   
 		downloadPage.clickToolBarButton();
 	}

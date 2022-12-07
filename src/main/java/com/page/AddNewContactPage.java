@@ -65,6 +65,7 @@ public class AddNewContactPage {
 		Thread.sleep(1000);
 		driver.findElement(uploadAndSendInviteBtn).click();
 		driver.findElement(InvitationResultModelCloseBtn).click();
+		driver.navigate().refresh();
 		Thread.sleep(2000);
 
 	}

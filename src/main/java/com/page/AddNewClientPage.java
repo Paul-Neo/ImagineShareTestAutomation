@@ -117,7 +117,7 @@ public class AddNewClientPage {
 		
 		driver.findElement(clientSettingsPage).click();
 		
-		findClient.clickClientName(clientName);
+		findClient.clickClientName(clientName); 
 		return driver.findElement(clientName_overview).isDisplayed();
 		
 

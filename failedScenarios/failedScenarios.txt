@@ -1,7 +1,0 @@
-file:src/test/resources/stepScenarios/LoginPage.feature:18
-file:src/test/resources/stepScenarios/Download.feature:22
-file:src/test/resources/stepScenarios/Search.feature:56
-file:src/test/resources/stepScenarios/FilePreview.feature:44
-file:src/test/resources/stepScenarios/ShareFiles.feature:27:41:57
-file:src/test/resources/stepScenarios/Upload.feature:31
-file:src/test/resources/stepScenarios/FileVersioning.feature:14:41

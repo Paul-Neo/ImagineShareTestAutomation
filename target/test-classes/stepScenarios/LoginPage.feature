@@ -14,7 +14,7 @@ And User enters correct password "Pnnwfh2021!" and User gets the title of the pa
 And Clicks Sign In button
 Then Title page should be "Select Your Account"
 
-@test3
+@test3 @skip
 Scenario: Login with Two Factor Authentication
 Given User turned on the Two Factor Authentication
 |User Name										|Password			|

@@ -27,6 +27,7 @@ Then Staff Notification should be displayed
 |Complete a signature request												|
 |View a signature request														|
 |Send a message																			|
+|Weekly reminder for incomplete signature requests		|
 And Client should be added on the client list
 And Clients Overview should be correct
 

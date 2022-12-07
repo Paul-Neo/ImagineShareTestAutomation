@@ -45,7 +45,7 @@ public class ClientsPortalSteps {
 	public void user_is_on_tab(String tabName) throws InterruptedException {
 	   
 		nav.clickSelectedTab(tabName);
-		Thread.sleep(2000);
+	
 	}
 	
 	@Then("Files and folders should displayed")//using
@@ -90,7 +90,7 @@ public class ClientsPortalSteps {
 
 	}
 
-	@Then("the latest activity should be today")//using
+	@Then("the latest activity should be today")
 	public void the_latest_activity_should_be_today() {
 
 		Assert.assertTrue(clientsPortalPage.isLatestActivityTodayUpdated());
@@ -107,8 +107,8 @@ public class ClientsPortalSteps {
 		Assert.assertTrue(expectedMessage.equals(actualMessage));
 	}
 	
-	@When("User navigates to Messages")//using
-	public void click_messages() {
+	@When("User navigates to Messages")
+	public void click_messages() throws InterruptedException {
 		
 		clientsPortalPage.clickMessagesTab();
 	}

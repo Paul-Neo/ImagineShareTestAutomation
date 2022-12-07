@@ -18,6 +18,7 @@ Then Notification settings should be displayed
 |Download a file they uploaded											|
 |Comment on a file																	|
 |Send a message																			|
+|Weekly reminder for incomplete signature requests	|
 |Upload a file																			|
 |View a file you uploaded														|
 |Download a file you uploaded												|
@@ -25,4 +26,5 @@ Then Notification settings should be displayed
 |Complete a signature request												|
 |View a signature request														|
 |Send a message																			|
+|Weekly reminder for incomplete signature requests	|
 

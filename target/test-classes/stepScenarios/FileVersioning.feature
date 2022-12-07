@@ -15,7 +15,7 @@ Scenario: Check File Versions on General folder
 Given File versioning is switched to "Enable File Versioning"
 When User is on General Folder
 Then Versions column should be displayed
-When User clicks file a version icon
+When User clicks a file version icon
 Then A modal should be displayed with header message "File Versions"
 And User selects a file version
 Then All buttons should be enabled
@@ -29,7 +29,7 @@ Scenario: Check File Versions on Client Workspace
 Given File versioning is switched to "Enable File Versioning"
 When User is on Client Workspace "Avalon Systems"
 Then Versions column should be displayed
-When User clicks file a version icon
+When User clicks a file version icon
 Then A modal should be displayed with header message "File Versions"
 And User selects a file version
 Then All buttons should be enabled
@@ -42,7 +42,7 @@ Scenario: Check File Versions on Personal folder
 Given File versioning is switched to "Enable File Versioning"
 When User is on Personal File "Paul Napadao"
 Then Versions column should be displayed
-When User clicks file a version icon
+When User clicks a file version icon
 Then A modal should be displayed with header message "File Versions"
 And User selects a file version
 Then All buttons should be enabled

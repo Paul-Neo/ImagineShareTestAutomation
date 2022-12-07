@@ -81,7 +81,7 @@ public class SearchPage {
 
 		driver.findElement(filterClientname).sendKeys(clientName);
 		driver.findElement(applyFilterButton).click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 
 	public String getFileName() {
