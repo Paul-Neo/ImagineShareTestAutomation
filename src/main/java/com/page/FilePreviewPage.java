@@ -1,9 +1,15 @@
 package com.page;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 import com.qa.util.DropDownUtil;
 import com.qa.util.NavigateUtil;
+import com.qa.util.ScrollUtil;
 
 public class FilePreviewPage {
 
@@ -25,7 +31,17 @@ public class FilePreviewPage {
 	private By assocClientDropDown = By.xpath("//small[text()='Associated Client: ']/following::div[@class='css-1pcexqc-container']");
 	private By tagsDropDown = By.xpath("//div[@class='css-16pqwjk-indicatorContainer']");
 	private By filesTab = By.xpath("//a[text()='Files']");
-
+	private By PDF_tronStatus = By.xpath("//strong[contains(text(),'PDFtron')]/following::p[@class='-to-display'][1]");
+	private By updateButton = By.xpath("//button[text()='Update']");
+	private By switchOn = By.xpath("//strong[contains(text(),'PDFtron')]/following::label[@class='switch'][1]");
+	private By firmSettings = By.xpath("//span[text()='Firm Settings']");
+	private By advanceSettings = By.xpath("//a[text()='Advanced Settings']");
+	private By pdfIcon = By.xpath("//i[@class='far fa-edit fa-lg']");
+	private By saveButton = By.xpath("//button[text()='Save']");
+	private By pdfEditorIframe = By.xpath("//div[@class='custom-ribbons-container']");
+	private By pdfEditorToolBarButtons = By.cssSelector("div.tool-group-buttons-scroll button");
+	
+	
 	
 	public String clickPDF_file() throws InterruptedException {
 		
@@ -105,8 +121,74 @@ public class FilePreviewPage {
 		
 	}
 	
+	public void navigateToAdvanceSettings() throws InterruptedException {
+		
+		driver.findElement(firmSettings).click();;
+		driver.findElement(advanceSettings).click();;
+		Thread.sleep(3000);
+		
+	}
+	
+	public void pdfEditorToggleOn() throws InterruptedException {
+		
+		String actualStatus = driver.findElement(PDF_tronStatus).getText();
+		
+		if(actualStatus.equals("Off")) {
+			
+			ScrollUtil scrollDown = new ScrollUtil(driver);
+			
+			scrollDown.scrollPage(1000);//scroll down
+			Thread.sleep(2000);
+			driver.findElement(updateButton).click();
+			Thread.sleep(2000);
+			scrollDown.scrollPage(-2000);//scroll up
+			driver.findElement(switchOn).click();
+			scrollDown.scrollPage(1000);//scroll down
+			driver.findElement(saveButton).click();
+			Thread.sleep(5000);
+			
+		}
+		
+		
+	}
+	
+	public void clickPDF_Icon() throws InterruptedException {
+		
+		driver.findElement(pdfIcon).click();
+		Thread.sleep(5000);
+		
+	}
+	
+	public boolean isPdfTronExist() throws InterruptedException {
+		
+		 driver.switchTo().frame("webviewer-1");
+		 Thread.sleep(5000);
+		 return driver.findElement(pdfEditorIframe).isDisplayed();
+		
+	}
+	
+	public List<String> getPdfTronToolBarButtonsList() {
+		
+		List<String> list = new ArrayList<>();
+		List<WebElement> elementList = driver.findElements(pdfEditorToolBarButtons);
+		
+		for(WebElement e : elementList) {
+			
+				String listNames = e.getAttribute("aria-label");
+				System.out.println("Tool Bar Button Name: " + listNames);
+				
+				list.add(listNames);
+			
+		}
+		
+		
+		return list;
+		
+	}
+	
 	
 
+	
 	
 
 }

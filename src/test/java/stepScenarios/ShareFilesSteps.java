@@ -52,7 +52,7 @@ public class ShareFilesSteps {
 	@Given("User is on General Folder")
 	public void user_is_on_general_folder() throws InterruptedException {
 
-		navigate.generalFolder();
+		navigate.navigateToGeneralFolder();
 	}
 
 	@When("User Select a file {string}")

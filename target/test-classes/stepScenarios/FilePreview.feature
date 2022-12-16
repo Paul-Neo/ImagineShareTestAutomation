@@ -48,10 +48,21 @@ And Click Details link
 When User selects associated client "QA Test"
 Then file should be moved on selected associated client
 
-
-
-
-
-
-
+@test6
+Scenario: PDF Editor in General Files
+Given Pdf editor is toggled on
+And User is on General Folder
+When User Clicks a PDF file
+And User Click Edit pdf icon
+Then File should be ready to edit
+And PDFtron toolbar buttons should be displayed
+|Underline								|
+|Highlight								|
+|Rectangle								|
+|Free Text								|
+|Free Hand Highlight			|
+|Free Hand								|
+|Note											|
+|Squiggly									|
+|Strikeout								|
 

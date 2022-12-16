@@ -24,7 +24,7 @@ public class DeleteSteps {
 	@Given("User Uploaded a file in General Files {string}")
 	public void user_uploaded_a_file_in_general_files(String fileName) throws InterruptedException {
 	   
-		nav.generalFolder();
+		nav.navigateToGeneralFolder();
 		rename.renameLatestPDF();
 		deletePage =  uploadPage.doFileUpload(fileName);
 		Assert.assertTrue(deletePage.isFileUploaded(fileName));

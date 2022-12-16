@@ -65,7 +65,7 @@ public class MoveSteps {
 		System.out.println("Personal File is: " + personalFile);
 		System.out.println("Expected File Name is: " + this.fileName);
 
-		navigate.personalFolder(personalFolder);
+		navigate.navigateToPersonalFolder(personalFolder);
 		String latestFileName = movePage.findMovedFile();
 
 		System.out.println("Latest File Name is: " + latestFileName);
@@ -76,13 +76,13 @@ public class MoveSteps {
 	@Given("User is on Personal File {string}")
 	public void user_is_on_personal_file(String personalFolder) throws InterruptedException {
 
-		navigate.personalFolder(personalFolder);
+		navigate.navigateToPersonalFolder(personalFolder);
 	}
 
 	@Then("File should be gone in Personal Files and moved in General Files")
 	public void file_should_be_gone_in_personal_files_and_moved_in_general_files() throws InterruptedException {
 
-		navigate.generalFolder();
+		navigate.navigateToGeneralFolder();
 		System.out.println("Expected File Name is: " + this.fileName);
 
 		String actualFileName = movePage.findMovedFile();

@@ -54,30 +54,4 @@ public class AllWorkspacesPage {
 		return lists;
 	}
 	
-	public String getNewUrl() {
-		
-		
-		return driver.getCurrentUrl();
-	}
-	
-	public String changeUrl() {
-		
-	
-		String url = getNewUrl();
-		char[] newChar;
-		String newUrl = "";
-		
-		if(url.charAt(2)!= 'i') {
-			
-			newChar = url.toCharArray();
-			newChar[2] = 'i';
-			
-			 newUrl = newUrl.toString();
-
-		}
-		
-		return newUrl;
-		
-	}
-	
 }

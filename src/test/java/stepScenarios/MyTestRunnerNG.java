@@ -10,9 +10,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-		features = {"src/test/resources/stepScenarios/Print.feature"}, 
+		features = {"src/test/resources/stepScenarios/FilePreview.feature"}, 
 		glue = {"stepScenarios"},
-//		tags = "@test5",
+		tags = "@test6",
 		plugin = { "pretty", 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"timeline:test-output-thread/",

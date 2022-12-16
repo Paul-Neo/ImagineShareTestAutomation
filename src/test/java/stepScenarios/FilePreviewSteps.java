@@ -1,9 +1,14 @@
 package stepScenarios;
 
+import java.util.List;
+
 import org.junit.Assert;
 
 import com.page.FilePreviewPage;
 import com.qa.factory.DriverFactory;
+
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -34,7 +39,6 @@ public class FilePreviewSteps {
 	@When("Click Details link")
 	public void click_details_link() {
 
-	   
 		filePreview.navToDetailsLink();
 	}
 	
@@ -43,7 +47,6 @@ public class FilePreviewSteps {
 
 	public void default_associated_client_should_be_correct() {
 
-	  
 		String expectedResult = "Elavon";
 		String actualResult = filePreview.getDefaultAssocClient();
 		
@@ -83,5 +86,41 @@ public class FilePreviewSteps {
 		
 		Assert.assertTrue(movedFile.equals(latestPDF_fileName));
 	}
+	
+	@Given("Pdf editor is toggled on")
+	public void pdf_editor_is_toggled_on() throws InterruptedException {
+	    
+		filePreview.navigateToAdvanceSettings();
+		filePreview.pdfEditorToggleOn();
+		
+	}
+	
+	@When("User Click Edit pdf icon")
+	public void user_click_edit_pdf_icon() throws InterruptedException {
+	
+		filePreview.clickPDF_Icon();
+	
+	}
+	
+	@Then("File should be ready to edit")
+	public void file_should_be_ready_to_edit() throws InterruptedException {
+	
+		Assert.assertTrue(filePreview.isPdfTronExist());
+	}
+	
+	@Then("PDFtron toolbar buttons should be displayed")
+	public void pd_ftron_toolbar_buttons_should_be_displayed(DataTable dataTable) {
+	 
+		List<String> expectedToolBarList =  dataTable.asList();
+		System.out.println("Expected Tool Bar List: " + expectedToolBarList);
+		
+		List<String> actualToolBarList = filePreview.getPdfTronToolBarButtonsList();
+		System.out.println("Actual Tool Bar List: " + actualToolBarList);
+		
+		Assert.assertTrue(expectedToolBarList.equals(actualToolBarList));
+		
+		
+	}
+
 
 }

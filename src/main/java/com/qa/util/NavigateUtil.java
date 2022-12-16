@@ -29,7 +29,7 @@ public class NavigateUtil {
 	
 
 	
-	public void generalFolder() throws InterruptedException {
+	public void navigateToGeneralFolder() throws InterruptedException {
 		
 		driver.findElement(allFilesTab).click();
 		driver.findElement(generalFiles).click();
@@ -37,7 +37,7 @@ public class NavigateUtil {
 		Thread.sleep(5000);
 	}
 	
-	public void personalFolder(String folderName) throws InterruptedException {
+	public void navigateToPersonalFolder(String folderName) throws InterruptedException {
 		
 		By selectedFolderName = elementUtil.get_a_XpathData(folderName);
 		
