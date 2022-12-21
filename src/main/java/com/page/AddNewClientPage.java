@@ -10,10 +10,12 @@ import org.openqa.selenium.WebElement;
 import com.qa.util.DropDownUtil;
 import com.qa.util.ElementUtil;
 import com.qa.util.FileFinderUtil;
+import com.qa.util.GenerateRandomStrings;
 
 public class AddNewClientPage {
 
 	private ElementUtil elementUtil = new ElementUtil();
+	private GenerateRandomStrings generateRandomNames = new GenerateRandomStrings();
 
 	private WebDriver driver;
 
@@ -65,21 +67,42 @@ public class AddNewClientPage {
 		driver.findElement(createNewClientLink).click();
 	}
 
-	public void enterClientInfo(String clientName, String clientIdentifier, String StaffName, String enagagementTypes) {
+	public void assignStaffAndSelectEngagementTypes(String StaffName, String enagagementTypes) {
 
 		DropDownUtil dropDownUtil = new DropDownUtil(driver);
-
+		
 		By selectedEnagagementType = elementUtil.getDivXpathData(enagagementTypes);
 
-		driver.findElement(this.clientName).sendKeys(clientName);
-		driver.findElement(this.clientIdentifier).sendKeys(clientIdentifier);
-
+//		driver.findElement(this.clientName).sendKeys(clientName);
+//		driver.findElement(this.clientIdentifier).sendKeys(clientIdentifier);
+		
 		dropDownUtil.selectFromDropDown(dropDown, StaffName);
 
 		driver.findElement(selectedEnagagementType).click();
 
 	}
+	
+	public String enterClientName() throws InterruptedException {
+		
+		
+		String clientName = generateRandomNames.generateFullName();
+		driver.findElement(this.clientName).sendKeys(clientName);
+		Thread.sleep(2000);
+		
+		return clientName;
 
+	}
+	
+	public String enterClientIdentifier() throws InterruptedException {
+		
+		String clientIdentifier = generateRandomNames.randomString(4) + " TestID";
+		driver.findElement(this.clientIdentifier).sendKeys(clientIdentifier);
+		Thread.sleep(2000);
+		
+		return clientIdentifier;
+		
+	}
+	
 	public void clickNext() {
 
 		driver.findElement(nextBtn).click();
@@ -107,17 +130,16 @@ public class AddNewClientPage {
 		driver.findElement(saveBtn).click();
 		Thread.sleep(2000);
 		driver.navigate().refresh();
+		Thread.sleep(5000);
 	}
 
-	public boolean isClientAddedSuccessfully(String clientName) {
-
-		//return driver.findElement(clientName_overview).getText();
+	public boolean isClientAddedSuccessfully(String clientName) throws InterruptedException {
 		
 		FileFinderUtil findClient = new FileFinderUtil(driver);
-		
 		driver.findElement(clientSettingsPage).click();
-		
 		findClient.clickClientName(clientName); 
+
+		
 		return driver.findElement(clientName_overview).isDisplayed();
 		
 
@@ -127,13 +149,23 @@ public class AddNewClientPage {
 		
 		boolean isCorrect = false;
 		
-		String expectedClientName = driver.findElement(generalInfo_clientName).getText();
-		String expectedClientIdentifier = driver.findElement(generalInfo_clientIdentifier).getText();
-		String expectedEngagementTypes = driver.findElement(generalInfo_engagemenTypes).getText();
+		String actualCLientName = driver.findElement(generalInfo_clientName).getText();
+		String actualClientIdentifier = driver.findElement(generalInfo_clientIdentifier).getText();
+		String actualEngagementTypes = driver.findElement(generalInfo_engagemenTypes).getText();
 		
-		if(expectedClientName.equals(clientName)
-				&& expectedClientIdentifier.equals(clientIdentifier)
-				&& expectedEngagementTypes.equals(expectedEngagementTypes)) {
+		
+		System.out.println("Actual Client Name : " + actualCLientName);
+		System.out.println("Expected Client Name : " + clientName);
+		
+		System.out.println("Actual Client Identifer : " + actualClientIdentifier);
+		System.out.println("Expected Client Identifer : " + clientIdentifier);
+		
+		System.out.println("Actual Client Engagment Types : " + actualEngagementTypes);
+		System.out.println("Expected Client Engagment Types : " + engagementTypes);
+		
+		if(actualCLientName.equals(clientName)
+				&& actualClientIdentifier.equals(clientIdentifier)
+				&& actualEngagementTypes.equals(engagementTypes)) {
 
 			isCorrect = true;
 		}

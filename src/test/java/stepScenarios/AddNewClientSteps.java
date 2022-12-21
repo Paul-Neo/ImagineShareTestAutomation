@@ -40,16 +40,16 @@ public class AddNewClientSteps {
 	}
 
 	@When("User enters client information")
-	public void user_enters_client_information(DataTable dataTable) {
+	public void user_enters_client_information(DataTable dataTable) throws InterruptedException {
 
 		List<Map<String, String>> newClientInfo = dataTable.asMaps(String.class, String.class);
 
-		String clientName = newClientInfo.get(0).get("Name");
-		String clientIdentifier = newClientInfo.get(0).get("Client Identifier");
+		String clientName = addNewClient.enterClientName();
+		String clientIdentifier = addNewClient.enterClientIdentifier();
 		String staffName = newClientInfo.get(0).get("Assign Staff");
 		String engagementTypes = newClientInfo.get(0).get("Engagement Types");
 
-		addNewClient.enterClientInfo(clientName, clientIdentifier, staffName, engagementTypes);
+		addNewClient.assignStaffAndSelectEngagementTypes(staffName, engagementTypes);
 
 		// getting the expected clientName to use in assertion
 		expectedClientName = clientName;

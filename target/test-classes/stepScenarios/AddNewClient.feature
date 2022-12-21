@@ -20,13 +20,13 @@ When User enters client information
 |Thomas Shelby			|Peaky Blinders				|Paul Napadao			|1040							|
 And Click Next
 Then Staff Notification should be displayed
-|Upload a file																			|
-|View a file you uploaded														|
-|Download a file you uploaded												|
-|Comment on a file																	|
-|Complete a signature request												|
-|View a signature request														|
-|Send a message																			|
+|Upload a file																				|
+|View a file you uploaded															|
+|Download a file you uploaded													|
+|Comment on a file																		|
+|Complete a signature request													|
+|View a signature request															|
+|Send a message																				|
 |Weekly reminder for incomplete signature requests		|
 And Client should be added on the client list
 And Clients Overview should be correct

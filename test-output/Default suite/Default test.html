@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Dec 21 18:17:32 SGT 2022</td>
+<td>Started on:</td><td>Wed Dec 21 20:18:52 SGT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>130 seconds (130826 ms)</td>
+<tr><td>Total time:</td><td>45 seconds (45828 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,23 +67,77 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Move a single File in General Files to Personal File", "Optional[Move Feature]"</td>
-<td></td>
-<td>63</td>
-<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
-<tr>
-<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Move a single File in Personal File to General FIles", "Optional[Move Feature]"</td>
-<td></td>
-<td>61</td>
-<td>stepScenarios.MyTestRunnerNG@4dc27487</td></tr>
+<td title='stepScenarios.MyTestRunnerNG.runScenario()'><b>runScenario</b><br>Test class: stepScenarios.MyTestRunnerNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add New Client", "Optional[Add New Client Feature]"</td>
+<td><div><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //a[contains(text(),&apos;Walker D&apos;Amore&apos;)] because of the following error:
+SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//a[contains(text(),&apos;Walker D&apos;Amore&apos;)]&apos; is not a valid XPath expression.
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50491}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 170cb26d15c469842e69b36ca415fa43
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Walker D&apos;Amore&apos;)]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.qa.util.FileFinderUtil.clickClientName(FileFinderUtil.java:184)
+	at com.page.AddNewClientPage.isClientAddedSuccessfully(AddNewClientPage.java:140)
+	at stepScenarios.AddNewClientSteps.client_should_be_added_on_the_client_list(AddNewClientSteps.java:84)
+	at ?.Client should be added on the client list(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/AddNewClient.feature:31)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1807899330", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1807899330'><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //a[contains(text(),&apos;Walker D&apos;Amore&apos;)] because of the following error:
+SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;//a[contains(text(),&apos;Walker D&apos;Amore&apos;)]&apos; is not a valid XPath expression.
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PAR-OCC-084&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\PAULNA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50491}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 170cb26d15c469842e69b36ca415fa43
+*** Element info: {Using=xpath, value=//a[contains(text(),&apos;Walker D&apos;Amore&apos;)]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.qa.util.FileFinderUtil.clickClientName(FileFinderUtil.java:184)
+	at com.page.AddNewClientPage.isClientAddedSuccessfully(AddNewClientPage.java:140)
+	at stepScenarios.AddNewClientSteps.client_should_be_added_on_the_client_list(AddNewClientSteps.java:84)
+	at ?.Client should be added on the client list(file:///C:/Users/Paul%20Napadao/eclipse-workspace/ImagineShareTestAutomation/src/test/resources/stepScenarios/AddNewClient.feature:31)
+</pre></div></td>
+<td>39</td>
+<td>stepScenarios.MyTestRunnerNG@626abbd0</td></tr>
 </table><p>
 </body>
 </html>

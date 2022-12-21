@@ -1,26 +1,15 @@
 $(document).ready(function() {
 CucumberHTML.timelineItems.pushArray([
   {
-    "id": "b03fc1e9-ee52-47e9-b7dd-d25770fc21b3",
-    "feature": "Move Feature",
-    "scenario": "Move a single File in Personal File to General FIles",
-    "start": 1671617916461,
-    "group": 1,
-    "content": "",
-    "tags": "@test2,",
-    "end": 1671617978110,
-    "className": "passed"
-  },
-  {
-    "id": "2dbf607c-7615-4203-b4bf-37fb1ed337f8",
-    "feature": "Move Feature",
-    "scenario": "Move a single File in General Files to Personal File",
-    "start": 1671617853326,
+    "id": "166a9567-b280-4e0b-ac64-45af1252ec55",
+    "feature": "Add New Client Feature",
+    "scenario": "Add New Client",
+    "start": 1671625133218,
     "group": 1,
     "content": "",
     "tags": "@test1,",
-    "end": 1671617916370,
-    "className": "passed"
+    "end": 1671625172261,
+    "className": "failed"
   }
 ]);
 CucumberHTML.timelineGroups.pushArray([
