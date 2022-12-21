@@ -27,6 +27,7 @@ public class MovePage {
 	public String findMovedFile() {
 		
 		driver.findElement(latestPDF_file).click();
+		System.out.println("Latest File Name is : "+driver.findElement(fileName).getText());
 		return driver.findElement(fileName).getText();
 
 	}

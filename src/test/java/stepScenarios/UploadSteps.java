@@ -3,6 +3,7 @@ package stepScenarios;
 import org.junit.Assert;
 import com.page.UploadPage;
 import com.qa.factory.DriverFactory;
+import com.qa.util.RenameUtil;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,6 +12,7 @@ import io.cucumber.java.en.When;
 public class UploadSteps {
 
 	private UploadPage uploadPage = new UploadPage(DriverFactory.getDriver());
+	private RenameUtil renameUtil = new RenameUtil(DriverFactory.getDriver());
 	private String fileName;
 	private String errorMsg;
 	
@@ -19,7 +21,9 @@ public class UploadSteps {
 		
 		fileName = "File12345";
 		
-		uploadPage.renameFile(fileName);
+//		uploadPage.renameFile(fileName);
+		
+		renameUtil.renameLatestPDF();
 		uploadPage.uploadFiles();
 		
 	}

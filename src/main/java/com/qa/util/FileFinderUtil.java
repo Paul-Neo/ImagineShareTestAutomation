@@ -17,6 +17,11 @@ public class FileFinderUtil {
 	private By assignedStaffList = By.cssSelector("tr.-staff-item a");
 	private By selectedValue;
 	
+	private By latestPDF_checkBox = By.xpath("//div[@class='table-cell -pdf-80']/preceding::input[@type='checkbox'][1]");
+	private By latestPDF_File = By.xpath("//div[@class='table-cell -pdf-80']/following::a[1]");
+	
+	
+	
 	public FileFinderUtil(WebDriver driver) {
 
 		this.driver = driver;
@@ -300,4 +305,14 @@ public class FileFinderUtil {
 		return expectedClientName;
 	}
 
+	public String selectLatestPDF_file() throws InterruptedException {
+		
+		Thread.sleep(6000);
+		
+		driver.findElement(latestPDF_checkBox).click();
+		String getLatestPDF_fileName = driver.findElement(latestPDF_File).getText();
+		
+		return getLatestPDF_fileName;
+		
+	}
 }

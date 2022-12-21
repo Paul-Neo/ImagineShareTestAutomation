@@ -31,13 +31,15 @@ public class PrintPage {
 	public boolean isFileReadyForPrint() {
 		
 		int frameCount = driver.findElements(iframe).size();
-		int expectedCount = 4;
+		int expectedCount = 2;
 		boolean isFileReadyForPrint = false;
+		
+		System.out.println("Expected Frame Count: " + expectedCount);
+		System.out.println("Actual Frame Count: " + frameCount);
 		
 		if(frameCount == expectedCount) {
 			
-			System.out.println("Expected Frame Count: " + expectedCount);
-			System.out.println("Actual Frame Count: " + frameCount);
+	
 			
 			isFileReadyForPrint = true;
 			

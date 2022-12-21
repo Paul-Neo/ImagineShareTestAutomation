@@ -19,13 +19,14 @@ Then A modal should be displayed with header message "Assign staff"
 When User Select a Staff "Larry Bird"
 And Click next button
 Then Assigned staff notification settings should be displayed
-|Upload a file									|
-|View a file you uploaded				|
-|Download a file you uploaded		|
-|Comment on a file							|
-|Complete a signature request		|
-|View a signature request				|
-|Send a message									|
+|Upload a file																			|
+|View a file you uploaded														|
+|Download a file you uploaded												|
+|Comment on a file																	|
+|Complete a signature request												|
+|View a signature request														|
+|Send a message																			|
+|Weekly reminder for incomplete signature requests	|
 When Click Assign Staff button	
 Then Staff should exist on Clients Assinged Staff list
 

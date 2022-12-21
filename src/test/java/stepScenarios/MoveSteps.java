@@ -18,14 +18,25 @@ public class MoveSteps {
 	private String personalFile;
 	private String fileName;
 
-	@When("User Selects a file {string}")
-	public void user_selects_a_file_in_general_files(String fileName) throws InterruptedException {
-
-		movePage.sleep(2000);
-
-		fileFinder.clickaCheckbox(fileName);
+//	@When("User Selects a file {string}")
+//	public void user_selects_a_file_in_general_files(String fileName) throws InterruptedException {
+//
+//		movePage.sleep(2000);
+//
+//		fileFinder.clickaCheckbox(fileName);
+//		
+//		this.fileName = fileName;
+//	}
+	
+	@When("User Selects a file")
+	public void user_selects_a_file() throws InterruptedException {
+	
 		
-		this.fileName = fileName;
+		fileName = fileFinder.selectLatestPDF_file();
+		
+		System.out.println("Moving file: " + fileName);
+		
+		
 	}
 
 	@When("Click Move")
@@ -66,12 +77,14 @@ public class MoveSteps {
 		System.out.println("Expected File Name is: " + this.fileName);
 
 		navigate.navigateToPersonalFolder(personalFolder);
-		String latestFileName = movePage.findMovedFile();
+		String actualLatestFileName = movePage.findMovedFile();
 
-		System.out.println("Latest File Name is: " + latestFileName);
+		System.out.println("Actual File Name is: " + actualLatestFileName);
 
-		Assert.assertTrue(this.fileName.equals(latestFileName));
+		Assert.assertTrue(this.fileName.equals(actualLatestFileName));
 	}
+	
+	
 
 	@Given("User is on Personal File {string}")
 	public void user_is_on_personal_file(String personalFolder) throws InterruptedException {
@@ -84,11 +97,12 @@ public class MoveSteps {
 
 		navigate.navigateToGeneralFolder();
 		System.out.println("Expected File Name is: " + this.fileName);
+		
 
-		String actualFileName = movePage.findMovedFile();
-		System.out.println("Actual File Name is: " + actualFileName);
+		String actualLatestFileName = movePage.findMovedFile();
+		System.out.println("Actual File Name is: " + actualLatestFileName);
 
-		Assert.assertTrue(this.fileName.equals(actualFileName));
+		Assert.assertTrue(this.fileName.equals(actualLatestFileName));
 
 	}
 

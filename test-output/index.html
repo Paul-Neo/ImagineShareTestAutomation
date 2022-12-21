@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Paul Napadao\AppData\Local\Temp\testng-eclipse-1849877185\testng-customsuite.xml</span>
+                    <span>C:\Users\Paul Napadao\AppData\Local\Temp\testng-eclipse-1700062437\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="stepScenarios.MyTestRunnerNG" class="method navigator-link" hash-for-method="runScenario(&quot;PDF Editor in General Files&quot;, &quot;Optional[File Preview]&quot;)">runScenario("PDF Editor in General Files", "Optional[File Preview]")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="stepScenarios.MyTestRunnerNG" class="method navigator-link" hash-for-method="runScenario(&quot;Move a single File in General Files to Personal File&quot;, &quot;Optional[Move Feature]&quot;)">runScenario("Move a single File in General Files to Personal File", "Optional[Move Feature]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="stepScenarios.MyTestRunnerNG" class="method navigator-link" hash-for-method="runScenario(&quot;Move a single File in Personal File to General FIles&quot;, &quot;Optional[Move Feature]&quot;)">runScenario("Move a single File in Personal File to General FIles", "Optional[Move Feature]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -125,10 +130,20 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;PDF Editor in General Files&quot;, &quot;Optional[File Preview]&quot;)">
-                  </a> <!-- runScenario("PDF Editor in General Files", "Optional[File Preview]") -->
+                  <a name="runScenario(&quot;Move a single File in General Files to Personal File&quot;, &quot;Optional[Move Feature]&quot;)">
+                  </a> <!-- runScenario("Move a single File in General Files to Personal File", "Optional[Move Feature]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("PDF Editor in General Files", "Optional[File Preview]")</span>
+                  <span class="parameters">("Move a single File in General Files to Personal File", "Optional[Move Feature]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Move a single File in Personal File to General FIles&quot;, &quot;Optional[Move Feature]&quot;)">
+                  </a> <!-- runScenario("Move a single File in Personal File to General FIles", "Optional[Move Feature]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Move a single File in Personal File to General FIles", "Optional[Move Feature]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -138,7 +153,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Paul Napadao\AppData\Local\Temp\testng-eclipse-1849877185\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Paul Napadao\AppData\Local\Temp\testng-eclipse-1700062437\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -195,16 +210,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'stepScenarios.MyTestRunnerNG')
-data.setCell(0, 3, 79959);
+data.setCell(0, 3, 63294);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'runScenario')
+data.setCell(1, 2, 'stepScenarios.MyTestRunnerNG')
+data.setCell(1, 3, 61737);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -236,12 +255,16 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">runScenario("PDF Editor in General Files", "Optional[File Preview]")</span>
-                <span class="method-start">804 ms</span>
+                <span class="method-name">runScenario("Move a single File in General Files to Personal File", "Optional[Move Feature]")</span>
+                <span class="method-start">792 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Move a single File in Personal File to General FIles", "Optional[Move Feature]")</span>
+                <span class="method-start">64087 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">80765 ms</span>
+                <span class="method-start">125826 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

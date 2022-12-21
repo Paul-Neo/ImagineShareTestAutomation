@@ -22,7 +22,7 @@ public class RenameUtil {
 	
 	public void renameLatestPDF() throws InterruptedException {
 
-		String generatedText = generateRandomStrings.randomString(3);
+		String generatedText = generateRandomStrings.randomString(4);
 		
 		driver.findElement(fileSubtask).click();
 		driver.findElement(rename).click();

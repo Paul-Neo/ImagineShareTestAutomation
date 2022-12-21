@@ -83,10 +83,11 @@ public class AddNewContactPage {
 		driver.findElement(archiveContactsBtn).click();
 		driver.findElement(viewArchiveOptionBtn).click();
 		driver.findElement(viewArhiveLink).click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		driver.findElement(checkBox.getTDPrecidingCheckBox(contactName)).click();
 		driver.findElement(deleteContactsBtn).click();
 		driver.findElement(alertDeleteBtn).click();
+		Thread.sleep(5000);
 
 	}
 

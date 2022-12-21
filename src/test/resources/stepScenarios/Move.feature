@@ -12,7 +12,7 @@ Then Profile firm should be "ImagineTime"
 @test1
 Scenario: Move a single File in General Files to Personal File
 Given User is on General Folder
-When User Selects a file "Move File test.pdf"
+When User Selects a file
 And Click Move
 Then Move window should be displayed
 When User Selects "Paul Napadao | Personal files"
@@ -22,7 +22,7 @@ Then File should be gone in General Files and moved in Personal Files "Paul Napa
 @test2
 Scenario: Move a single File in Personal File to General FIles
 Given User is on Personal File "Paul Napadao"
-When User Selects a file "Move File test.pdf"
+When User Selects a file
 And Click Move
 Then Move window should be displayed
 When User Selects "(General Files)"

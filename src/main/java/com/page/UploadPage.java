@@ -83,7 +83,7 @@ public class UploadPage {
 		driver.findElement(saveAndUpload).click();
 		Thread.sleep(1000);
 		driver.navigate().refresh();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 	}
 
 	public boolean isFileUploaded(String expectedFileName) {
@@ -122,8 +122,9 @@ public class UploadPage {
 		driver.findElement(uploadNewFiles).click();
 		driver.findElement(browse).sendKeys(fileLoc);
 		driver.findElement(saveAndUpload).click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		driver.navigate().refresh();
+		Thread.sleep(5000);
 		
 		return new DeletePage(driver);
 	}

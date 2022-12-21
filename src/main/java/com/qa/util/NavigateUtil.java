@@ -34,7 +34,7 @@ public class NavigateUtil {
 		driver.findElement(allFilesTab).click();
 		driver.findElement(generalFiles).click();
 		driver.navigate().refresh();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 	}
 	
 	public void navigateToPersonalFolder(String folderName) throws InterruptedException {
@@ -46,7 +46,7 @@ public class NavigateUtil {
 		driver.findElement(selectedFolderName).click();
 		
 		driver.navigate().refresh();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 	}
 	
@@ -59,7 +59,7 @@ public class NavigateUtil {
 		driver.findElement(goToClientWorkspace).click();
 		
 		driver.navigate().refresh();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 	}
 	
 	public void navigateToClientSettings(String clientsName) throws InterruptedException {
@@ -71,7 +71,7 @@ public class NavigateUtil {
 		driver.findElement(goToClientSettings).click();
 		
 		driver.navigate().refresh();
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 	}
 
 	public void clickSelectedTab(String tabName) throws InterruptedException {
@@ -79,7 +79,7 @@ public class NavigateUtil {
 		By selectedTabName =  elementUtil.get_a_XpathData(tabName);
 		driver.findElement(selectedTabName).click();
 		driver.navigate().refresh();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 	}
 	
 	public void navigateToMyProfile() throws InterruptedException {
@@ -87,7 +87,7 @@ public class NavigateUtil {
 		driver.findElement(profileDropDown).click();
 		driver.findElement(myProfile).click();
 		driver.navigate().refresh();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 	}
 	
 }

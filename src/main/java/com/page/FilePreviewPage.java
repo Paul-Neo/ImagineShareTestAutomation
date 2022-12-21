@@ -45,8 +45,11 @@ public class FilePreviewPage {
 	
 	public String clickPDF_file() throws InterruptedException {
 		
+		
+		driver.navigate().refresh();
+		Thread.sleep(5000);
 		driver.findElement(latestPDF_file).click();
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		return driver.findElement(PDFfileName).getText();
 		
 	}
