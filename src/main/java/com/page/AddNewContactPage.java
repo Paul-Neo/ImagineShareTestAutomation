@@ -10,11 +10,13 @@ import org.openqa.selenium.WebElement;
 import com.qa.util.CheckBoxUtil;
 import com.qa.util.DropDownUtil;
 import com.qa.util.FileFinderUtil;
+import com.qa.util.GenerateRandomStrings;
 import com.qa.util.NavigateUtil;
 
 public class AddNewContactPage {
 
 	private WebDriver driver;
+	private GenerateRandomStrings generateRandomStrings = new GenerateRandomStrings();
 
 	public AddNewContactPage(WebDriver driver) {
 		this.driver = driver;
@@ -39,10 +41,12 @@ public class AddNewContactPage {
 	private By removeFromClientBtn = By.xpath("//button[text()='Remove from Client ']");
 	private By noClientContactsTxt = By.cssSelector("div.u-centerText h3");
 
+	
 	public void navigateToClientsOverview(String clientName) throws InterruptedException {
 		NavigateUtil nav = new NavigateUtil(driver);
 
 		nav.navigateToClientSettings(clientName);
+		
 	}
 
 	public void clickAddContactsBtn() {
@@ -50,13 +54,27 @@ public class AddNewContactPage {
 		driver.findElement(addContactsBtn).click();
 	}
 
-	public void fillContactsInfo(String emailAddress, String fullName, String personalNote)
-			throws InterruptedException {
+	public String setContactsInfo()throws InterruptedException {
 
+		
+//		driver.findElement(this.emailAddress).sendKeys(emailAddress);
+//		driver.findElement(this.fullName).sendKeys(fullName);
+//		driver.findElement(this.personalNote).sendKeys(personalNote);
+//		Thread.sleep(1000);
+		
+		String firstName = generateRandomStrings.generateFirstName();
+		String lastName = generateRandomStrings.generateLastName();
+		String fullName = firstName + " " + lastName;
+		String emailAddress = firstName + lastName + "@gmail.com";
+		String personalNote = "Personal Note Test";
+		
 		driver.findElement(this.emailAddress).sendKeys(emailAddress);
 		driver.findElement(this.fullName).sendKeys(fullName);
 		driver.findElement(this.personalNote).sendKeys(personalNote);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
+		return fullName;
+		
+		
 	}
 
 	public void sendContactInvitation() throws InterruptedException {
@@ -83,11 +101,12 @@ public class AddNewContactPage {
 		driver.findElement(archiveContactsBtn).click();
 		driver.findElement(viewArchiveOptionBtn).click();
 		driver.findElement(viewArhiveLink).click();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		driver.findElement(checkBox.getTDPrecidingCheckBox(contactName)).click();
 		driver.findElement(deleteContactsBtn).click();
+		Thread.sleep(2000);
 		driver.findElement(alertDeleteBtn).click();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 
 	}
 

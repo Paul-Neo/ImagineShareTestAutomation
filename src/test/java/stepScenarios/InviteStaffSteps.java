@@ -1,13 +1,10 @@
 package stepScenarios;
 
-import java.util.List;
-import java.util.Map;
 
 import org.junit.Assert;
 
 import com.page.InviteStaffPage;
 import com.qa.factory.DriverFactory;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -44,24 +41,15 @@ public class InviteStaffSteps {
 	}
 	
 	@When("Create new staff")
-	public void create_new_staff() {
+	public void create_new_staff() throws InterruptedException {
 
 		inviteStaffPage.selectCreateNewStaff();
 	}
 	
 	@When("User Fill up Staff information")
-	public void user_fill_up_staff_information(DataTable dataTable) {
+	public void user_fill_up_staff_information() throws InterruptedException {
 		
-		List<Map<String, String>> newStaffInfo =  dataTable.asMaps(String.class, String.class);
-		
-		String emailAddress = newStaffInfo.get(0).get("Email Address");
-		String fullName = newStaffInfo.get(0).get("Full Name");
-		String hasPriviledge = newStaffInfo.get(0).get("Has Owner Priveledge");
-		String personalNote = newStaffInfo.get(0).get("Personal Note");
-		
-		inviteStaffPage.fillUpInvitationForm(emailAddress, fullName, hasPriviledge, personalNote);
-		
-		staffName = fullName;
+		staffName = inviteStaffPage.setupNewStaffInfo();
 		
 	}
 	

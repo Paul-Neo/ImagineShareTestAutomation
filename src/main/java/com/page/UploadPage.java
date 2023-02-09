@@ -124,7 +124,7 @@ public class UploadPage {
 		driver.findElement(saveAndUpload).click();
 		Thread.sleep(5000);
 		driver.navigate().refresh();
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		
 		return new DeletePage(driver);
 	}

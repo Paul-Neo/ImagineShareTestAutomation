@@ -19,6 +19,10 @@ public class AddNewClientSteps {
 	private String expectedClientName;
 	private String expectedClientIdentifier;
 	private String expectedEngagementTypes;
+	private String deletedClientName;
+	private String newClientName;
+	private String newClientID;
+	private String newEngagementTypes;
 
 	@Given("User is on Client Settings page")
 	public void user_is_on_client_settings_page() {
@@ -44,8 +48,9 @@ public class AddNewClientSteps {
 
 		List<Map<String, String>> newClientInfo = dataTable.asMaps(String.class, String.class);
 
-		String clientName = addNewClient.enterClientName();
-		String clientIdentifier = addNewClient.enterClientIdentifier();
+		String clientName = addNewClient.setClientName();
+		String clientIdentifier = addNewClient.setClientIdentifier(clientName);
+		
 		String staffName = newClientInfo.get(0).get("Assign Staff");
 		String engagementTypes = newClientInfo.get(0).get("Engagement Types");
 
@@ -58,7 +63,7 @@ public class AddNewClientSteps {
 	}
 
 	@When("Click Next")
-	public void click_next() {
+	public void click_next() throws InterruptedException {
 
 		addNewClient.clickNext();
 	}
@@ -93,27 +98,26 @@ public class AddNewClientSteps {
 
 	}
 
-	@When("User Selects a Client {string}")
-	public void user_selects_a_client(String clientName) throws InterruptedException {
+	@When("User Selects a Client")
+	public void user_selects_a_client() throws InterruptedException {
 
-		addNewClient.selectClient(clientName);
+		addNewClient.selectClient(expectedClientName);
 
-		expectedClientName = clientName;
+		deletedClientName = expectedClientName;
 
 	}
 
 	@Then("Selected Client should be on the archive list")
 	public void selected_client_should_be_on_the_archive_list() {
-
 		
-		Assert.assertTrue(addNewClient.isClientMovedToArchived(expectedClientName));
+		Assert.assertTrue(addNewClient.isClientMovedToArchived(deletedClientName));
 
 	}
 
 	@When("User Selects a client in the archive list")
 	public void user_selects_a_client_in_the_archive_list() throws InterruptedException {
 
-		addNewClient.selectClientFromArchivedList(expectedClientName);
+		addNewClient.selectClientFromArchivedList(deletedClientName);
 	}
 
 	@Then("Client Should be deleted")
@@ -121,5 +125,68 @@ public class AddNewClientSteps {
 
 		Assert.assertTrue(addNewClient.isClientSuccessfullyDeleted());
 	}
+		
+	@Given("User added a new Client")
+	public void user_added_a_new_client() throws InterruptedException {
+	 
+		addNewClient.navigateToClientSettingsPage();
+		addNewClient.clickNewClientButton();
+		addNewClient.clickCreateNewClientLink();
+	
+		String clientName = addNewClient.setClientName();
+		String clientIdentifier = addNewClient.setClientIdentifier(clientName);
+		
+		String staffName = "Paul Napadao";
+		String engagementTypes = "1040";
+
+		addNewClient.assignStaffAndSelectEngagementTypes(staffName, engagementTypes);
+		
+		// getting the expected clientName to use in assertion
+		expectedClientName = clientName;
+		expectedClientIdentifier = clientIdentifier;
+		expectedEngagementTypes = engagementTypes;
+		
+		addNewClient.clickNext();
+		addNewClient.clickSave();
+		
+		
+	}
+	
+	@When("User select a client")
+	public void user_select_a_client() throws InterruptedException {
+		
+		Assert.assertTrue(addNewClient.isClientAddedSuccessfully(expectedClientName));
+		Assert.assertTrue(addNewClient.isClientGeneralInfoCorrect(expectedClientName, expectedClientIdentifier,
+				expectedEngagementTypes));
+	   
+	}
+	
+	@When("Updates client info")
+	public void updates_client_info() throws InterruptedException {
+	    
+		addNewClient.clickUpdateGeneralInfo();
+		
+		newClientName =  addNewClient.setNewClientName();
+		newClientID = addNewClient.setNewClientID(newClientName);
+		newEngagementTypes = addNewClient.updateEngagementTypes();
+		
+		
+		System.out.println("New Client Name: " + newClientName);
+		System.out.println("New Client ID: " + newClientID);
+		System.out.println("New Added Engagement Types: " + newEngagementTypes);
+		
+		addNewClient.clickSave();
+		
+		
+	}
+	
+	@Then("Clients info should be updated")
+	public void clients_info_should_be_updated() {
+	  
+		Assert.assertTrue(addNewClient.isClientGeneralInfoCorrect(newClientName, newClientID, newEngagementTypes));
+		
+		
+	}
+	
 
 }

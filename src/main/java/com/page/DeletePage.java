@@ -44,15 +44,20 @@ public class DeletePage {
 		driver.findElement(LatestPDF_File_CB).click();
 	}
 	
-	public void clickLatestArchvied_CB() {
+	public void clickLatestArchvied_CB() throws InterruptedException {
 		
+		Thread.sleep(3000);
+		driver.navigate().refresh();
+		Thread.sleep(3000);
 		driver.findElement(latestArchived_CB).click();
+		
 	}
 
-	public boolean isFileUploaded(String expectedFile) {
+	public boolean isFileUploaded(String expectedFile) throws InterruptedException {
 
 		boolean isFileUploaded = false;
 
+		Thread.sleep(2000);
 		String latestFile = driver.findElement(latestPDF_fileName).getText();
 
 	//	expectedFile = expectedFile + " (New)";

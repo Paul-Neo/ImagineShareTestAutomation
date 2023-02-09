@@ -57,6 +57,7 @@ public class LoginPage {
 		// comment out sleep when doing a regression test to avoid error in getting title page
 		Thread.sleep(2000);
 		return driver.getTitle();
+		
 	}
 	
 	public void enterEmailAddress(String emailAddress) {

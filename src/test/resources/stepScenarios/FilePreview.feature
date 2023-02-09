@@ -16,7 +16,7 @@ When User Clicks a PDF file
 Then buttons and links should be displayed
 And Title page should be "File Preview"
 
-@test2 @skip
+@test2
 Scenario: Preview a pdf file in client workspace then check tags and Associated Clients
 Given User is on Client Workspace "Elavon"
 When User Clicks a PDF file

@@ -8,12 +8,14 @@ import org.openqa.selenium.WebElement;
 
 import com.qa.util.CheckBoxUtil;
 import com.qa.util.ElementUtil;
+import com.qa.util.GenerateRandomStrings;
 import com.qa.util.ToolBarButtonsUtil;
 
 public class FolderTemplatePage {
 
 	private WebDriver driver;
 	private ElementUtil elementUtil = new ElementUtil();
+	private GenerateRandomStrings generateRandomStrings = new GenerateRandomStrings();
 
 	public FolderTemplatePage(WebDriver driver) {
 
@@ -55,33 +57,51 @@ public class FolderTemplatePage {
 	private By actualFoldersCount = By.xpath("//div[contains(text(),'KB')]/following::div[1]");
 	
 	
-	public void clickNewTemplateButton() {
+	public void clickNewTemplateButton() throws InterruptedException {
 
 		driver.findElement(newTemplateButton).click();
+		Thread.sleep(5000);
 	}
 
 	public String getHeaderMessage() throws InterruptedException {
 
 		Thread.sleep(2000);
 		return driver.findElement(headerMessage).getText();
+		
 	}
-
-	public void enterTemplateInfo(String name, String description, String delegatedAdmin) {
-
+	
+	
+	public String setFolderTemplateName() throws InterruptedException {
+		
+		String name = generateRandomStrings.generateFirstName() + " Template Folder Test";
 		driver.findElement(this.name).sendKeys(name);
-		driver.findElement(this.description).sendKeys(description);
-
-		driver.findElement(dropdownButton).click();
-
-		selectedDelegatedAdmin = elementUtil.getDivXpathData(delegatedAdmin);
-
-		driver.findElement(selectedDelegatedAdmin).click();
-
+		Thread.sleep(2000);
+		
+		return name;
+		
+		
 	}
+	
+	public void setFolderTemplateDescription(String description) throws InterruptedException {
+		
+		
+		driver.findElement(this.description).sendKeys(description);
+		Thread.sleep(2000);
+	}
+	
+	public void setFolderTemplateDelegatedAdmin(String delegatedAdmin) throws InterruptedException {
+		
+		driver.findElement(dropdownButton).click();
+		selectedDelegatedAdmin = elementUtil.getDivXpathData(delegatedAdmin);
+		driver.findElement(selectedDelegatedAdmin).click();
+		Thread.sleep(2000);
+	}
+	
 
-	public void clickCreateTemplate() {
+	public void clickCreateTemplate() throws InterruptedException {
 
 		driver.findElement(createTemplate).click();
+		Thread.sleep(2000);
 	}
 
 	public String getFolderTemplateName() {
@@ -206,5 +226,9 @@ public class FolderTemplatePage {
 		 return actualCount + 1;
 	}
 	
+	public int getTemplateFolderCount() {
+		
+		return driver.findElements(templateNames).size();
+	}
 
 }

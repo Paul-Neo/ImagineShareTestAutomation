@@ -28,7 +28,6 @@ public class DeleteSteps {
 		rename.renameLatestPDF();
 		deletePage =  uploadPage.doFileUpload(fileName);
 		Assert.assertTrue(deletePage.isFileUploaded(fileName));
-		System.out.println("Upload Successfully!!");
 		this.fileName = fileName;
 	}
 	
@@ -115,7 +114,7 @@ public class DeleteSteps {
 	}
 
 	@When("User Selects a file in archived files list")
-	public void user_selects_a_file_in_archived_files_list() {
+	public void user_selects_a_file_in_archived_files_list() throws InterruptedException {
 
 		deletePage.clickLatestArchvied_CB();
 	}

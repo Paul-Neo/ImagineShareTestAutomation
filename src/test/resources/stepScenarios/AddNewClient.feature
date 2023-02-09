@@ -10,14 +10,14 @@ And User Select a firm "Paul QA Test Firm"
 Then Profile firm should be "Paul QA Test Firm"
 
 @test1
-Scenario: Add New Client
+Scenario: Add New Client and delete client
 Given User is on Client Settings page
 When User clicks new client button
 And Clicks Create new client
 Then A modal should be displayed with header message "New client"
 When User enters client information
-|Name								|Client Identifier		|Assign Staff			|Engagement Types	|
-|Thomas Shelby			|Peaky Blinders				|Paul Napadao			|1040							|
+|Assign Staff			|Engagement Types	|
+|Paul Napadao			|1040							|
 And Click Next
 Then Staff Notification should be displayed
 |Upload a file																				|
@@ -30,16 +30,20 @@ Then Staff Notification should be displayed
 |Weekly reminder for incomplete signature requests		|
 And Client should be added on the client list
 And Clients Overview should be correct
-
-@test2
-Scenario: Delete a Client
 Given User is on Client Settings page
-When User Selects a Client "Thomas Shelby"
+When User Selects a Client
 And Click Archive
 Then Selected Client should be on the archive list
 When User Selects a client in the archive list
 And Click Delete
 Then Client Should be deleted
+
+@test2
+Scenario: Update Clients info
+Given User added a new Client
+When User select a client
+And Updates client info
+Then Clients info should be updated
 
 
 	

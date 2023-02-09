@@ -37,12 +37,14 @@ public class AllWorkspacesPageSteps {
 		System.out.println("Email Adress: " + emailAddress);
 		System.out.println("Password: " + password);
 		loginPage.doLogin(emailAddress, password);
+		
 	}
 
 	@Then("User Select a firm {string}")
-	public void user_select_a_firm(String firmName) {
+	public void user_select_a_firm(String firmName) throws InterruptedException {
 
 		allWorkspacesPage.selectFirm(firmName);
+		
 	}
 
 	@Then("Profile firm should be {string}")
@@ -87,4 +89,5 @@ public class AllWorkspacesPageSteps {
 	public void links_count_shoud_be(Integer expectedCount) {
 		Assert.assertTrue(allWorkspacesPage.getSideBarLinkcount() == expectedCount);
 	}
+	
 }

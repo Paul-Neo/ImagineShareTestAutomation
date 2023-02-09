@@ -17,13 +17,13 @@ And Click Invite staff button
 And Create new staff
 Then A modal should be displayed with header message "Invite staff members to Paul QA Test Firm"
 When User Fill up Staff information
-|Email Address								|Full Name						|Has Owner Priveledge		|Personal Note			|
-|AutomationStaff1@gmail.com 	|Automation Staff123	|false									|Invite staff test	|
 And User send an Invite
 Then New Staff should be added on the list
 When User click settings for selected staff member
 And Select "Inactive" status
 And Delete the staff member
 Then Staff member count should be correct
+
+
 
 

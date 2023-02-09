@@ -1,14 +1,8 @@
 package stepScenarios;
 
-import java.util.List;
-import java.util.Map;
-
 import org.junit.Assert;
-
 import com.page.AddNewContactPage;
 import com.qa.factory.DriverFactory;
-
-import io.cucumber.datatable.DataTable;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -35,16 +29,18 @@ public class AddNewContactStep {
 	}
 	
 	@When("User fill up add contact form")
-	public void user_fill_up_add_contact_form(DataTable dataTable) throws InterruptedException {
+	public void user_fill_up_add_contact_form() throws InterruptedException {
 	 
-		List<Map<String, String>> contactInfo =  dataTable.asMaps(String.class, String.class);
+//		List<Map<String, String>> contactInfo =  dataTable.asMaps(String.class, String.class);
+//		
+//		String emailAddress = contactInfo.get(0).get("Email Address");
+//		String fullName = contactInfo.get(0).get("Full Name");
+//		String personalNote = contactInfo.get(0).get("Personal Note");
+//				
+//		addNewContact.fillContactsInfo(emailAddress, fullName, personalNote);
+//		contactName = fullName;
 		
-		String emailAddress = contactInfo.get(0).get("Email Address");
-		String fullName = contactInfo.get(0).get("Full Name");
-		String personalNote = contactInfo.get(0).get("Personal Note");
-				
-		addNewContact.fillContactsInfo(emailAddress, fullName, personalNote);
-		contactName = fullName;
+		contactName = addNewContact.setContactsInfo();
 		
 	}
 	

@@ -17,9 +17,10 @@ public class FolderTemplateSteps {
 	private FolderTemplatePage folderTemplatePage = new FolderTemplatePage(DriverFactory.getDriver());
 	private String expectedTemplateFolderName;
 	private int expectedFoldersCount;
+	private int actualFoldesCount;
 
 	@When("Click New Template button")
-	public void click_new_template_button() {
+	public void click_new_template_button() throws InterruptedException {
 
 		folderTemplatePage.clickNewTemplateButton();
 	}
@@ -37,26 +38,31 @@ public class FolderTemplateSteps {
 	}
 
 	@When("User Enters Template info")
-	public void user_enters_template_info(DataTable dataTable) {
+	public void user_enters_template_info(DataTable dataTable) throws InterruptedException {
 
 		List<Map<String, String>> templateInfo = dataTable.asMaps(String.class, String.class);
 
-		String name = templateInfo.get(0).get("Name");
+		
 		String description = templateInfo.get(0).get("Description");
 		String delegatedAdmin = templateInfo.get(0).get("Delegated Admin");
-
-		folderTemplatePage.enterTemplateInfo(name, description, delegatedAdmin);
-
+		
+		String name = folderTemplatePage.setFolderTemplateName();
+		folderTemplatePage.setFolderTemplateDescription(description);
+		folderTemplatePage.setFolderTemplateDelegatedAdmin(delegatedAdmin);
+		
+		
 		expectedTemplateFolderName = name;
-
+	
 	}
 
 	@When("Click create template")
-	public void click_create_template() {
+	public void click_create_template() throws InterruptedException {
 
 		folderTemplatePage.clickCreateTemplate();
+		actualFoldesCount = folderTemplatePage.getTemplateFolderCount();
 
 	}
+	
 
 	@Then("New template should be added on the list")
 	public void new_template_should_be_added_on_the_list() throws InterruptedException {
@@ -68,10 +74,12 @@ public class FolderTemplateSteps {
 		
 		Assert.assertTrue(expectedTemplateFolderName.equals(actualFolderTemplateName));
 		
+		
+		
 		folderTemplatePage.clickCancelBtn();
 	}
 
-	@When("Select a Folder Template")
+	@When("User Select a Folder Template")
 	public void select_a_folder_template() throws InterruptedException {
 
 		folderTemplatePage.openFolderTemplateSettings();
@@ -91,35 +99,37 @@ public class FolderTemplateSteps {
 		folderTemplatePage.getAlertBoxHeader(headerMessage);
 	}
 
-	@Then("Template name should be {string}")
-	public void template_name_should_be(String expectedTemplateName) {
+	@Then("Template name should be correct")
+	public void template_name_should_be() {
 
-		System.out.println("Expected Template Name: " + expectedTemplateName);
+		System.out.println("Expected Template Name: " + expectedTemplateFolderName);
 
 		String actualTemplateName = folderTemplatePage.getSelectedTemplateNameForDeletion();
 		System.out.println("Actual Template Name: " + actualTemplateName);
 
-		Assert.assertTrue(expectedTemplateName.equals(actualTemplateName));
+		Assert.assertTrue(expectedTemplateFolderName.equals(actualTemplateName));
 
 	}
 
 	@When("User Click Ok")
 	public void user_click_ok() throws InterruptedException {
 
+		
 		folderTemplatePage.clickOkBtn();
 	
 	}
 
 	@Then("Template should be deleted from the list")
-	public void template_should_be_deleted_from_the_list(DataTable dataTable) {
+	public void template_should_be_deleted_from_the_list() {
 
-		List<String> expectedList = dataTable.asList();
-		System.out.println("Expected List: " + expectedList);
-
-		List<String> actualList = folderTemplatePage.getTemplateList();
-		System.out.println("Actual List: " + actualList);
-
-		Assert.assertTrue(expectedList.equals(actualList));
+		//get template count
+		int newCount = actualFoldesCount - 1;
+		expectedFoldersCount = folderTemplatePage.getTemplateFolderCount();
+		
+		System.out.println("New Count: " + newCount);
+		System.out.println("Expected Folders Count: " + expectedFoldersCount);
+		
+		Assert.assertEquals(newCount, expectedFoldersCount);
 	}
 	
 	@When("User Select Apply folder template")

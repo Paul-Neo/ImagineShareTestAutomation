@@ -8,10 +8,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.qa.util.ElementUtil;
+import com.qa.util.GenerateRandomStrings;
 
 public class InviteStaffPage {
 
 	private WebDriver driver;
+	private GenerateRandomStrings generateRandomStrings = new GenerateRandomStrings();
 
 	public InviteStaffPage(WebDriver driver) {
 
@@ -21,11 +23,11 @@ public class InviteStaffPage {
 	private By firmSettingsPage = By.xpath("//span[text()='Firm Settings']");
 	private By membersTab = By.xpath("//a[text()='Members']");
 	private By inviteStaffBtn = By.xpath("//button[text()='Invite staff']");
-	private By createNewStaff = By.xpath("//a[text()='Create new staff']");
-	private By emailAddress = By.xpath("//input[@name='email']");
-	private By fullName = By.xpath("//input[@name='fullname']");
-	private By ownderPriviledges = By.xpath("//input[@name='owner']");
-	private By personalNote = By.xpath("//textarea[@name='personalNote']");
+	private By createNewStaffBtn = By.xpath("//a[text()='Create new staff']");
+	private By emailAddressTxtField = By.xpath("//input[@name='email']");
+	private By fullNameTxtField = By.xpath("//input[@name='fullname']");
+	private By ownerPriviledgeCheckBox = By.xpath("//input[@name='owner']");
+	private By personalNoteTxtArea = By.xpath("//textarea[@name='personalNote']");
 	private By sendNowBtn = By.xpath("//span[text()=' Send now']");
 	private By InvitationResultModelCloseBtn = By.xpath("//button[text()='Close']");
 	private By statusDropDown = By.xpath("//select[@name='staff.status']");
@@ -51,29 +53,27 @@ public class InviteStaffPage {
 		Thread.sleep(2000);
 	}
 
-	public void selectCreateNewStaff() {
+	public void selectCreateNewStaff() throws InterruptedException {
 
-		driver.findElement(createNewStaff).click();
+		driver.findElement(createNewStaffBtn).click();
+		Thread.sleep(2000);
 	}
 
-	public void fillUpInvitationForm(String emailAddress, String fullName, String priviledge, String personalNote) {
+	public String setupNewStaffInfo() throws InterruptedException {
 
-		boolean hasPriviledge;
-
-		hasPriviledge = Boolean.parseBoolean(priviledge);
-
-		driver.findElement(this.emailAddress).sendKeys(emailAddress);
-		driver.findElement(this.fullName).sendKeys(fullName);
-
-		if (hasPriviledge == true) {
-
-			driver.findElement(ownderPriviledges).click();
-		} else {
-
-			driver.findElement(ownderPriviledges);
-		}
+		String firstName = generateRandomStrings.generateFirstName();
+		String lastName = generateRandomStrings.generateLastName();
+		String fullName = firstName + " " + lastName;
+		String emailAddress = firstName + lastName +"@gmail.com";
 		
-		driver.findElement(this.personalNote).sendKeys(personalNote);
+		driver.findElement(emailAddressTxtField).sendKeys(emailAddress);
+		driver.findElement(fullNameTxtField).sendKeys(fullName);
+		driver.findElement(ownerPriviledgeCheckBox).click();
+		driver.findElement(personalNoteTxtArea).sendKeys("Test Staff");
+		Thread.sleep(3000);
+		
+		return fullName;
+	
 	}
 
 	public void sendInvite() throws InterruptedException {
@@ -123,6 +123,7 @@ public class InviteStaffPage {
 		driver.findElement(okayBtn).click();
 		
 		driver.navigate().refresh();
+		Thread.sleep(3000);
 	}
 	
 	public int getStaffMemberCount() {

@@ -16,8 +16,6 @@ When User is on "Contacts" tab
 And Click Add contacts button
 Then A modal should be displayed with header message "Invite client users to Steph Curry"
 When User fill up add contact form
-|Email Address								|Full Name			|Personal Note		|
-|jj@gmail.com		|Janver Jacinto	|Add Contact Test	|
 And User send an invitation to contacts
 Then Contact should be added on client contacts list
 When User delete the contact

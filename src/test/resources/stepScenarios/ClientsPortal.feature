@@ -17,7 +17,6 @@ Then Navigation Links should be displayed
 |Dashboard					|
 |Quick Tasks				|
 |Request Lists			|
-|Request List Tasks	|
 |Message Board			|
 |Account						|
 

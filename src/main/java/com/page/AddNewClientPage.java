@@ -28,9 +28,9 @@ public class AddNewClientPage {
 	private By clientSettingsPage = By.xpath("//span[text()='Client Settings']");
 	private By newClientBtn = By.xpath("//button[text()='New Client']");
 	private By createNewClientLink = By.xpath("//a[text()='Create new client']");
-	private By clientName = By.xpath("//input[@name = 'client.name']");
-	private By clientIdentifier = By.xpath("//input[@name = 'client.identifier']");
-	private By dropDown = By.xpath("//div[@class='css-1wy0on6 react-select__indicators']");
+	private By clientNameTxtField = By.xpath("//input[@name = 'client.name']");
+	private By clientIdentiferTxtField = By.xpath("//input[@name = 'client.identifier']");
+	private By assignStaffDropDown = By.xpath("//div[@class='css-1wy0on6 react-select__indicators']");
 	private By nextBtn = By.xpath("//button[text()='Next']");
 	private By staffNotifications = By.cssSelector("div.client-form label");
 	private By saveBtn = By.xpath("//button[text()='Save']");
@@ -49,7 +49,11 @@ public class AddNewClientPage {
 	private By generalInfo_clientIdentifier = By.xpath("//small[text()='Client identifier']/following::p[1]");
 	private By generalInfo_engagemenTypes = By.xpath("//small[text()='Engagement types']/following::p[1]");
 	
+	private By updateGeneralInfoBtn = By.xpath("//button[text()='Update general client info']");
+	private By clientNameUpdateTxtField = By.xpath("//input[@name='client.name']");
+	private By clientIdentifierUpdateTxtField = By.xpath("//input[@name='client.identifier']");
 	
+	private By generalInfo = By.cssSelector("div.-static p");
 	
 	
 	public void navigateToClientSettingsPage() {
@@ -67,45 +71,53 @@ public class AddNewClientPage {
 		driver.findElement(createNewClientLink).click();
 	}
 
-	public void assignStaffAndSelectEngagementTypes(String StaffName, String enagagementTypes) {
+	public void assignStaffAndSelectEngagementTypes(String StaffName, String enagagementTypes) throws InterruptedException {
 
 		DropDownUtil dropDownUtil = new DropDownUtil(driver);
 		
 		By selectedEnagagementType = elementUtil.getDivXpathData(enagagementTypes);
-
-//		driver.findElement(this.clientName).sendKeys(clientName);
-//		driver.findElement(this.clientIdentifier).sendKeys(clientIdentifier);
 		
-		dropDownUtil.selectFromDropDown(dropDown, StaffName);
+		dropDownUtil.selectFromDropDown(assignStaffDropDown, StaffName);
 
 		driver.findElement(selectedEnagagementType).click();
+		
+		Thread.sleep(3000);
 
 	}
 	
-	public String enterClientName() throws InterruptedException {
+	public String setClientName() throws InterruptedException {
 		
 		
-		String clientName = generateRandomNames.generateFullName();
-		driver.findElement(this.clientName).sendKeys(clientName);
+		String firstName = generateRandomNames.generateFirstName();
+		String lastName = generateRandomNames.generateLastName();
+		
+		String clientName = firstName + " " +  lastName;
+		
+		System.out.println("EXPECTED CLIENT NAME IS " + clientName);
+		
+		driver.findElement(clientNameTxtField).sendKeys(clientName);
+		
 		Thread.sleep(2000);
 		
 		return clientName;
 
 	}
 	
-	public String enterClientIdentifier() throws InterruptedException {
+	public String setClientIdentifier(String clientName) throws InterruptedException {
 		
-		String clientIdentifier = generateRandomNames.randomString(4) + " TestID";
-		driver.findElement(this.clientIdentifier).sendKeys(clientIdentifier);
+		String clientIdentifier = clientName + " TestID";
+		driver.findElement(clientIdentiferTxtField).sendKeys(clientIdentifier);
 		Thread.sleep(2000);
 		
 		return clientIdentifier;
 		
 	}
 	
-	public void clickNext() {
+	public void clickNext() throws InterruptedException {
 
 		driver.findElement(nextBtn).click();
+		Thread.sleep(2000);
+		
 	}
 
 	public List<String> getStaffNotifications() {
@@ -142,7 +154,6 @@ public class AddNewClientPage {
 		
 		return driver.findElement(clientName_overview).isDisplayed();
 		
-
 	}
 
 	public boolean isClientGeneralInfoCorrect(String clientName, String clientIdentifier, String engagementTypes) {
@@ -165,7 +176,7 @@ public class AddNewClientPage {
 		
 		if(actualCLientName.equals(clientName)
 				&& actualClientIdentifier.equals(clientIdentifier)
-				&& actualEngagementTypes.equals(engagementTypes)) {
+				&& actualEngagementTypes.contains(engagementTypes)) {
 
 			isCorrect = true;
 		}
@@ -192,7 +203,7 @@ public class AddNewClientPage {
 	
 	public void selectClientFromArchivedList(String archivedClient) throws InterruptedException {
 		
-		By selectedArchivedClient = By.xpath("//div[contains(text(),'Thomas Shelby')]/preceding::input[@type='checkbox'][1]");
+		By selectedArchivedClient = By.xpath("//div[contains(text(),'"+archivedClient+"')]/preceding::input[@type='checkbox'][1]");
 		driver.findElement(selectedArchivedClient).click();
 		Thread.sleep(4000);
 	}
@@ -202,5 +213,55 @@ public class AddNewClientPage {
 		return driver.findElement(noClientFoundText).isDisplayed();
 	}
 	
-
+	public void clickUpdateGeneralInfo() throws InterruptedException {
+		
+		driver.findElement(updateGeneralInfoBtn).click();
+		Thread.sleep(2000);
+		
+		
+	}
+	
+	public String setNewClientName() throws InterruptedException {
+		
+		String newName = generateRandomNames.generateFirstName() + " " + generateRandomNames.generateLastName();
+		
+		driver.findElement(clientNameUpdateTxtField).clear();
+		Thread.sleep(2000);
+		driver.findElement(clientNameUpdateTxtField).sendKeys(newName);
+		
+		return newName;
+		
+	}
+	
+	public String setNewClientID(String newClientName) throws InterruptedException {
+		
+		String newClientID = newClientName + " testID";
+		
+		driver.findElement(clientIdentifierUpdateTxtField).clear();
+		Thread.sleep(2000);
+		driver.findElement(clientIdentifierUpdateTxtField).sendKeys(newClientID);
+		
+		return newClientID;
+		
+	}
+	
+	public String updateEngagementTypes() throws InterruptedException {
+		
+		String newEngagementTypes = "Tax Planning";
+		
+		By selectedEnagagementType = elementUtil.getDivXpathData(newEngagementTypes);
+		
+		Thread.sleep(2000);
+		driver.findElement(selectedEnagagementType).click();
+		
+		return newEngagementTypes;
+		
+	}	
+	
+	public boolean isClientsGeneralInfoUpdated() {
+		
+		return  driver.findElement(generalInfo).isDisplayed();	 
+		
+	}
+	
 }

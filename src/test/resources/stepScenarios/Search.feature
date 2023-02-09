@@ -6,8 +6,8 @@ Given User has already logged in to Imagine Time
 |paul.napadao@narrasoft.com	|Pnnwfh2021!|
 When User gets the title of the page
 Then Title page should be "Select Your Account"
-And User Select a firm "ImagineTime"
-Then Profile firm should be "ImagineTime"
+And User Select a firm "Paul QA Test Firm"
+Then Profile firm should be "Paul QA Test Firm"
 
 @test1
 Scenario: Search a Client
@@ -40,7 +40,7 @@ And Clients Settigs links should be displayed
 @test3
 Scenario: Search folder
 Given User is on All Client Workspaces page
-When User search "Folder1245"
+When User search "Dont Delete this folder"
 And Select the expected folder
 Then Client Workspace links should be displayed
 |Files					|
@@ -56,7 +56,7 @@ Then Client Workspace links should be displayed
 Scenario: Search File
 Given User is on All Client Workspaces page
 When User search "testfile12345.pdf"
-When User Enter a client name in advance search "QA Test"
+When User Enter a client name in advance search "Elavon"
 And Select the expected file
 Then File name should be correct
 And buttons should be displayed
@@ -69,27 +69,6 @@ And Links should also displayed
 |Private Notes			|
 |Details						|
 |Activity						|
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
