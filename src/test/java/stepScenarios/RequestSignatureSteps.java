@@ -18,7 +18,7 @@ public class RequestSignatureSteps {
 	private String expectedNotifiedSigner;
 
 	@When("User Click a file in General Files {string}")
-	public void user_click_a_file_in_general_files(String fileName) {
+	public void user_click_a_file_in_general_files(String fileName) throws InterruptedException {
 
 		requestSignature.clickFile(fileName);
 

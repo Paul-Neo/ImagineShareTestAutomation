@@ -44,14 +44,12 @@ public class FolderTemplateSteps {
 
 		
 		String description = templateInfo.get(0).get("Description");
-		String delegatedAdmin = templateInfo.get(0).get("Delegated Admin");
 		
-		String name = folderTemplatePage.setFolderTemplateName();
 		folderTemplatePage.setFolderTemplateDescription(description);
-		folderTemplatePage.setFolderTemplateDelegatedAdmin(delegatedAdmin);
+		folderTemplatePage.clickNewFolderButton();
+		String folderTemplateName = folderTemplatePage.setFolderTemplateName();
 		
-		
-		expectedTemplateFolderName = name;
+		expectedTemplateFolderName = folderTemplateName;
 	
 	}
 

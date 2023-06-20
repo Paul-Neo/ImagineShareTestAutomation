@@ -38,7 +38,7 @@ And Clients Settigs links should be displayed
 |Assigned Staff		|
 
 @test3
-Scenario: Search folder
+Scenario: Search folder in client workspace
 Given User is on All Client Workspaces page
 When User search "Dont Delete this folder"
 And Select the expected folder

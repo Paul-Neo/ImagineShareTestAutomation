@@ -82,6 +82,8 @@ public class ClientsPortalSteps {
 		Assert.assertTrue(subject.equals(clientsPortalPage.getSubjectText())
 				&& message.equals(clientsPortalPage.getMessageText()));
 		
+		nav.LogOut();//log out
+		
 	}
 
 	@When("User navigates to clients workspace with a Client Name {string}")//using

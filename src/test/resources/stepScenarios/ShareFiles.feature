@@ -35,7 +35,7 @@ When User Enter in Link Settings
 And Click Create Share Link button
 Then Selected file should be displayed
 When User Click Copy Link
-Then Link should be displayed "https://app.imaginetime.com/share"
+Then Link should be displayed
 
 @test3
 Scenario: Share a Single File on General Files using Direct Link in link setting
@@ -51,7 +51,7 @@ When User select a contact in dropdown and send a Email Message
 And Click Create Share Link button
 Then Selected file should be displayed
 When User Click Copy Link
-Then Link should be displayed "https://app.imaginetime.com/share"
+Then Link should be displayed
 
 @test4
 Scenario: Share a Single File on Clients Workspace
@@ -63,7 +63,7 @@ When User Enter in Link Settings
 |Question/Answer		|What is your social security number, without the dashes?	|123456789		|
 And Click Create Share Link button
 When User Click Copy Link
-Then Link should be displayed "https://app.imaginetime.com/share"
+Then Link should be displayed
 
 
 

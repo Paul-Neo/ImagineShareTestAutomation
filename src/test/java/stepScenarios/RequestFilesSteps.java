@@ -43,7 +43,7 @@ public class RequestFilesSteps {
 	}
 	
 	@When("Toggle Expiration date, Add Instructions and Send Emails")
-	public void toggle_expiration_date_add_instructions_and_send_emails() {
+	public void toggle_expiration_date_add_instructions_and_send_emails() throws InterruptedException {
 
 		requestFilesPage.clickToggles();
 		

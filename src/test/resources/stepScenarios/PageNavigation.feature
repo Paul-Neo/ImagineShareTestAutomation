@@ -13,7 +13,6 @@ Given User is on General Folder
 When User go to archive list
 Then Column Headers should be displayed
 |Filename		|
-|Client			|
 |Created By	|
 |Date				|
 When Filter per "25" pages

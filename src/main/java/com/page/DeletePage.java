@@ -2,7 +2,6 @@ package com.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import com.qa.util.NavigateUtil;
 import com.qa.util.ToolBarButtonsUtil;
 public class DeletePage {
@@ -28,30 +27,17 @@ public class DeletePage {
 	private By latestPDF_fileName = By.xpath("//div[@class='table-cell -pdf-80']/following::a[1]");
 	private By LatestPDF_File_CB = By.xpath("//div[@class='table-cell -pdf-80']/preceding::input[1]");
 	
-	private By LatestArchived = By.xpath("//a[@class='-filename'][1]");
-	private By latestArchived_CB = By.xpath("//a[@class='-filename']/preceding::input[1]");
-	
 	private By createNewFolder = By.xpath("//span[text()='Create new folder']");
 	private By folderName = By.xpath("//input[@name='folderName']");
 	private By saveButton = By.xpath("//button[text()='Save']");
 	private By latestFolderName = By.xpath("//div[@class='table-cell -folder-empty']/following::a[1]");
 	private By latestFolderCB = By.xpath("//div[@class='table-cell -folder-empty']/preceding::input[@type='checkbox'][1]");
 	
-	//private By processingBar = By.xpath("");
-	
 	public void clickLatestPDF_CB() {
 		
 		driver.findElement(LatestPDF_File_CB).click();
 	}
 	
-	public void clickLatestArchvied_CB() throws InterruptedException {
-		
-		Thread.sleep(3000);
-		driver.navigate().refresh();
-		Thread.sleep(3000);
-		driver.findElement(latestArchived_CB).click();
-		
-	}
 
 	public boolean isFileUploaded(String expectedFile) throws InterruptedException {
 
@@ -85,11 +71,7 @@ public class DeletePage {
 		driver.findElement(option).click();
 		driver.findElement(viewArchivedFiles).click();
 		driver.navigate().refresh();
-	}
-	
-	public String getLatestArchivedFile() {
-		
-		return driver.findElement(LatestArchived).getText();
+		Thread.sleep(3000);
 	}
 	
 	public void delete() throws InterruptedException {
@@ -110,7 +92,8 @@ public class DeletePage {
 				&& driver.findElement(delete_cancelButton).isDisplayed()) {
 			
 			driver.findElement(alertDeleteBtn).click();
-			Thread.sleep(2000);
+			
+			Thread.sleep(5000);
 		}
 		
 		
@@ -129,6 +112,7 @@ public class DeletePage {
 		ToolBarButtonsUtil toolBarUtil = new ToolBarButtonsUtil(driver);
 		
 		toolBarUtil.clickNewFolder(createNewFolder);
+		Thread.sleep(5000);
 		driver.findElement(this.folderName).sendKeys(folderName);
 		driver.findElement(saveButton).click();
 		driver.navigate().refresh();
@@ -149,6 +133,7 @@ public class DeletePage {
 		
 		driver.navigate().refresh();
 	}
+	
 	
 }
 	

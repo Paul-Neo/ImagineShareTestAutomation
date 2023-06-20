@@ -43,11 +43,12 @@ public class ShareFilesPage {
 	private By sendEmailsToggle = By.xpath("//input[@name='sendEmails']/following::span[@class='slider round'][1]");
 	private By emailMessage = By.xpath("//textarea[@name='emailMessage']");
 	private By recipientDropDown = By.xpath(
-			"//button[text()='Or enter an email address']/preceding::div[@class='css-16pqwjk-indicatorContainer react-select__indicator react-select__dropdown-indicator'][1]");
+			"//button[text()=' Or enter an email address ']/preceding::div[@class='css-16pqwjk-indicatorContainer react-select__indicator react-select__dropdown-indicator'][1]");
 	private By directLinkDropDown = By.xpath(
 			"//strong[contains(text(),'Who has access')]/following::div[@class='css-1wy0on6 react-select__indicators'][1]");
 
 	private By selectedRecipient;
+	private By applyFilterButton = By.xpath("//input[@placeholder='Search...']/following::button[text()='Apply Filter']");
 
 	
 	public void navigateToAllFilesTab() {
@@ -83,6 +84,8 @@ public class ShareFilesPage {
 	public void selectFile(String fileName) throws InterruptedException {
 
 		driver.findElement(searchBox).sendKeys(fileName);
+		driver.findElement(applyFilterButton).click();
+		Thread.sleep(5000);
 
 		By selectedFile = checkBoxUtil.getaPrecidingCheckBox(fileName);
 

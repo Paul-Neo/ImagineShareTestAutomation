@@ -40,9 +40,9 @@ public class UploadPage {
 	//Advance Settings elements
 	
 	private By advanceSettingsTab = By.xpath("//a[text()='Advanced Settings']");
-	private By updateButton = By.xpath("//button[text()='Update']");
-	private By fileUploadSettingsDropDown = By.xpath("//strong[text()='Default file uploads']/following::div[@class='css-1wy0on6 react-select__indicators'][1]");
-	private By saveButton = By.xpath("//button[text()='Save']");
+	private By editBtn = By.xpath("//button[text()='Edit']");
+	private By fileUploadSettingsDropDown = By.xpath("//div[text()='Default Status of Newly Uploaded Files']/following::div[@class='css-1wy0on6 react-select__indicators'][1]");
+	private By updateBtn = By.xpath("//button[text()='Update']");
 	
 	
 	
@@ -119,8 +119,11 @@ public class UploadPage {
 		scroll.scrollPage(-1500);
 		
 		driver.findElement(newFileButton).click();
+		Thread.sleep(2000);
 		driver.findElement(uploadNewFiles).click();
+		Thread.sleep(2000);
 		driver.findElement(browse).sendKeys(fileLoc);
+		Thread.sleep(2000);
 		driver.findElement(saveAndUpload).click();
 		Thread.sleep(5000);
 		driver.navigate().refresh();
@@ -195,13 +198,13 @@ public class UploadPage {
 
 		driver.findElement(FirmSettings).click();
 		driver.findElement(advanceSettingsTab).click();
-		driver.findElement(updateButton).click();
+		driver.findElement(editBtn).click();
 		
 		js.executeScript("window.scrollBy(0,-1500)");
 		Thread.sleep(2000);
 		
 		dropDown.selectFromDropDown(fileUploadSettingsDropDown, fileUploadSettings);
-		driver.findElement(saveButton).click();
+		driver.findElement(updateBtn).click();
 		
 	}
 	

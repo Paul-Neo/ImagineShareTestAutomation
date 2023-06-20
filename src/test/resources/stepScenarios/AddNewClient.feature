@@ -45,6 +45,22 @@ When User select a client
 And Updates client info
 Then Clients info should be updated
 
+@test3
+Scenario: Add Clients Primary Phone
+Given User added a new Client
+When User select a client
+And Enter Phone number
+And User click set primary
+Then Number should be set as primary
+
+@test4
+Scenario: Add Clients Primary Address
+Given User added a new Client
+When User select a client
+And Enter Address
+And User click set primary
+Then Address should be set as primary
+
 
 	
 

@@ -46,7 +46,8 @@ public class ToolBarButtonsUtil {
 		
 		ScrollUtil scroll = new ScrollUtil(driver);
 		scroll.scrollPage(-1500);
-		driver.findElement(newLinkBtn).click();;
+		driver.findElement(newLinkBtn).click();
+		Thread.sleep(3000);
 		driver.findElement(linkAction).click();
 		Thread.sleep(3000);
 		
@@ -57,6 +58,7 @@ public class ToolBarButtonsUtil {
 		ScrollUtil scroll = new ScrollUtil(driver);
 		scroll.scrollPage(-1500);
 		driver.findElement(newFolderBtn).click();
+		Thread.sleep(3000);
 		driver.findElement(selectedButton).click();
 		Thread.sleep(3000);
 	
@@ -94,6 +96,7 @@ public class ToolBarButtonsUtil {
 		ScrollUtil scroll = new ScrollUtil(driver);
 		scroll.scrollPage(-1500);
 		driver.findElement(staffSetingsBtn).click();
+		Thread.sleep(2000);
 		driver.findElement(selectedSettings).click();
 		Thread.sleep(3000);
 		

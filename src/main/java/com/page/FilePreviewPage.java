@@ -31,13 +31,13 @@ public class FilePreviewPage {
 	private By assocClientDropDown = By.xpath("//small[text()='Associated Client: ']/following::div[@class='css-1pcexqc-container']");
 	private By tagsDropDown = By.xpath("//div[@class='css-16pqwjk-indicatorContainer']");
 	private By filesTab = By.xpath("//a[text()='Files']");
-	private By PDF_tronStatus = By.xpath("//strong[contains(text(),'PDFtron')]/following::p[@class='-to-display'][1]");
-	private By updateButton = By.xpath("//button[text()='Update']");
-	private By switchOn = By.xpath("//strong[contains(text(),'PDFtron')]/following::label[@class='switch'][1]");
+	private By PDF_tronStatus = By.xpath("//div[text()='Enable PDF Editing (using PDFtron)?']/following::div[1]");
+	private By editButton = By.xpath("//button[text()='Edit']");
+	private By switchSpan = By.xpath("//div[text()='Enable PDF Editing (using PDFtron)?']//following::span[1]");
 	private By firmSettings = By.xpath("//span[text()='Firm Settings']");
 	private By advanceSettings = By.xpath("//a[text()='Advanced Settings']");
 	private By pdfIcon = By.xpath("//i[@class='far fa-edit fa-lg']");
-	private By saveButton = By.xpath("//button[text()='Save']");
+	private By updateButton = By.xpath("//button[text()='Update']");
 	private By pdfEditorIframe = By.xpath("//div[@class='custom-ribbons-container']");
 	private By pdfEditorToolBarButtons = By.cssSelector("div.tool-group-buttons-scroll button");
 	
@@ -45,8 +45,6 @@ public class FilePreviewPage {
 	
 	public String clickPDF_file() throws InterruptedException {
 		
-		
-		Thread.sleep(5000);
 		driver.findElement(latestPDF_file).click();
 		Thread.sleep(5000);
 		return driver.findElement(PDFfileName).getText();
@@ -135,18 +133,18 @@ public class FilePreviewPage {
 		
 		String actualStatus = driver.findElement(PDF_tronStatus).getText();
 		
-		if(actualStatus.equals("Off")) {
+		if(actualStatus.equals("No")) {
 			
 			ScrollUtil scrollDown = new ScrollUtil(driver);
 			
 			scrollDown.scrollPage(1000);//scroll down
 			Thread.sleep(2000);
-			driver.findElement(updateButton).click();
+			driver.findElement(editButton).click();
 			Thread.sleep(2000);
 			scrollDown.scrollPage(-2000);//scroll up
-			driver.findElement(switchOn).click();
+			driver.findElement(switchSpan).click();
 			scrollDown.scrollPage(1000);//scroll down
-			driver.findElement(saveButton).click();
+			driver.findElement(updateButton).click();
 			Thread.sleep(5000);
 			
 		}

@@ -61,34 +61,39 @@ public class RequestFilesPage {
 		Thread.sleep(2000);
 	}
 	
-	public void clickToggles() {
+	public void clickToggles() throws InterruptedException {
 		
 		driver.findElement(expirationToggle).click();
 		driver.findElement(instructionsToggle).click();
 		driver.findElement(sendEmailsToggle).click();
 		driver.findElement(receiveEmailsToggle).click();
+		Thread.sleep(3000);
 	}
 	
-	public void enterInstructions(String instructions) {
+	public void enterInstructions(String instructions) throws InterruptedException {
 		
 		driver.findElement(this.instructions).sendKeys(instructions);
+		Thread.sleep(2000);
 	}
 	
-	public void enterEmailMessage(String emailMessage) {
+	public void enterEmailMessage(String emailMessage) throws InterruptedException {
 		
 		driver.findElement(this.emailMessage).sendKeys(emailMessage);
+		Thread.sleep(2000);
 		
 	}
 	
 	public void clickSendMailsDropDown(String sendMails) throws InterruptedException {
 		
 		dropDown.selectFromDropDown(sendMailsDropDown, sendMails);
+		Thread.sleep(2000);
 		
 	}
 	
 	public void clickRecieveDropDown(String recieveEmails) throws InterruptedException {
 		
 		dropDown.selectFromDropDown(receiveMailsDropDown, recieveEmails);
+		Thread.sleep(2000);
 	}
 	
 	public void clickSelectFolderBtn() throws InterruptedException {

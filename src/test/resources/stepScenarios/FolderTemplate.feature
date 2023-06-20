@@ -16,8 +16,8 @@ When User is on "Folder Templates" tab
 And Click New Template button
 Then Create Template window should be displayed with header message "Create Template"
 When User Enters Template info
-|Description		|Delegated Admin		|
-|For Test Only	|Larry Bird					|
+|Description		|
+|For Test Only	|
 And Click create template
 Then New template should be added on the list
 When User Select a Folder Template

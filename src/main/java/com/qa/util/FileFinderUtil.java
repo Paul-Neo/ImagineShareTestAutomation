@@ -34,11 +34,13 @@ public class FileFinderUtil {
 		List<String> lists = new ArrayList<>();
 
 		int counter = 0;
-		boolean selectedCLientNotFound = true;
+		boolean selectedClientNotFound = true;
 
 		do {
 			List<WebElement> elementsLists = driver.findElements(dataLists);
+			
 			int clientCount = elementsLists.size();
+			
 			for (WebElement e : elementsLists) {
 				counter++;
 				String currentValue = e.getText();
@@ -50,8 +52,8 @@ public class FileFinderUtil {
 					if (driver.findElement(selectedValue).isDisplayed()) {
 
 						driver.findElement(selectedValue).click();
-						Thread.sleep(3000);
-						selectedCLientNotFound = false;
+						Thread.sleep(5000);
+						selectedClientNotFound = false;
 						break;
 					}
 
@@ -65,9 +67,9 @@ public class FileFinderUtil {
 
 			}
 
-			System.out.println(selectedCLientNotFound);
+			System.out.println(selectedClientNotFound);
 
-		} while (selectedCLientNotFound);
+		} while (selectedClientNotFound);
 
 	}
 	
@@ -81,7 +83,7 @@ public class FileFinderUtil {
 		List<String> lists = new ArrayList<>();
 
 		int counter = 0;
-		boolean selectedCLientNotFound = true;
+		boolean selectedClientNotFound = true;
 
 		do {
 			List<WebElement> elementsLists = driver.findElements(dataLists);
@@ -97,7 +99,7 @@ public class FileFinderUtil {
 					if (driver.findElement(selectedValue).isDisplayed()) {
 
 						driver.findElement(selectedValue).click();
-						selectedCLientNotFound = false;
+						selectedClientNotFound = false;
 						break;
 					}
 
@@ -110,9 +112,9 @@ public class FileFinderUtil {
 
 			}
 
-			System.out.println(selectedCLientNotFound);
+			System.out.println(selectedClientNotFound);
 
-		} while (selectedCLientNotFound);
+		} while (selectedClientNotFound);
 
 	}
 	
@@ -123,7 +125,7 @@ public class FileFinderUtil {
 		List<String> lists = new ArrayList<>();
 
 		int counter = 0;
-		boolean selectedCLientNotFound = true;
+		boolean selectedClientNotFound = true;
 
 		do {
 			List<WebElement> elementsLists = driver.findElements(assignedStaffList);
@@ -139,7 +141,7 @@ public class FileFinderUtil {
 					if (driver.findElement(selectedValue).isDisplayed()) {
 
 						driver.findElement(selectedValue).click();
-						selectedCLientNotFound = false;
+						selectedClientNotFound = false;
 						break;
 					}
 
@@ -152,9 +154,9 @@ public class FileFinderUtil {
 
 			}
 
-			System.out.println(selectedCLientNotFound);
+			System.out.println(selectedClientNotFound);
 
-		} while (selectedCLientNotFound);
+		} while (selectedClientNotFound);
 
 	}
 
@@ -168,7 +170,7 @@ public class FileFinderUtil {
 		List<String> lists = new ArrayList<>();
 
 		int counter = 0;
-		boolean selectedCLientNotFound = true;
+		boolean selectedClientNotFound = true;
 
 		do {
 			List<WebElement> elementsLists = driver.findElements(dataLists);
@@ -185,7 +187,7 @@ public class FileFinderUtil {
 
 						driver.findElement(selectedValue).click();
 						expectedClientName = driver.findElement(clientName).getText();
-						selectedCLientNotFound = false;
+						selectedClientNotFound = false;
 						break;
 					}
 
@@ -198,9 +200,9 @@ public class FileFinderUtil {
 
 			}
 
-			System.out.println(selectedCLientNotFound);
+			System.out.println(selectedClientNotFound);
 
-		} while (selectedCLientNotFound);
+		} while (selectedClientNotFound);
 
 		return expectedClientName;
 	}
@@ -216,7 +218,7 @@ public class FileFinderUtil {
 
 		int counter = 0;
 		
-		boolean selectedCLientNotFound = true;
+		boolean selectedClientNotFound = true;
 
 		do {
 			List<WebElement> elementsLists = driver.findElements(dataLists);
@@ -238,7 +240,7 @@ public class FileFinderUtil {
 						
 						driver.findElement(selectedValue).click();
 					
-						selectedCLientNotFound = false;
+						selectedClientNotFound = false;
 						break;
 					}
 
@@ -251,14 +253,14 @@ public class FileFinderUtil {
 
 			}
 
-			System.out.println(selectedCLientNotFound);
+			System.out.println(selectedClientNotFound);
 
-		} while (selectedCLientNotFound);
+		} while (selectedClientNotFound);
 		
 		return staffCountIntValue;
 	}
 
-	public String clickFileName(String expectedValue) {
+	public String clickFileName(String expectedValue) throws InterruptedException {
 
 		selectedValue = elementUtil.get_a_XpathData(expectedValue);
 
@@ -268,7 +270,7 @@ public class FileFinderUtil {
 		List<String> lists = new ArrayList<>();
 
 		int counter = 0;
-		boolean selectedCLientNotFound = true;
+		boolean selectedClientNotFound = true;
 
 		do {
 			List<WebElement> elementsLists = driver.findElements(dataLists);
@@ -285,7 +287,7 @@ public class FileFinderUtil {
 
 						driver.findElement(selectedValue).click();
 						expectedClientName = driver.findElement(clientName).getText();
-						selectedCLientNotFound = false;
+						selectedClientNotFound = false;
 						break;
 					}
 
@@ -294,17 +296,19 @@ public class FileFinderUtil {
 					counter = 0;
 					System.out.println("Clicking next button");
 					driver.findElement(nextPageButton).click();
+					Thread.sleep(3000);
 				}
 
 			}
 
-			System.out.println(selectedCLientNotFound);
+			System.out.println(selectedClientNotFound);
 
-		} while (selectedCLientNotFound);
+		} while (selectedClientNotFound);
 
 		return expectedClientName;
 	}
-
+	
+	
 	public String selectLatestPDF_file() throws InterruptedException {
 		
 		Thread.sleep(6000);

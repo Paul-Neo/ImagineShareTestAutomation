@@ -45,6 +45,44 @@ public class GenerateRandomStrings {
 		
 		return emailAddress;
 	}
+	
+	public String generatePhoneNumber() {
+		
+		String phoneNumber = faker.phoneNumber().cellPhone().toString();	
+
+		return phoneNumber;
+	}
+	
+	public String generateAddress1() {
+		
+		String address = faker.address().streetAddress();
+		
+		return address;
+	}
+	
+	public String generateAddress2() {
+		
+		String address2 = faker.address().buildingNumber();
+		
+		return address2;
+	}
+	
+	public String generateCity() {
+		
+		String city = faker.address().cityName();
+		
+		return city;
+	}
+	
+	public String generatePostalCode() {
+		
+		String postalCode = faker.address().zipCode();
+		
+		return postalCode;
+		
+	}
+	
+	
 }
 
 

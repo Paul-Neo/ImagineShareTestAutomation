@@ -15,7 +15,7 @@ import com.qa.util.GenerateRandomStrings;
 public class AddNewClientPage {
 
 	private ElementUtil elementUtil = new ElementUtil();
-	private GenerateRandomStrings generateRandomNames = new GenerateRandomStrings();
+	private GenerateRandomStrings generateRandomStrings = new GenerateRandomStrings();
 
 	private WebDriver driver;
 
@@ -55,20 +55,57 @@ public class AddNewClientPage {
 	
 	private By generalInfo = By.cssSelector("div.-static p");
 	
+	//General Info - Add Primary number
+	private By addPhoneBtn = By.xpath("//button[text()=' Add phone']");
+	private By phoneTypeDropdown = By.xpath("//strong[text()='Primary Phone']/following::div[@class='css-1wy0on6 react-select__indicators'][1]");
+	private By phoneNumberTxtField = By.xpath("//input[@type='tel']");
+	private By setAsPrimaryLink = By.xpath("//small[contains(text(),'Primary')]");
+	private By addPhoneNumberBtn = By.xpath("//button[text()='Add Phone Number']");
+	private By primaryPhoneNumber = By.xpath("//p[text()='Mobile:']/following::p[1]");
+	
+	//General Ino - Add Primary Address
+	private By addAddressBtn = By.xpath("//button[text()=' Add address']");
+	private By streetAddress1TextField = By.xpath("//input[@name='address.street1']");
+	private By streetAddress2TextField = By.xpath("//input[@name='address.street2']");
+	private By cityTextField = By.xpath("//input[@name='address.city']");
+	private By postalCodeTextField = By.xpath("//input[@name='address.postal']");
+	private By addAddress2Btn = By.xpath("//button[text()='Add Address']");
+	private String dropDown = "//label[text()='{0}']/following::div[@class='css-1wy0on6 react-select__indicators'][1]";
+	private By fullAddressLabel = By.xpath("//div[@class='-address']");
 	
 	public void navigateToClientSettingsPage() {
 
 		driver.findElement(clientSettingsPage).click();
 	}
 
+	public void clickAddAddress() throws InterruptedException {
+		
+		driver.findElement(addAddressBtn).click();
+		Thread.sleep(2000);
+		
+	}
+	
 	public void clickNewClientButton() {
 
 		driver.findElement(newClientBtn).click();
 	}
 
+	public void clickSetPrimary() throws InterruptedException {
+		
+		driver.findElement(setAsPrimaryLink).click();
+		Thread.sleep(3000);
+	}
+	
 	public void clickCreateNewClientLink() {
 
 		driver.findElement(createNewClientLink).click();
+	}
+	
+	public void clickNext() throws InterruptedException {
+
+		driver.findElement(nextBtn).click();
+		Thread.sleep(2000);
+		
 	}
 
 	public void assignStaffAndSelectEngagementTypes(String StaffName, String enagagementTypes) throws InterruptedException {
@@ -88,8 +125,8 @@ public class AddNewClientPage {
 	public String setClientName() throws InterruptedException {
 		
 		
-		String firstName = generateRandomNames.generateFirstName();
-		String lastName = generateRandomNames.generateLastName();
+		String firstName = generateRandomStrings.generateFirstName();
+		String lastName = generateRandomStrings.generateLastName();
 		
 		String clientName = firstName + " " +  lastName;
 		
@@ -113,13 +150,68 @@ public class AddNewClientPage {
 		
 	}
 	
-	public void clickNext() throws InterruptedException {
-
-		driver.findElement(nextBtn).click();
+	public void clickAddAddress2() throws InterruptedException {
+		
+		driver.findElement(addAddress2Btn).click();
+		Thread.sleep(2000);
+	}
+	
+	public String setStreetAddress1() throws InterruptedException {
+		
+		String address = generateRandomStrings.generateAddress1();
+		
+		driver.findElement(streetAddress1TextField).sendKeys(address);
 		Thread.sleep(2000);
 		
+		return address;
 	}
-
+	
+	public String setStreetAddress2() throws InterruptedException {
+		
+		String address = generateRandomStrings.generateAddress2();
+		
+		driver.findElement(streetAddress2TextField).sendKeys(address);
+		Thread.sleep(2000);
+		
+		return address;
+	}
+	
+	public String setCity() throws InterruptedException {
+		
+		String city = generateRandomStrings.generateCity();
+		
+		driver.findElement(cityTextField).sendKeys(city);
+		Thread.sleep(2000);
+		
+		return city;
+		
+	}
+	
+	public String setPostalCode() throws InterruptedException {
+		
+		String postalCode = generateRandomStrings.generatePostalCode();
+		
+		driver.findElement(postalCodeTextField).sendKeys(postalCode);
+		Thread.sleep(2000);
+		
+		return postalCode;
+	}
+	
+	public String selectValueInAddressDropdown(String labelName, String selectedValue) {
+		
+		//Set Country or Set State
+		
+		DropDownUtil dropdown = new DropDownUtil(driver);
+		
+		By dropDownElement = By.xpath(dropDown.replace("{0}", labelName));
+		
+		dropdown.selectFromDropDown(dropDownElement, selectedValue);
+		
+		
+		return selectedValue;
+		
+	}
+	
 	public List<String> getStaffNotifications() {
 
 		List<String> list = new ArrayList<>();
@@ -223,7 +315,7 @@ public class AddNewClientPage {
 	
 	public String setNewClientName() throws InterruptedException {
 		
-		String newName = generateRandomNames.generateFirstName() + " " + generateRandomNames.generateLastName();
+		String newName = generateRandomStrings.generateFirstName() + " " + generateRandomStrings.generateLastName();
 		
 		driver.findElement(clientNameUpdateTxtField).clear();
 		Thread.sleep(2000);
@@ -263,5 +355,34 @@ public class AddNewClientPage {
 		return  driver.findElement(generalInfo).isDisplayed();	 
 		
 	}
+	
+	public void setPhoneNumber() throws InterruptedException {
+		
+		DropDownUtil dropDown = new DropDownUtil(driver);
+		
+		String phoneNumber = generateRandomStrings.generatePhoneNumber();
+		
+		
+		driver.findElement(addPhoneBtn).click();
+		dropDown.selectFromDropDown(phoneTypeDropdown, "Mobile");
+		driver.findElement(phoneNumberTxtField).sendKeys(phoneNumber);
+		Thread.sleep(5000);
+		driver.findElement(addPhoneNumberBtn).click();
+		Thread.sleep(3000);
+	
+		
+	}
+	
+	public boolean isPhoneNumberSetAsPrimary() {
+		
+		return driver.findElement(primaryPhoneNumber).isDisplayed();
+	}
+	
+	public String getFullAddress() {
+		
+		return driver.findElement(fullAddressLabel).getText();
+		
+	}
+	
 	
 }

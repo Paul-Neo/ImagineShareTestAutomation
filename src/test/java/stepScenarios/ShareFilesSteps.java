@@ -115,8 +115,12 @@ public class ShareFilesSteps {
 		sharefilesPage.clickCopyLink();
 	}
 
-	@Then("Link should be displayed {string}")
-	public void link_should_be_displayed(String baseLink) {
+	@Then("Link should be displayed")
+	public void link_should_be_displayed() {
+
+//		String baseLink = "https://app.imaginetime.com/share";
+		String baseLink = "https://test-app.imaginetime.com";
+		
 
 		// checks the beginning of the link.
 

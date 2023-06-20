@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
 
 		features = {"src/test/resources/stepScenarios"}, 
 		glue = {"stepScenarios"},
-//		tags = "@test3",
+//		tags = "@test1",
 		plugin = { "pretty", 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"timeline:test-output-thread/",

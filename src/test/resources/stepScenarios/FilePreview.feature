@@ -34,7 +34,7 @@ Then file should be moved on selected associated client
 
 @test4
 Scenario: Move a file through associated clients in General Folder
-Given User Uploaded a file in General Files "Delete.pdf"
+Given User Uploaded a file in General Files "Move.pdf"
 When User Clicks a PDF file
 And Click Details link
 When User selects associated client "Lebron James"

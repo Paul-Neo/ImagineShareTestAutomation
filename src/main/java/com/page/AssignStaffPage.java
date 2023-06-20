@@ -29,7 +29,7 @@ public class AssignStaffPage {
 	private By staffLists = By.cssSelector("tr.-staff-item a");
 	private By unAssignButton = By.xpath("//button[text()='Unassigned staff ']");
 	private By confirmUnassign = By.xpath("//button[text()='Yes']");
-	private By selectAllStaffs = By.xpath("//a[text()='Assigned Staff']/following::input[1]");
+	private By selectAllStaffsCheckBox = By.xpath("//a[text()='Assigned Staff']/following::input[1]");
 	private By expectedMessage = By.cssSelector("div.u-centerText h3");
 
 	public boolean areToolBarButtonsEnabled() {
@@ -114,7 +114,7 @@ public class AssignStaffPage {
 
 	}
 
-	public List<String> getAssignedStaffs() {
+	public List<String> getAssignedStaffs() throws InterruptedException {
 
 		List<String> list = new ArrayList<>();
 		List<WebElement> elementList = driver.findElements(staffLists);
@@ -126,6 +126,7 @@ public class AssignStaffPage {
 			list.add(staffName);
 		}
 
+		Thread.sleep(3000);
 		return list;
 	}
 
@@ -162,9 +163,10 @@ public class AssignStaffPage {
 		driver.findElement(assignedStaffTab).click();
 	}
 
-	public void selectAllStaffs() {
+	public void selectAllStaffs() throws InterruptedException {
 
-		driver.findElement(selectAllStaffs).click();
+		driver.findElement(selectAllStaffsCheckBox).click();
+		Thread.sleep(2000);
 	}
 
 	public String getExpectedMessage() {

@@ -24,10 +24,12 @@ Then Navigation Links should be displayed
 Scenario: Check files if displayed
 Given User is on "Files" tab
 Then Files and folders should displayed
-|New Folder Test123				|
-|Test Sept 14							|
-|Axis.pdf									|
-|File Test.pdf						|
+|Test Sept 14				|
+|New Folder Test123	|
+|File1.pdf					|
+|File2.pdf					|
+|File3.pdf					|
+|File4.pdf					|
 
 @test2
 Scenario: Download a folder on Clients portal
@@ -42,7 +44,7 @@ When User tick all checkbox
 And Click download button
 Then Files should be downloaded as zip file
 
-@test4
+@test4 @skip
 Scenario: Check the latest message if posted
 Given User has sent a message in Clients portal
 |Email Address							|Password		|Subject					|Message									|

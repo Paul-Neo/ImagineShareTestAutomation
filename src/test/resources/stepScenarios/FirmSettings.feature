@@ -11,7 +11,6 @@ Then Title page should be "Select Your Account"
 Scenario: Cancel firm Subscription
 Given User is on accounts page
 Then Firms should be displayed
-|Avalon Systems								|
 |QA Test											|
 |ImagineTime									|
 |IS - Mangobilling Test Firm	|
@@ -34,7 +33,6 @@ When User Go to Admin
 And Click a firm "Paul QA Test Firm"
 And Update subscription status "Trialing"
 Then Firms should be displayed
-|Avalon Systems								|
 |QA Test											|
 |ImagineTime									|
 |IS - Mangobilling Test Firm	|
@@ -54,6 +52,7 @@ Then Links should be displayed
 |Custom Tags					|
 |Advanced Settings		|
 |Folder Templates			|
+|Request Lists				|
 |Integrations					|
 
 

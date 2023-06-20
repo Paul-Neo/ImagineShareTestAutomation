@@ -21,7 +21,7 @@ public class SearchSteps {
 	private String fileName;
 
 	@When("User search {string}")
-	public void user_search(String name) {
+	public void user_search(String name) throws InterruptedException {
 
 		clientsName = name;
 		search.search(name);
@@ -104,7 +104,9 @@ public class SearchSteps {
 		String actualFileName = searchPage.getFileName();
 		System.out.println("Actual File Name is: " + actualFileName);
 
-		Assert.assertTrue(fileName.equals(actualFileName));
+//		Assert.assetE(fileName.equals(actualFileName));
+		
+		Assert.assertEquals(fileName,actualFileName);
 	}
 
 	@Then("buttons should be displayed")
@@ -122,7 +124,9 @@ public class SearchSteps {
 		List<String> expectedLinks = dataTable.asList(String.class);
 		List<String> actualLinks = searchPage.getfilePreviewNavlinks();
 
-		Assert.assertTrue(expectedLinks.equals(actualLinks));
+//		Assert.assertTrue(expectedLinks.equals(actualLinks));
+		
+		Assert.assertEquals(expectedLinks,actualLinks);
 
 	}
 

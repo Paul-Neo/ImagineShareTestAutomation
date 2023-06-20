@@ -26,6 +26,8 @@ public class NavigateUtil {
 
 	private By profileDropDown = By.xpath("//div[@class='-profile-info']");
 	private By myProfile = By.xpath("//a[text()='My Profile ']");
+	private By logOut = By.xpath("//a[text()='Logout']");
+	
 	
 
 	
@@ -90,6 +92,13 @@ public class NavigateUtil {
 		Thread.sleep(10000);
 	}
 	
+	public void LogOut() throws InterruptedException {
+		
+		driver.findElement(profileDropDown).click();
+		driver.findElement(logOut).click();
+		driver.navigate().refresh();
+		Thread.sleep(5000);
+	}
 	
 	
 }

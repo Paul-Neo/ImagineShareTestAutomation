@@ -12,7 +12,7 @@ Then Profile firm should be "Paul QA Test Firm"
 @test1
 Scenario: Check notification when Assigning a Staff
 Given User is on Client Settings page
-When User Selects a client "Lebron James"
+When User Selects a client "Steph Curry"
 Then Tool Bar buttons should enabled
 When User click Assign Staff button
 Then A modal should be displayed with header message "Assign staff"
@@ -39,7 +39,6 @@ Then Assined staffs should be dispalyed
 |Paul Napadao		|
 |Larry Bird			|
 |Michael Jordan	|
-
 When User unassign a staff "Michael Jordan"
 Then Staff should be removed from the list
 |Paul Napadao		|

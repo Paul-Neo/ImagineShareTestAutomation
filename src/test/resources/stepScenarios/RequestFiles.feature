@@ -19,7 +19,7 @@ When User Enter in Link Settings
 |Question/Answer		|What is your social security number, without the dashes?	|123456789		|
 And Click Create request files link
 When User Click Copy Link
-Then Link should be displayed "https://app.imaginetime.com/request/file"
+Then Link should be displayed
 
 @test2
 Scenario: Request files to Client Workspace
@@ -34,7 +34,7 @@ And User Enters the following Informations
 |Please upload a file	|Paul Contact				|Test Message				|paul.napadao@narrasoft.com		|
 And Click Create request files link
 When User Click Copy Link
-Then Link should be displayed "https://app.imaginetime.com/request/file"
+Then Link should be displayed
 
 @test3
 Scenario: Add a new folder when choose a file upload location
@@ -47,5 +47,5 @@ And Add a new folder
 When User Select "Direct Link" in Link Settings
 And Click Create request files link
 When User Click Copy Link
-Then Link should be displayed "https://app.imaginetime.com/request/file"
+Then Link should be displayed
 

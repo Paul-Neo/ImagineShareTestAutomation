@@ -41,7 +41,7 @@ public class RequestSignaturePage {
 	private By individualAuthAnswer = By.xpath("//input[@placeholder = 'Shared answer' and @value = '']");
 	
 	
-	public void clickFile(String fileName) {
+	public void clickFile(String fileName) throws InterruptedException {
 
 		FileFinderUtil fileFinder = new FileFinderUtil(driver);
 
@@ -90,7 +90,7 @@ public class RequestSignaturePage {
 	public void clickPrepareRequestButton() throws InterruptedException {
 
 		driver.findElement(prepareRequestButton).click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 	}
 
 	public boolean isSignatureReqCreated() {

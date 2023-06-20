@@ -21,7 +21,7 @@ Then File should be downloaded
 @test2
 Scenario: download a folder from a client
 Given User is on Client Workspace "QA Test"
-When User download "Folder 1" folder
+When User download "Dont Delete this folder" folder
 Then folder should be downloaded as zip file
 
 @test3

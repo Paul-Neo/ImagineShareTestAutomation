@@ -45,14 +45,10 @@ public class SearchPage {
 
 		ElementUtil elementUtil = new ElementUtil();
 		
-//		By folderName = By.xpath("//div[text()='" + name + "']");
-//		driver.findElement(folderName).click();
-		
-		
 		By folderName =  elementUtil.getDivXpathData(name);
 		
-		Thread.sleep(2000);
 		driver.findElement(folderName).click();
+		Thread.sleep(7000);
 		
 		
 	}

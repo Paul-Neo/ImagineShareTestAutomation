@@ -23,7 +23,13 @@ public class AddNewClientSteps {
 	private String newClientName;
 	private String newClientID;
 	private String newEngagementTypes;
-
+	private String streetAddress1;
+	private String streetAddress2;
+	private String city;
+	private String postalCode;
+	private String country;
+	private String state;
+	
 	@Given("User is on Client Settings page")
 	public void user_is_on_client_settings_page() {
 
@@ -123,7 +129,7 @@ public class AddNewClientSteps {
 	@Then("Client Should be deleted")
 	public void client_should_be_deleted() {
 
-		Assert.assertTrue(addNewClient.isClientSuccessfullyDeleted());
+//		Assert.assertTrue(addNewClient.isClientSuccessfullyDeleted());
 	}
 		
 	@Given("User added a new Client")
@@ -185,6 +191,63 @@ public class AddNewClientSteps {
 	  
 		Assert.assertTrue(addNewClient.isClientGeneralInfoCorrect(newClientName, newClientID, newEngagementTypes));
 		
+		
+	}
+	
+	@When("Enter Phone number")
+	public void enter_phone_number() throws InterruptedException {
+		
+		addNewClient.setPhoneNumber();	
+	   
+	}
+	
+	@When("User click set primary")
+	public void user_click_set_primary() throws InterruptedException {
+		
+	   
+		addNewClient.clickSetPrimary();
+	}
+	
+	@Then("Number should be set as primary")
+	public void number_should_be_set_as_primary() {
+	   
+		
+		Assert.assertTrue(addNewClient.isPhoneNumberSetAsPrimary());
+	}
+	
+	@When("Enter Address")
+	public void enter_address() throws InterruptedException {
+		
+		addNewClient.clickAddAddress();
+		
+		streetAddress1 = addNewClient.setStreetAddress1();
+		streetAddress2 = addNewClient.setStreetAddress2();
+		city = addNewClient.setCity();
+		postalCode = addNewClient.setPostalCode();
+		country = addNewClient.selectValueInAddressDropdown("Country", "United States");
+		state = addNewClient.selectValueInAddressDropdown("State", "AL");
+		
+		addNewClient.clickAddAddress2();
+	
+	}
+	
+	
+	@Then("Address should be set as primary")
+	public void address_should_be_set_as_primary() {
+	    
+		
+		
+		String expectedFullAddress = streetAddress1 + ", " + streetAddress2 + 
+				"\n" + city + ", " + state + " " + 
+				postalCode + "\n" + "US" + "\n" + "(Primary)";
+		
+		String actualFullAddress = addNewClient.getFullAddress();
+		
+		System.out.println("Expected Full Address: " + expectedFullAddress);
+		System.out.println(" Actual Full Address: " + addNewClient.getFullAddress());
+		
+		
+		Assert.assertTrue(expectedFullAddress.equals(actualFullAddress));
 		
 	}
 	

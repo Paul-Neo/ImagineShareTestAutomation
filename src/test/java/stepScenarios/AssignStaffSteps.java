@@ -92,7 +92,7 @@ public class AssignStaffSteps {
 	}
 
 	@Then("Assined staffs should be dispalyed")
-	public void assined_staffs_should_be_dispalyed(DataTable dataTable) {
+	public void assined_staffs_should_be_dispalyed(DataTable dataTable) throws InterruptedException {
 
 		List<String> expectedStaffLists = dataTable.asList();
 
@@ -113,7 +113,7 @@ public class AssignStaffSteps {
 	}
 
 	@Then("Staff should be removed from the list")
-	public void staff_should_be_removed_from_the_list(DataTable dataTable) {
+	public void staff_should_be_removed_from_the_list(DataTable dataTable) throws InterruptedException {
 
 		List<String> expectedStaffLists = dataTable.asList();
 
@@ -154,8 +154,8 @@ public class AssignStaffSteps {
 	}
 
 	@When("User select all assigned staffs")
-	public void user_select_all_assigned_staffs() {
-
+	public void user_select_all_assigned_staffs() throws InterruptedException {
+		
 		assignStaffPage.selectAllStaffs();
 	}
 
@@ -163,6 +163,7 @@ public class AssignStaffSteps {
 	public void click_unassigned_staff() throws InterruptedException {
 
 		assignStaffPage.unassignStaff();
+		Thread.sleep(2000);
 	}
 
 	@Then("Message should be displayed {string}")
