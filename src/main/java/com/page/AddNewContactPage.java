@@ -12,8 +12,9 @@ import com.qa.util.DropDownUtil;
 import com.qa.util.FileFinderUtil;
 import com.qa.util.GenerateRandomStrings;
 import com.qa.util.NavigateUtil;
+import com.qa.util.PageActions;
 
-public class AddNewContactPage {
+public class AddNewContactPage extends PageActions{
 
 	private WebDriver driver;
 	private GenerateRandomStrings generateRandomStrings = new GenerateRandomStrings();
@@ -25,9 +26,9 @@ public class AddNewContactPage {
 	private By allContactsPage = By.xpath("//span[text()='All ' and text()=' Contacts']");
 	private By contactsList = By.cssSelector("tbody a");
 	private By addContactsBtn = By.xpath("//a[text()='Add contacts']");
-	private By emailAddress = By.xpath("//input[@name='email']");
-	private By fullName = By.xpath("//input[@name='fullname']");
-	private By personalNote = By.xpath("//textarea[@name='personalNote']");
+	private By emailAddressTxtField = By.xpath("//input[@name='email']");
+	private By fullNameTxtField = By.xpath("//input[@name='fullname']");
+	private By personalNoteTxtField = By.xpath("//textarea[@name='personalNote']");
 	private By sendNowBtn = By.xpath("//span[text()=' Send now']");
 	private By uploadAndSendInviteBtn = By.xpath("//button[text()='Yes, upload and send invite']");
 	private By InvitationResultModelCloseBtn = By.xpath("//button[text()='Close']");
@@ -68,10 +69,16 @@ public class AddNewContactPage {
 		String emailAddress = firstName + lastName + "@gmail.com";
 		String personalNote = "Personal Note Test";
 		
-		driver.findElement(this.emailAddress).sendKeys(emailAddress);
-		driver.findElement(this.fullName).sendKeys(fullName);
-		driver.findElement(this.personalNote).sendKeys(personalNote);
-		Thread.sleep(2000);
+//		driver.findElement(this.emailAddress).sendKeys(emailAddress);
+//		driver.findElement(this.fullName).sendKeys(fullName);
+//		driver.findElement(this.personalNote).sendKeys(personalNote);
+		
+		sendKeys(driver, emailAddressTxtField, emailAddress);
+		sendKeys(driver, fullNameTxtField, fullName);
+		sendKeys(driver, personalNoteTxtField, personalNote);
+		
+		
+//		Thread.sleep(2000);
 		return fullName;
 		
 		
@@ -79,12 +86,17 @@ public class AddNewContactPage {
 
 	public void sendContactInvitation() throws InterruptedException {
 
-		driver.findElement(sendNowBtn).click();
-		Thread.sleep(1000);
-		driver.findElement(uploadAndSendInviteBtn).click();
-		driver.findElement(InvitationResultModelCloseBtn).click();
-		driver.navigate().refresh();
-		Thread.sleep(2000);
+//		driver.findElement(sendNowBtn).click();
+//		Thread.sleep(1000);
+//		driver.findElement(uploadAndSendInviteBtn).click();
+//		driver.findElement(InvitationResultModelCloseBtn).click();
+//		driver.navigate().refresh();
+//		Thread.sleep(2000);
+		
+		clickOn(driver, sendNowBtn);
+		clickOn(driver, uploadAndSendInviteBtn);
+		clickOn(driver, InvitationResultModelCloseBtn);
+		refreshPage(driver);
 
 	}
 
@@ -98,21 +110,31 @@ public class AddNewContactPage {
 	public void deleteContact(String contactName) throws InterruptedException {
 
 		CheckBoxUtil checkBox = new CheckBoxUtil();
-		driver.findElement(archiveContactsBtn).click();
-		driver.findElement(viewArchiveOptionBtn).click();
-		driver.findElement(viewArhiveLink).click();
-		Thread.sleep(4000);
-		driver.findElement(checkBox.getTDPrecidingCheckBox(contactName)).click();
-		driver.findElement(deleteContactsBtn).click();
-		Thread.sleep(2000);
-		driver.findElement(alertDeleteBtn).click();
-		Thread.sleep(4000);
+		
+//		driver.findElement(archiveContactsBtn).click();
+//		driver.findElement(viewArchiveOptionBtn).click();
+//		driver.findElement(viewArhiveLink).click();
+//		Thread.sleep(4000);
+//		driver.findElement(checkBox.getTDPrecidingCheckBox(contactName)).click();
+//		driver.findElement(deleteContactsBtn).click();
+//		Thread.sleep(2000);
+//		driver.findElement(alertDeleteBtn).click();
+//		Thread.sleep(4000);
+		
+		clickOn(driver, archiveContactsBtn);
+		clickOn(driver, viewArchiveOptionBtn);
+		clickOn(driver, viewArhiveLink);
+		clickOn(driver, checkBox.getTDPrecidingCheckBox(contactName));
+		clickOn(driver, deleteContactsBtn);
+		clickOn(driver, alertDeleteBtn);
 
 	}
 
 	public void clickChooseFromExistingContactsBtn() {
 
-		driver.findElement(chooseFromExistingContactsBtn).click();
+//		driver.findElement(chooseFromExistingContactsBtn).click();
+		
+		clickOn(driver, chooseFromExistingContactsBtn);
 	}
 
 	public void selectFromExistingContact(String contactName) {
@@ -131,12 +153,16 @@ public class AddNewContactPage {
 
 		driver.findElement(removeFromClientBtn).click();
 		driver.findElement(alertDeleteBtn).click();
-
+		
+		clickOn(driver, removeFromClientBtn);
+		clickOn(driver, alertDeleteBtn);
 	}
 
 	public String getExpectedText() {
 
-		return driver.findElement(noClientContactsTxt).getText();
+//		return driver.findElement(noClientContactsTxt).getText();
+		
+		return getElementText(driver, noClientContactsTxt);
 	}
 
 	public boolean isContactSuccessfullyDelete(String deletedContact) {

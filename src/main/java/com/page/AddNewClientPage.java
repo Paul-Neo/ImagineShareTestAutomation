@@ -1,5 +1,6 @@
 package com.page;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,8 +12,9 @@ import com.qa.util.DropDownUtil;
 import com.qa.util.ElementUtil;
 import com.qa.util.FileFinderUtil;
 import com.qa.util.GenerateRandomStrings;
+import com.qa.util.PageActions;
 
-public class AddNewClientPage {
+public class AddNewClientPage extends PageActions{
 
 	private ElementUtil elementUtil = new ElementUtil();
 	private GenerateRandomStrings generateRandomStrings = new GenerateRandomStrings();
@@ -25,9 +27,10 @@ public class AddNewClientPage {
 
 	}
 
-	private By clientSettingsPage = By.xpath("//span[text()='Client Settings']");
+//	private By clientSettingsPage = By.xpath("//span[text()='Client Settings']");
+	private By allWorkspacesPage = By.xpath("//span[text()='All ' and text()=' Workspaces']");
 	private By newClientBtn = By.xpath("//button[text()='New Client']");
-	private By createNewClientLink = By.xpath("//a[text()='Create new client']");
+	private By createNewClientLink = By.xpath("//a[text()='Create New Client']");
 	private By clientNameTxtField = By.xpath("//input[@name = 'client.name']");
 	private By clientIdentiferTxtField = By.xpath("//input[@name = 'client.identifier']");
 	private By assignStaffDropDown = By.xpath("//div[@class='css-1wy0on6 react-select__indicators']");
@@ -41,8 +44,7 @@ public class AddNewClientPage {
 	private By viewArchiveOptionBtn = By.xpath("//div[@class='-options -yt-edit-option']");
 	private By viewArchiveLink = By.xpath("//a[text()='View Archive']");
 	private By noClientFoundText = By.xpath("//h2[text()='No client found.']");
-	
-	
+	private By archiveLists = By.xpath("//div[@class='table-cell' and @style='white-space: initial; min-width: 150px;']//div[@class='overflow-hidden']");
 	
 	//General Info
 	private By generalInfo_clientName = By.xpath("//small[text()='Client name']/following::p[1]");
@@ -63,7 +65,7 @@ public class AddNewClientPage {
 	private By addPhoneNumberBtn = By.xpath("//button[text()='Add Phone Number']");
 	private By primaryPhoneNumber = By.xpath("//p[text()='Mobile:']/following::p[1]");
 	
-	//General Ino - Add Primary Address
+	//General Info - Add Primary Address
 	private By addAddressBtn = By.xpath("//button[text()=' Add address']");
 	private By streetAddress1TextField = By.xpath("//input[@name='address.street1']");
 	private By streetAddress2TextField = By.xpath("//input[@name='address.street2']");
@@ -73,38 +75,41 @@ public class AddNewClientPage {
 	private String dropDown = "//label[text()='{0}']/following::div[@class='css-1wy0on6 react-select__indicators'][1]";
 	private By fullAddressLabel = By.xpath("//div[@class='-address']");
 	
+	/*Page Actions*/
+	
 	public void navigateToClientSettingsPage() {
 
-		driver.findElement(clientSettingsPage).click();
+		
+		clickOn(driver, allWorkspacesPage);
 	}
 
 	public void clickAddAddress() throws InterruptedException {
 		
-		driver.findElement(addAddressBtn).click();
-		Thread.sleep(2000);
-		
+		clickOn(driver, addAddressBtn);
+			
 	}
 	
 	public void clickNewClientButton() {
-
-		driver.findElement(newClientBtn).click();
+		
+		clickOn(driver, newClientBtn);
+		
 	}
 
 	public void clickSetPrimary() throws InterruptedException {
 		
-		driver.findElement(setAsPrimaryLink).click();
-		Thread.sleep(3000);
+		
+		clickOn(driver, setAsPrimaryLink);
 	}
 	
 	public void clickCreateNewClientLink() {
-
-		driver.findElement(createNewClientLink).click();
+		
+		clickOn(driver, createNewClientLink);
+		
 	}
 	
 	public void clickNext() throws InterruptedException {
 
-		driver.findElement(nextBtn).click();
-		Thread.sleep(2000);
+		clickOn(driver, nextBtn);
 		
 	}
 
@@ -115,15 +120,37 @@ public class AddNewClientPage {
 		By selectedEnagagementType = elementUtil.getDivXpathData(enagagementTypes);
 		
 		dropDownUtil.selectFromDropDown(assignStaffDropDown, StaffName);
-
-		driver.findElement(selectedEnagagementType).click();
 		
-		Thread.sleep(3000);
-
+		clickOn(driver, selectedEnagagementType);
+		
 	}
 	
-	public String setClientName() throws InterruptedException {
+	public void clickAddAddress2() throws InterruptedException {
 		
+		clickOn(driver, addAddress2Btn);
+		
+	}
+	
+	public String selectValueInAddressDropdown(String labelName, String selectedValue) {
+		
+		//Set Country or Set State
+		DropDownUtil dropDownUtil = new DropDownUtil(driver);
+		By dropDownElement = By.xpath(dropDown.replace("{0}", labelName));
+		dropDownUtil.selectFromDropDown(dropDownElement, selectedValue);
+		
+		return selectedValue;
+		
+	}
+	
+	public void sleep() throws InterruptedException {
+		
+		sleep(3000);
+//		refreshPage(driver);
+	}
+	
+	/*Setters*/
+	
+	public String setClientName() throws InterruptedException {
 		
 		String firstName = generateRandomStrings.generateFirstName();
 		String lastName = generateRandomStrings.generateLastName();
@@ -131,8 +158,7 @@ public class AddNewClientPage {
 		String clientName = firstName + " " +  lastName;
 		
 		System.out.println("EXPECTED CLIENT NAME IS " + clientName);
-		
-		driver.findElement(clientNameTxtField).sendKeys(clientName);
+		sendKeys(driver, clientNameTxtField, clientName);
 		
 		Thread.sleep(2000);
 		
@@ -143,35 +169,27 @@ public class AddNewClientPage {
 	public String setClientIdentifier(String clientName) throws InterruptedException {
 		
 		String clientIdentifier = clientName + " TestID";
-		driver.findElement(clientIdentiferTxtField).sendKeys(clientIdentifier);
-		Thread.sleep(2000);
+		
+		sendKeys(driver, clientIdentiferTxtField, clientIdentifier);
 		
 		return clientIdentifier;
 		
-	}
-	
-	public void clickAddAddress2() throws InterruptedException {
-		
-		driver.findElement(addAddress2Btn).click();
-		Thread.sleep(2000);
 	}
 	
 	public String setStreetAddress1() throws InterruptedException {
 		
 		String address = generateRandomStrings.generateAddress1();
 		
-		driver.findElement(streetAddress1TextField).sendKeys(address);
-		Thread.sleep(2000);
+		sendKeys(driver, streetAddress1TextField, address);
 		
 		return address;
 	}
 	
 	public String setStreetAddress2() throws InterruptedException {
 		
-		String address = generateRandomStrings.generateAddress2();
+		String address = generateRandomStrings.generateAddress2();		
 		
-		driver.findElement(streetAddress2TextField).sendKeys(address);
-		Thread.sleep(2000);
+		sendKeys(driver, streetAddress2TextField, address);
 		
 		return address;
 	}
@@ -180,8 +198,7 @@ public class AddNewClientPage {
 		
 		String city = generateRandomStrings.generateCity();
 		
-		driver.findElement(cityTextField).sendKeys(city);
-		Thread.sleep(2000);
+		sendKeys(driver, cityTextField, city);
 		
 		return city;
 		
@@ -191,26 +208,29 @@ public class AddNewClientPage {
 		
 		String postalCode = generateRandomStrings.generatePostalCode();
 		
-		driver.findElement(postalCodeTextField).sendKeys(postalCode);
-		Thread.sleep(2000);
+		sendKeys(driver, postalCodeTextField, postalCode);
 		
 		return postalCode;
 	}
 	
-	public String selectValueInAddressDropdown(String labelName, String selectedValue) {
+	/*Getters*/
+	
+	public List<String> getArchiveLists() {
 		
-		//Set Country or Set State
+		List<String> list = new ArrayList<String>();
+		List<WebElement> archiveLists = driver.findElements(this.archiveLists);
 		
-		DropDownUtil dropdown = new DropDownUtil(driver);
+		for(WebElement e : archiveLists) {
+			
+			String listOfArchive = e.getText();
+			System.out.println("Archive Names: " + listOfArchive);
+			list.add(listOfArchive);
+		}
 		
-		By dropDownElement = By.xpath(dropDown.replace("{0}", labelName));
-		
-		dropdown.selectFromDropDown(dropDownElement, selectedValue);
-		
-		
-		return selectedValue;
+		return list;
 		
 	}
+
 	
 	public List<String> getStaffNotifications() {
 
@@ -231,20 +251,18 @@ public class AddNewClientPage {
 
 	public void clickSave() throws InterruptedException {
 
-		driver.findElement(saveBtn).click();
-		Thread.sleep(2000);
-		driver.navigate().refresh();
-		Thread.sleep(5000);
+		clickOn(driver, saveBtn);
 	}
+	
 
 	public boolean isClientAddedSuccessfully(String clientName) throws InterruptedException {
 		
 		FileFinderUtil findClient = new FileFinderUtil(driver);
-		driver.findElement(clientSettingsPage).click();
-		findClient.clickClientName(clientName); 
-
 		
-		return driver.findElement(clientName_overview).isDisplayed();
+		clickOn(driver, allWorkspacesPage);
+		findClient.clickClientName(clientName); 
+			
+		return isElementDisplayed(driver, clientName_overview);
 		
 	}
 
@@ -252,10 +270,9 @@ public class AddNewClientPage {
 		
 		boolean isCorrect = false;
 		
-		String actualCLientName = driver.findElement(generalInfo_clientName).getText();
-		String actualClientIdentifier = driver.findElement(generalInfo_clientIdentifier).getText();
-		String actualEngagementTypes = driver.findElement(generalInfo_engagemenTypes).getText();
-		
+		String actualCLientName = getElementText(driver, generalInfo_clientName);
+		String actualClientIdentifier = getElementText(driver, generalInfo_clientIdentifier);
+		String actualEngagementTypes = getElementText(driver, generalInfo_engagemenTypes);
 		
 		System.out.println("Actual Client Name : " + actualCLientName);
 		System.out.println("Expected Client Name : " + clientName);
@@ -287,29 +304,38 @@ public class AddNewClientPage {
 
 	public boolean isClientMovedToArchived(String archivedClientName) {
 		
-		driver.findElement(viewArchiveOptionBtn).click();
-		driver.findElement(viewArchiveLink).click();
-		return driver.findElement(elementUtil.getDivXpathData(archivedClientName)).isDisplayed();
+		clickOn(driver, viewArchiveOptionBtn);
+		clickOn(driver, viewArchiveLink);
+		
+		return isElementDisplayed(driver, elementUtil.getDivXpathData(archivedClientName));
 	
 	}
 	
 	public void selectClientFromArchivedList(String archivedClient) throws InterruptedException {
 		
 		By selectedArchivedClient = By.xpath("//div[contains(text(),'"+archivedClient+"')]/preceding::input[@type='checkbox'][1]");
-		driver.findElement(selectedArchivedClient).click();
-		Thread.sleep(4000);
+		
+		clickOn(driver, selectedArchivedClient);
+		
 	}
 	
-	public boolean isClientSuccessfullyDeleted() {
+	public boolean isClientSuccessfullyDeleted(String deletedClientName) {
 		
-		return driver.findElement(noClientFoundText).isDisplayed();
+		List<String> archiveNames = getArchiveLists();
+	
+		boolean isDeleted = false;
+		
+		if(!archiveNames.contains(deletedClientName)) {
+			
+			isDeleted = true;
+		}
+		
+		return isDeleted;
 	}
 	
 	public void clickUpdateGeneralInfo() throws InterruptedException {
 		
-		driver.findElement(updateGeneralInfoBtn).click();
-		Thread.sleep(2000);
-		
+		clickOn(driver, updateGeneralInfoBtn);
 		
 	}
 	
@@ -317,9 +343,8 @@ public class AddNewClientPage {
 		
 		String newName = generateRandomStrings.generateFirstName() + " " + generateRandomStrings.generateLastName();
 		
-		driver.findElement(clientNameUpdateTxtField).clear();
-		Thread.sleep(2000);
-		driver.findElement(clientNameUpdateTxtField).sendKeys(newName);
+		clearText(driver, clientNameUpdateTxtField);
+		sendKeys(driver, clientNameUpdateTxtField, newName);
 		
 		return newName;
 		
@@ -329,9 +354,8 @@ public class AddNewClientPage {
 		
 		String newClientID = newClientName + " testID";
 		
-		driver.findElement(clientIdentifierUpdateTxtField).clear();
-		Thread.sleep(2000);
-		driver.findElement(clientIdentifierUpdateTxtField).sendKeys(newClientID);
+		clearText(driver, clientIdentifierUpdateTxtField);
+		sendKeys(driver, clientIdentifierUpdateTxtField, newClientID);
 		
 		return newClientID;
 		
@@ -344,7 +368,8 @@ public class AddNewClientPage {
 		By selectedEnagagementType = elementUtil.getDivXpathData(newEngagementTypes);
 		
 		Thread.sleep(2000);
-		driver.findElement(selectedEnagagementType).click();
+		
+		clickOn(driver, selectedEnagagementType);
 		
 		return newEngagementTypes;
 		
@@ -352,7 +377,7 @@ public class AddNewClientPage {
 	
 	public boolean isClientsGeneralInfoUpdated() {
 		
-		return  driver.findElement(generalInfo).isDisplayed();	 
+		return isElementDisplayed(driver, generalInfo);
 		
 	}
 	
@@ -362,27 +387,23 @@ public class AddNewClientPage {
 		
 		String phoneNumber = generateRandomStrings.generatePhoneNumber();
 		
-		
-		driver.findElement(addPhoneBtn).click();
+		clickOn(driver, addPhoneBtn);
 		dropDown.selectFromDropDown(phoneTypeDropdown, "Mobile");
-		driver.findElement(phoneNumberTxtField).sendKeys(phoneNumber);
-		Thread.sleep(5000);
-		driver.findElement(addPhoneNumberBtn).click();
-		Thread.sleep(3000);
-	
+		sendKeys(driver, phoneNumberTxtField, phoneNumber);
+		clickOn(driver, addPhoneNumberBtn);
 		
 	}
 	
 	public boolean isPhoneNumberSetAsPrimary() {
 		
-		return driver.findElement(primaryPhoneNumber).isDisplayed();
+		
+		return isElementDisplayed(driver, primaryPhoneNumber);
 	}
 	
 	public String getFullAddress() {
 		
-		return driver.findElement(fullAddressLabel).getText();
+		return getElementText(driver, fullAddressLabel);
 		
 	}
-	
 	
 }

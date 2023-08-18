@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class NavigateUtil {
+public class NavigateUtil extends PageActions{
 
 	private WebDriver driver;
 	private ElementUtil elementUtil = new ElementUtil();
@@ -28,15 +28,23 @@ public class NavigateUtil {
 	private By myProfile = By.xpath("//a[text()='My Profile ']");
 	private By logOut = By.xpath("//a[text()='Logout']");
 	
+	private String sideNavTabName = "//span[normalize-space()='{0}']";
+	
 	
 
 	
 	public void navigateToGeneralFolder() throws InterruptedException {
 		
-		driver.findElement(allFilesTab).click();
-		driver.findElement(generalFiles).click();
-		driver.navigate().refresh();
-		Thread.sleep(10000);
+//		driver.findElement(allFilesTab).click();
+//		driver.findElement(generalFiles).click();
+//		driver.navigate().refresh();
+//		Thread.sleep(10000);
+		
+		clickOn(driver, allFilesTab);
+		clickOn(driver, generalFiles);
+		refreshPage(driver);
+		sleep(10000);
+		
 	}
 	
 	public void navigateToPersonalFolder(String folderName) throws InterruptedException {
@@ -98,6 +106,14 @@ public class NavigateUtil {
 		driver.findElement(logOut).click();
 		driver.navigate().refresh();
 		Thread.sleep(5000);
+	}
+	
+public void clickTabName(String tabName) {
+		
+		By selectedTabName = By.xpath(sideNavTabName.replace("{0}", tabName));
+		
+		clickOn(driver, selectedTabName);
+		
 	}
 	
 	

@@ -78,14 +78,15 @@ public class AddNewClientSteps {
 	public void staff_notification_should_be_displayed(DataTable dataTable) throws InterruptedException {
 
 		List<String> expectedNotificationLists = dataTable.asList();
-
 		System.out.println("Expected Notification lists " + expectedNotificationLists);
 
 		List<String> actualNotificationLists = addNewClient.getStaffNotifications();
-
 		Assert.assertTrue(expectedNotificationLists.equals(actualNotificationLists));
 
 		addNewClient.clickSave();
+		addNewClient.sleep();
+	
+		
 
 	}
 
@@ -129,7 +130,7 @@ public class AddNewClientSteps {
 	@Then("Client Should be deleted")
 	public void client_should_be_deleted() {
 
-//		Assert.assertTrue(addNewClient.isClientSuccessfullyDeleted());
+		Assert.assertTrue(addNewClient.isClientSuccessfullyDeleted(deletedClientName));
 	}
 		
 	@Given("User added a new Client")
@@ -176,13 +177,11 @@ public class AddNewClientSteps {
 		newClientID = addNewClient.setNewClientID(newClientName);
 		newEngagementTypes = addNewClient.updateEngagementTypes();
 		
-		
 		System.out.println("New Client Name: " + newClientName);
 		System.out.println("New Client ID: " + newClientID);
 		System.out.println("New Added Engagement Types: " + newEngagementTypes);
 		
 		addNewClient.clickSave();
-		
 		
 	}
 	
@@ -190,7 +189,6 @@ public class AddNewClientSteps {
 	public void clients_info_should_be_updated() {
 	  
 		Assert.assertTrue(addNewClient.isClientGeneralInfoCorrect(newClientName, newClientID, newEngagementTypes));
-		
 		
 	}
 	
@@ -234,8 +232,6 @@ public class AddNewClientSteps {
 	
 	@Then("Address should be set as primary")
 	public void address_should_be_set_as_primary() {
-	    
-		
 		
 		String expectedFullAddress = streetAddress1 + ", " + streetAddress2 + 
 				"\n" + city + ", " + state + " " + 

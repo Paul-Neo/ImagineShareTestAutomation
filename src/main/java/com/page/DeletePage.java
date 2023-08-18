@@ -3,8 +3,9 @@ package com.page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.qa.util.NavigateUtil;
+import com.qa.util.PageActions;
 import com.qa.util.ToolBarButtonsUtil;
-public class DeletePage {
+public class DeletePage extends PageActions{
 
 	private WebDriver driver;
 	
@@ -79,7 +80,7 @@ public class DeletePage {
 		String expectedAlertMsg = "Delete this";
 		String expectedCardBodyMsg = "Are you sure? This cannot be undone.";
 		
-		driver.findElement(deleteBtn).click();
+		clickOn(driver, deleteBtn);
 		
 		String actualAlertMsg = driver.findElement(deleteAlertMessaage).getText();
 		String actualCardBodyMsg = driver.findElement(deleteCardBodyMessage).getText();
@@ -89,9 +90,9 @@ public class DeletePage {
 		
 		if(actualAlertMsg.contains(expectedAlertMsg)
 				&& expectedCardBodyMsg.equals(actualCardBodyMsg)
-				&& driver.findElement(delete_cancelButton).isDisplayed()) {
+				&& isElementDisplayed(driver, delete_cancelButton)) {
 			
-			driver.findElement(alertDeleteBtn).click();
+			clickOn(driver, alertDeleteBtn);
 			
 			Thread.sleep(5000);
 		}

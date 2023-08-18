@@ -62,7 +62,9 @@ public class AllWorkspacesPageSteps {
 	@Given("User is on All Client Workspaces page")
 	public void user_is_on_all_client_workspaces_page() throws InterruptedException {
 
-		String expectedPageTitle = "Client Workspaces";
+		allWorkspacesPage.clickAllWorkspacesTab();
+		
+		String expectedPageTitle = "Clients Workspaces";
 		System.out.println("Expected Page Title is: " + expectedPageTitle);
 
 		String actualPageTitle = loginPage.getTitlePage();

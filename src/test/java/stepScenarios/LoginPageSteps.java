@@ -67,14 +67,14 @@ public class LoginPageSteps {
 	@When("User enters correct email address {string}")
 	public void user_enters_correct_email_address(String emailAddres) {
 
-		loginPage.enterEmailAddress(emailAddres);
+		loginPage.setEmailAddress(emailAddres);
 
 	}
 
 	@When("User enters correct password {string} and User gets the title of the page")
 	public void user_enters_correct_password_and_user_gets_the_title_of_the_page(String password) {
 
-		loginPage.enterPassword(password);
+		loginPage.setPassword(password);
 	}
 
 	@When("Clicks Sign In button")
@@ -92,7 +92,7 @@ public class LoginPageSteps {
 	@When("User enter correct six digit code")
 	public void user_enter_correct_six_digit_code() {
 
-		loginPage.enterSixDigitCode();
+		loginPage.setSixDigitCode();
 	}
 
 	@When("Click verify")
@@ -108,13 +108,13 @@ public class LoginPageSteps {
 	@When("User enters wrong email address {string}")
 	public void user_enters_wrong_email_address(String wrongEmailAddress) {
 
-		loginPage.enterEmailAddress(wrongEmailAddress);
+		loginPage.setEmailAddress(wrongEmailAddress);
 	}
 
 	@When("User enters wrong password {string}")
 	public void user_enters_wrong_password(String wrongPassword) {
 
-		loginPage.enterPassword(wrongPassword);
+		loginPage.setPassword(wrongPassword);
 	}
 
 	@Then("Error message should be displayed {string}")

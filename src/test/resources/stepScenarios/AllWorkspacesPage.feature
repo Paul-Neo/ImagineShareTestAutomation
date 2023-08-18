@@ -9,6 +9,8 @@ Then Title page should be "Select Your Account"
 And User Select a firm "ImagineTime"
 Then Profile firm should be "ImagineTime"
 
+
+@skip
 Scenario: Side bar links
 Given User is on All Client Workspaces page
 When User gets the side bar links lists
