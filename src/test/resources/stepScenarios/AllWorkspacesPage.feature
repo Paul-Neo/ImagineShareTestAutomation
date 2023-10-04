@@ -12,7 +12,7 @@ Then Profile firm should be "ImagineTime"
 
 @skip
 Scenario: Side bar links
-Given User is on All Client Workspaces page
+Given User is on "All Workspaces" page
 When User gets the side bar links lists
 |All Workspaces	|
 |All Contacts		|
@@ -20,3 +20,5 @@ When User gets the side bar links lists
 |Client Settings|
 |Firm Settings	|
 And Links count shoud be 5
+
+

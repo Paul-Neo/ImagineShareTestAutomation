@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.qa.util.ElementUtil;
+import com.qa.util.NavigateUtil;
 import com.qa.util.PageActions;
 
 public class AllWorkspacesPage extends PageActions{
@@ -14,11 +15,14 @@ public class AllWorkspacesPage extends PageActions{
 	private WebDriver driver;
 	
 	private ElementUtil elementUtil = new ElementUtil();
+
 	
 	public AllWorkspacesPage(WebDriver driver) {
 		
 		this.driver = driver;
 	}
+	
+	
 	
 	private By sideBarLinks = By.xpath("//span[@class='-text']");
 	
@@ -28,7 +32,6 @@ public class AllWorkspacesPage extends PageActions{
 	public void selectFirm(String firmName) {
 		
 		By selectedFirm = elementUtil.getSpanXpathData(firmName);
-//		driver.findElement(selectedFirm).click();
 		
 		clickOn(driver, selectedFirm);
 	}
@@ -40,17 +43,18 @@ public class AllWorkspacesPage extends PageActions{
 		return driver.findElement(selectedFirmProfile).getText();
 	}
 	
-	public void clickAllWorkspacesTab() {
+	public void clickBasePageTab(String tabName) {
 		
-		BasePages basePages = new BasePages(driver);
 		
-		basePages.clickTabName("All Workspaces");
-		System.out.println("Clicking All Workspaces");
+		NavigateUtil navigateUtil = new NavigateUtil(driver);
+		
+		navigateUtil.clickBasePageTab(tabName);
+		System.out.println("Clicking " + tabName);
+		
 	}
 	
 	
 	/*Setters*/
-	
 	
 	
 	/*Getters*/
@@ -58,6 +62,7 @@ public class AllWorkspacesPage extends PageActions{
 		
 		return driver.findElements(sideBarLinks).size();
 	}
+	
 	
 	public List<String> getSideBarLinks() {
 		

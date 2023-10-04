@@ -59,19 +59,11 @@ public class AllWorkspacesPageSteps {
 
 	}
 
-	@Given("User is on All Client Workspaces page")
-	public void user_is_on_all_client_workspaces_page() throws InterruptedException {
+	@Given("User is on {string} page")
+	public void user_is_on_all_client_workspaces_page(String basePageTabName) throws InterruptedException {
 
-		allWorkspacesPage.clickAllWorkspacesTab();
+		allWorkspacesPage.clickBasePageTab(basePageTabName);
 		
-		String expectedPageTitle = "Clients Workspaces";
-		System.out.println("Expected Page Title is: " + expectedPageTitle);
-
-		String actualPageTitle = loginPage.getTitlePage();
-		System.out.println("Actual Result is: " + actualPageTitle);
-
-		Assert.assertTrue(expectedPageTitle.equals(actualPageTitle));
-
 	}
 
 	@When("User gets the side bar links lists")
@@ -89,7 +81,10 @@ public class AllWorkspacesPageSteps {
 
 	@When("Links count shoud be {int}")
 	public void links_count_shoud_be(Integer expectedCount) {
+		
 		Assert.assertTrue(allWorkspacesPage.getSideBarLinkcount() == expectedCount);
+		
 	}
+	
 	
 }

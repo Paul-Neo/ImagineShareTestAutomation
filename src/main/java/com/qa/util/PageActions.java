@@ -9,8 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageActions {
 	
-	
-	
 	public void sleep(long milliseconds) throws InterruptedException {
 		
 		Thread.sleep(milliseconds);

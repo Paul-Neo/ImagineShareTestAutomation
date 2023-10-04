@@ -6,7 +6,9 @@ import java.util.Map;
 import org.junit.Assert;
 
 import com.page.AddNewClientPage;
+import com.page.AllWorkspacesPage;
 import com.qa.factory.DriverFactory;
+import com.qa.util.NavigateUtil;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -16,6 +18,8 @@ import io.cucumber.java.en.When;
 public class AddNewClientSteps {
 
 	private AddNewClientPage addNewClient = new AddNewClientPage(DriverFactory.getDriver());
+	private NavigateUtil navigateUtil = new NavigateUtil(DriverFactory.getDriver());
+	
 	private String expectedClientName;
 	private String expectedClientIdentifier;
 	private String expectedEngagementTypes;
@@ -83,11 +87,9 @@ public class AddNewClientSteps {
 		List<String> actualNotificationLists = addNewClient.getStaffNotifications();
 		Assert.assertTrue(expectedNotificationLists.equals(actualNotificationLists));
 
-		addNewClient.clickSave();
+		addNewClient.clickSaveButton();
 		addNewClient.sleep();
-	
 		
-
 	}
 
 	@Then("Client should be added on the client list")
@@ -98,7 +100,7 @@ public class AddNewClientSteps {
 	}
 
 	@Then("Clients Overview should be correct")
-	public void clients_overview_should_be_correct() {
+	public void clients_overview_should_be_correct() throws InterruptedException {
 
 		Assert.assertTrue(addNewClient.isClientGeneralInfoCorrect(expectedClientName, expectedClientIdentifier,
 				expectedEngagementTypes));
@@ -136,9 +138,12 @@ public class AddNewClientSteps {
 	@Given("User added a new Client")
 	public void user_added_a_new_client() throws InterruptedException {
 	 
-		addNewClient.navigateToClientSettingsPage();
+//		addNewClient.navigateToClientSettingsPage();
+		navigateUtil.clickBasePageTab("All Workspaces");
 		addNewClient.clickNewClientButton();
 		addNewClient.clickCreateNewClientLink();
+		
+	
 	
 		String clientName = addNewClient.setClientName();
 		String clientIdentifier = addNewClient.setClientIdentifier(clientName);
@@ -154,7 +159,7 @@ public class AddNewClientSteps {
 		expectedEngagementTypes = engagementTypes;
 		
 		addNewClient.clickNext();
-		addNewClient.clickSave();
+		addNewClient.clickSaveButton();
 		
 		
 	}
@@ -165,7 +170,6 @@ public class AddNewClientSteps {
 		Assert.assertTrue(addNewClient.isClientAddedSuccessfully(expectedClientName));
 		Assert.assertTrue(addNewClient.isClientGeneralInfoCorrect(expectedClientName, expectedClientIdentifier,
 				expectedEngagementTypes));
-	   
 	}
 	
 	@When("Updates client info")
@@ -181,14 +185,15 @@ public class AddNewClientSteps {
 		System.out.println("New Client ID: " + newClientID);
 		System.out.println("New Added Engagement Types: " + newEngagementTypes);
 		
-		addNewClient.clickSave();
+		addNewClient.clickSaveButton();
 		
 	}
 	
 	@Then("Clients info should be updated")
-	public void clients_info_should_be_updated() {
+	public void clients_info_should_be_updated() throws InterruptedException {
 	  
-		Assert.assertTrue(addNewClient.isClientGeneralInfoCorrect(newClientName, newClientID, newEngagementTypes));
+		Assert.assertTrue(addNewClient.isClientGeneralInfoCorrect
+				(newClientName, newClientID, newEngagementTypes));
 		
 	}
 	

@@ -11,7 +11,7 @@ Then Profile firm should be "Paul QA Test Firm"
 
 @test1
 Scenario: Add New Client and delete client
-Given User is on All Client Workspaces page
+Given User is on "All Workspaces" page
 When User clicks new client button
 And Clicks Create new client
 Then A modal should be displayed with header message "New client"
@@ -41,6 +41,7 @@ Then Client Should be deleted
 @test2
 Scenario: Update Clients info
 Given User added a new Client
+#When User is on "Overview" tab
 When User select a client
 And Updates client info
 Then Clients info should be updated
