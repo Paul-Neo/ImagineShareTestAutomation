@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
 
 		features = {"src/test/resources/stepScenarios/AddNewClient.feature"}, 
 		glue = {"stepScenarios"},
-		tags = "@test3",
+//		tags = "@test4",
 		plugin = { "pretty", 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"timeline:test-output-thread/",
@@ -27,7 +27,7 @@ import io.cucumber.testng.CucumberOptions;
 public class MyTestRunnerNG extends AbstractTestNGCucumberTests {
 
 	@Override
-	@DataProvider(parallel = false)
+	@DataProvider(parallel = true)
 	public Object[][] scenarios() {
 		return super.scenarios();
 	}

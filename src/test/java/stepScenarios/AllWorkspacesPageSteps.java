@@ -60,7 +60,7 @@ public class AllWorkspacesPageSteps {
 	}
 
 	@Given("User is on {string} page")
-	public void user_is_on_all_client_workspaces_page(String basePageTabName) throws InterruptedException {
+	public void user_is_on_all_client_page(String basePageTabName) throws InterruptedException {
 
 		allWorkspacesPage.clickBasePageTab(basePageTabName);
 		

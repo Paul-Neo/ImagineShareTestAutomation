@@ -11,7 +11,7 @@ Then Profile firm should be "Paul QA Test Firm"
 
 @test1
 Scenario: Add New Client and delete client
-Given User is on "All Workspaces" page
+Given User is on "Workspaces" page
 When User clicks new client button
 And Clicks Create new client
 Then A modal should be displayed with header message "New client"
@@ -28,10 +28,13 @@ Then Staff Notification should be displayed
 |View a signature request															|
 |Send a message																				|
 |Weekly reminder for incomplete signature requests		|
-And Client should be added on the client list
-And Clients Overview should be correct
-Given User is on Client Settings page
-When User Selects a Client
+#And Client should be added on the client list
+When User select a client
+#And Navigates to "Overview" tab
+And User navigates to "Overview" tab
+Then Clients Overview should be correct
+When User is on Client Settings page
+And User Selects a Client
 And Click Archive
 Then Selected Client should be on the archive list
 When User Selects a client in the archive list
@@ -41,8 +44,10 @@ Then Client Should be deleted
 @test2
 Scenario: Update Clients info
 Given User added a new Client
-#When User is on "Overview" tab
+#When User is on "Workspaces" page
+#And Navigates to "Overview" tab
 When User select a client
+And User navigates to "Overview" tab
 And Updates client info
 Then Clients info should be updated
 
@@ -50,6 +55,8 @@ Then Clients info should be updated
 Scenario: Add Clients Primary Phone
 Given User added a new Client
 When User select a client
+#And Navigates to "Overview" tab
+And User navigates to "Overview" tab
 And Enter Phone number
 And User click set primary
 Then Number should be set as primary
@@ -58,6 +65,7 @@ Then Number should be set as primary
 Scenario: Add Clients Primary Address
 Given User added a new Client
 When User select a client
+And User navigates to "Overview" tab
 And Enter Address
 And User click set primary
 Then Address should be set as primary

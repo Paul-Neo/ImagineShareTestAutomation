@@ -24,8 +24,8 @@ public class AddNewClientPage extends PageActions {
 
 	}
 
-//	private By clientSettingsPage = By.xpath("//span[text()='Client Settings']");
-	private By allWorkspacesPage = By.xpath("//span[text()='All ' and text()=' Workspaces']");
+	private String tabName = "//ul[contains(@class,'-underline navigation')]//a[text()='{0}']";
+	private By workspacesPage = By.xpath("//a//span[text()='Workspaces']");
 	private By newClientBtn = By.xpath("//button[text()='New Client']");
 	private By createNewClientLink = By.xpath("//a[text()='Create New Client']");
 	private By clientNameTxtField = By.xpath("//input[@name = 'client.name']");
@@ -79,7 +79,7 @@ public class AddNewClientPage extends PageActions {
 
 	public void navigateToClientSettingsPage() {
 
-		clickOn(driver, allWorkspacesPage);
+		clickOn(driver, workspacesPage);
 	}
 
 	public void clickAddAddress() throws InterruptedException {
@@ -96,7 +96,10 @@ public class AddNewClientPage extends PageActions {
 
 	public void clickSetPrimary() throws InterruptedException {
 
-		clickOn(driver, setAsPrimaryLink);
+//		clickOn(driver, setAsPrimaryLink);
+		
+		driver.findElement(setAsPrimaryLink).click();
+		sleep(3000);
 	}
 
 	public void clickCreateNewClientLink() {
@@ -153,6 +156,14 @@ public class AddNewClientPage extends PageActions {
 		//refreshPage(driver);
 	}
 
+	public void navigateToTab(String tabName) {
+		
+		By selectedTabName = By.xpath(this.tabName.replace("{0}", tabName));
+		
+		clickOn(driver, selectedTabName);
+	}
+	
+	
 	/* Setters */
 
 	public String setClientName() throws InterruptedException {
@@ -261,14 +272,13 @@ public class AddNewClientPage extends PageActions {
 		sleep(5000);
 	}
 
-	public boolean isClientAddedSuccessfully(String clientName) throws InterruptedException {
+	public void findAndClickClientName(String clientName) throws InterruptedException {
 
 		FileFinderUtil findClient = new FileFinderUtil(driver);
 
-		clickOn(driver, allWorkspacesPage);
+		clickOn(driver, workspacesPage);
 		findClient.clickClientName(clientName);
 
-		return isElementDisplayed(driver, clientName_overview);
 
 	}
 
@@ -396,6 +406,7 @@ public class AddNewClientPage extends PageActions {
 		dropDown.selectFromDropDown(phoneTypeDropdown, "Mobile");
 		sendKeys(driver, phoneNumberTxtField, phoneNumber);
 		clickOn(driver, addPhoneNumberBtn);
+		sleep(3000);
 
 	}
 

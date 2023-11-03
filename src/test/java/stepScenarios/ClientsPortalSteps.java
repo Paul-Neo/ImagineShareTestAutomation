@@ -41,11 +41,11 @@ public class ClientsPortalSteps {
 		Assert.assertTrue(expectedNavLinks.equals(actualNavLinks));
 	}
 	
-	@Given("User is on {string} tab")
-	public void user_is_on_tab(String tabName) throws InterruptedException {
-	   
-		nav.clickSelectedTab(tabName);
 	
+	@When("User navigates to {string} tab")
+	public void user_navigates_to_tab(String tabName) throws InterruptedException {
+	  
+		nav.clickSelectedTab(tabName);
 	}
 	
 	@Then("Files and folders should displayed")//using
