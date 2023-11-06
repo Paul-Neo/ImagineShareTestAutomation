@@ -69,7 +69,7 @@ public class NavigateUtil extends PageActions {
 		Thread.sleep(10000);
 	}
 
-	public void navigateToClientSettings(String clientsName) throws InterruptedException {
+	public void navigateToClientSettings(String clientsName) throws InterruptedException { //DEPRECATED
 
 		driver.findElement(searchBox).sendKeys(clientsName);
 		driver.findElement(searchIcon).click();

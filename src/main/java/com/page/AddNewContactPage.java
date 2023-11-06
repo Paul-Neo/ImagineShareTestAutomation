@@ -23,9 +23,9 @@ public class AddNewContactPage extends PageActions{
 		this.driver = driver;
 	}
 
-	private By allContactsPage = By.xpath("//span[text()='All ' and text()=' Contacts']");
+	private By workspacesPage = By.xpath("//span[text()='Workspaces']");
 	private By contactsList = By.cssSelector("tbody a");
-	private By addContactsBtn = By.xpath("//a[text()='Add contacts']");
+	private By addContactsBtn = By.xpath("//button[text()='Add Contacts']");
 	private By emailAddressTxtField = By.xpath("//input[@name='email']");
 	private By fullNameTxtField = By.xpath("//input[@name='fullname']");
 	private By personalNoteTxtField = By.xpath("//textarea[@name='personalNote']");
@@ -36,7 +36,7 @@ public class AddNewContactPage extends PageActions{
 	private By viewArchiveOptionBtn = By.xpath("//div[@class='-options -yt-edit-option']");
 	private By viewArhiveLink = By.xpath("//a[text()='View Archive']");
 	private By deleteContactsBtn = By.xpath("//button[text()='Delete Contacts ']");
-	private By alertDeleteBtn = By.xpath("//button[text()='Delete']");
+	private By alertDeleteBtn = By.xpath("//div[@class='alert-modal modal-anim-enter-done']//button[@class='yt-btn danger' and text()='Delete']");
 	private By chooseFromExistingContactsBtn = By.xpath("//button[text()='Choose from existing contacts']");
 	private By existingContactsDropDown = By.xpath("//div[@class='css-1wy0on6 react-select__indicators']");
 	private By removeFromClientBtn = By.xpath("//button[text()='Remove from Client ']");
@@ -46,7 +46,7 @@ public class AddNewContactPage extends PageActions{
 	public void navigateToClientsOverview(String clientName) throws InterruptedException {
 		NavigateUtil nav = new NavigateUtil(driver);
 
-		nav.navigateToClientSettings(clientName);
+		nav.navigateToClientWorkspace(clientName);
 		
 	}
 
@@ -95,6 +95,7 @@ public class AddNewContactPage extends PageActions{
 		
 		clickOn(driver, sendNowBtn);
 		clickOn(driver, uploadAndSendInviteBtn);
+		sleep(10000);
 		clickOn(driver, InvitationResultModelCloseBtn);
 		refreshPage(driver);
 
@@ -126,7 +127,9 @@ public class AddNewContactPage extends PageActions{
 		clickOn(driver, viewArhiveLink);
 		clickOn(driver, checkBox.getTDPrecidingCheckBox(contactName));
 		clickOn(driver, deleteContactsBtn);
+		sleep(3000);
 		clickOn(driver, alertDeleteBtn);
+		sleep(3000);
 
 	}
 
@@ -150,9 +153,11 @@ public class AddNewContactPage extends PageActions{
 		FileFinderUtil findContact = new FileFinderUtil(driver);
 
 		findContact.clickaCheckbox_contacts(contactName);
-
-		driver.findElement(removeFromClientBtn).click();
-		driver.findElement(alertDeleteBtn).click();
+//		sleep(2000);
+//		driver.findElement(removeFromClientBtn).click();
+//		sleep(2000);
+//		driver.findElement(alertDeleteBtn).click();
+//		sleep(2000);
 		
 		clickOn(driver, removeFromClientBtn);
 		clickOn(driver, alertDeleteBtn);
@@ -167,7 +172,7 @@ public class AddNewContactPage extends PageActions{
 
 	public boolean isContactSuccessfullyDelete(String deletedContact) {
 
-		driver.findElement(allContactsPage).click();
+		driver.findElement(workspacesPage).click();
 		driver.navigate().refresh();
 
 		List<String> list = new ArrayList<>();
