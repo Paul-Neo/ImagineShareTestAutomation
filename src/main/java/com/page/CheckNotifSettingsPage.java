@@ -19,12 +19,13 @@ public class CheckNotifSettingsPage {
 	private By notifications = By.cssSelector("div.-workspace-content label");
 	
 	public List<String> getNotificationSettings() {
+		
 		List<String>lists = new ArrayList<>();
 		List<WebElement>notificationSettingLists = driver.findElements(notifications);
 		
 		for(WebElement e : notificationSettingLists) {
 			String notifNames = e.getText();
-			System.out.println("Notification Names: "+notifNames);
+			System.out.println("Notification Names: "+ notifNames);
 			lists.add(notifNames);
 		}
 		return lists;

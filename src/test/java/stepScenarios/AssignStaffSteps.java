@@ -35,7 +35,7 @@ public class AssignStaffSteps {
 		Assert.assertTrue(assignStaffPage.areToolBarButtonsEnabled());
 	}
 
-	@When("User click Assign Staff button")
+	@When("User click Assign Staff button")//DEPRECATED
 	public void user_click_assign_staff_button() throws InterruptedException {
 
 		assignStaffPage.clickAssignStaffToolBarButton();
@@ -73,9 +73,10 @@ public class AssignStaffSteps {
 
 	}
 
-	@Then("Staff should exist on Clients Assinged Staff list")
+	@Then("Staff should exist on Clients Assinged Staff list")//DEPRECATED
 	public void staff_should_exist_on_clients_assinged_staff_list() {
 
+		
 	}
 
 	// test2
@@ -176,6 +177,21 @@ public class AssignStaffSteps {
 		
 		Assert.assertTrue(expectedMessage.equals(actualMessage));
 	}
+	
+	
+	@When("User click toolbar button {string}")
+	public void user_click_toolbar_button(String toolBarButtonName) throws InterruptedException {
+		
+		assignStaffPage.clickToolBarButton(toolBarButtonName);
+	  
+	}
+	@When("Select toolbar option {string}")
+	public void select_toolbar_option(String toolBarOptionName) {
+	   
+		
+		assignStaffPage.selectToolBarOption(toolBarOptionName);
+	}
+
 	
 	
 	/*

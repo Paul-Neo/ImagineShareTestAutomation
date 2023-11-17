@@ -16,10 +16,10 @@ public class AddNewTagSteps {
 		addNewTagPage.clickNewTagButton();
 	}
 
-	@When("User enter a name {string}")
-	public void user_enter_a_name(String name) throws InterruptedException{
+	@When("User enter a tag name")
+	public void user_enter_a_tag_name() throws InterruptedException{
 	 
-		addNewTagPage.enterName(name);
+		addNewTagPage.enterName();
 		
 	}
 
@@ -38,5 +38,6 @@ public class AddNewTagSteps {
 	@Then("The new tag should be added on the custom tags list")
 	public void the_new_tag_should_be_added_on_the_custom_tags_list() {
 	
+		//put validation once delete function in tags is already applied
 	}
 }

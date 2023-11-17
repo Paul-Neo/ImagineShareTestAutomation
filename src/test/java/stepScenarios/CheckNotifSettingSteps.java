@@ -18,10 +18,13 @@ public class CheckNotifSettingSteps {
 	
 	@Then("Notification settings should be displayed")
 	public void notification_settings_should_be_displayed(DataTable dataTable) {
+		
 		List<String> expectedNotifNames =  dataTable.asList();
-		System.out.println("Expected Notif Names: "+expectedNotifNames);
+		System.out.println("Expected Notif Names: " + expectedNotifNames);
 		
 		List<String> actualNotifNames = notifSettings.getNotificationSettings();
+		
+		System.out.print("Actual Notif Names: " + actualNotifNames);
 		
 		assertTrue(expectedNotifNames.equals(actualNotifNames));
 	}

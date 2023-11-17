@@ -11,9 +11,9 @@ public class URL {
 	
 	public String getUrl() {
 		
-		return imagineTimeTestServerProd;
+//		return imagineTimeProd;
 		
-//		return imagineTimeTestServerProd;
+		return imagineTimeTestServerProd;
 		
 //		return LexShare;
 			

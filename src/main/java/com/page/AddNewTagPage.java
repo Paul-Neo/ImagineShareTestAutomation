@@ -4,12 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.qa.util.ElementUtil;
+import com.qa.util.GenerateRandomStrings;
 import com.qa.util.PageActions;
 
 public class AddNewTagPage extends PageActions{
 
 	private WebDriver driver;
 	private ElementUtil elementUtil = new ElementUtil();
+	private GenerateRandomStrings generateRandomString = new GenerateRandomStrings();
 
 	public AddNewTagPage(WebDriver driver) {
 
@@ -29,12 +31,16 @@ public class AddNewTagPage extends PageActions{
 		clickOn(driver, newTagBtn);
 	}
 
-	public void enterName(String tagName) throws InterruptedException {
+	public void enterName() throws InterruptedException {
 
 //		Thread.sleep(2000);
 //		driver.findElement(name).sendKeys(names);
 		
+		String tagName = generateRandomString.generateFirstName() + "tag";
+		
 		sendKeys(driver, tagNameTxtField, tagName);
+		
+		
 	}
 
 	public void selectType(String type) throws InterruptedException {

@@ -25,10 +25,10 @@ public class AllWorkspacesPageSteps {
 
 		URL url = new URL();
 
-		List<Map<String, String>> sideBarLinkLists = dataTable.asMaps();
+		List<Map<String, String>> userCredential = dataTable.asMaps();
 
-		String emailAddress = sideBarLinkLists.get(0).get("Email Address");
-		String password = sideBarLinkLists.get(0).get("Password");
+		String emailAddress = userCredential.get(0).get("Email Address");
+		String password = userCredential.get(0).get("Password");
 
 		loginPage.waitLoginPageToLoad();
 

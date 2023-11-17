@@ -100,10 +100,16 @@ public class NavigateUtil extends PageActions {
 
 	public void LogOut() throws InterruptedException {
 
-		driver.findElement(profileDropDown).click();
-		driver.findElement(logOut).click();
-		driver.navigate().refresh();
+//		driver.findElement(profileDropDown).click();
+//		driver.findElement(logOut).click();
+//		driver.navigate().refresh();
+//		Thread.sleep(5000);
+		
+		clickOn(driver, profileDropDown);
+		clickOn(driver, logOut);
+//		driver.navigate().refresh();
 		Thread.sleep(5000);
+		
 	}
 
 	public void clickBasePageTab(String basePageTabName) {

@@ -210,7 +210,7 @@ public class FileFinderUtil {
 	public int clickClientNameAndGetStaffCount(String expectedValue) throws InterruptedException {
 
 		selectedValue = elementUtil.get_a_XpathData(expectedValue);
-		By staffCount = By.xpath("//a[text()='"+expectedValue+"']/following::div[1]");
+		By staffCount = By.xpath("//a[text()='" + expectedValue + "']/following::div[3]");
 		String staffCountStringValue = "";
 		int staffCountIntValue = 0;
 		

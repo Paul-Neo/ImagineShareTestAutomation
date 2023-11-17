@@ -6,19 +6,18 @@ Given User has already logged in to Imagine Time
 |paul.napadao@narrasoft.com	|Pnnwfh2021!|
 When User gets the title of the page
 Then Title page should be "Select Your Account"
-And User Select a firm "ImagineTime"
-Then Profile firm should be "ImagineTime"
+And User Select a firm "Paul QA Test Firm"
+Then Profile firm should be "Paul QA Test Firm"
 
-
-@skip
+@2test1
 Scenario: Side bar links
-Given User is on "All Workspaces" page
+Given User is on "Workspaces" page
 When User gets the side bar links lists
-|All Workspaces	|
-|All Contacts		|
-|All Files			|
-|Client Settings|
+|Workspaces			|
+|Contacts				|
+|Files					|
 |Firm Settings	|
+|Help						|
 And Links count shoud be 5
 
 
