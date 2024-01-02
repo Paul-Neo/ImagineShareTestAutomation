@@ -5,11 +5,12 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import com.qa.util.DropDownUtil;
+import com.qa.util.PageActions;
 import com.qa.util.ScrollUtil;
 import com.qa.util.ToolBarButtonsUtil;
 import com.qa.util.URL;
 
-public class UploadPage {
+public class UploadPage extends PageActions{
 
 	private WebDriver driver;
 	private URL url = new URL();
@@ -19,10 +20,10 @@ public class UploadPage {
 		this.driver = driver;
 	}
 
-	private By newFileButton = By.xpath("//button[text()='New File']");
-	private By uploadNewFiles = By.xpath("//span[text()='Upload new files']");
+	private By newFileBtn = By.xpath("//button[text()='New File']");
+	private By uploadNewFileBtn = By.xpath("//span[text()='Upload new files']");
 	private By headerText = By.xpath("//div[@class='card-header']");
-	private By browse = By.xpath("//input[@type='file']");
+	private By browse = By.xpath("//input[@multiple and @type='file']");
 	private By saveAndUpload = By.xpath("//button[text()='Upload & save']");
 	private By latestPDF_File = By.xpath("//div[@class='table-cell -pdf-80']/following::a");
 	private By fileSubtask = By.xpath("//div[@class='table-cell -pdf-80']");
@@ -43,8 +44,6 @@ public class UploadPage {
 	private By editBtn = By.xpath("//button[text()='Edit']");
 	private By fileUploadSettingsDropDown = By.xpath("//div[text()='Default Status of Newly Uploaded Files']/following::div[@class='css-1wy0on6 react-select__indicators'][1]");
 	private By updateBtn = By.xpath("//button[text()='Update']");
-	
-	
 	
 	
 	public void uploadFiles() throws InterruptedException {
@@ -118,16 +117,29 @@ public class UploadPage {
 		
 		scroll.scrollPage(-1500);
 		
-		driver.findElement(newFileButton).click();
-		Thread.sleep(2000);
-		driver.findElement(uploadNewFiles).click();
-		Thread.sleep(2000);
+//		driver.findElement(newFileButton).click();
+//		Thread.sleep(2000);
+//		driver.findElement(uploadNewFiles).click();
+//		Thread.sleep(2000);
+//		driver.findElement(browse).sendKeys(fileLoc);
+//		Thread.sleep(2000);
+//		driver.findElement(saveAndUpload).click();
+//		Thread.sleep(5000);
+//		driver.navigate().refresh();
+//		Thread.sleep(7000);
+		
+		clickOn(driver, newFileBtn);
+		clickOn(driver, uploadNewFileBtn);
+		sleep(0);
+//		sendKeys(driver, browse, fileLoc);
 		driver.findElement(browse).sendKeys(fileLoc);
-		Thread.sleep(2000);
-		driver.findElement(saveAndUpload).click();
-		Thread.sleep(5000);
-		driver.navigate().refresh();
-		Thread.sleep(7000);
+//		sendKeys(driver, browse, fileLoc);
+		sleep(5000);
+		clickOn(driver, saveAndUpload);
+		sleep(3000);
+//		refreshPage(driver);
+//		sleep(3000);
+		
 		
 		return new DeletePage(driver);
 	}

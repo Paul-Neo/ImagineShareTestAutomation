@@ -9,13 +9,14 @@ public class NavigateUtil extends PageActions {
 
 	private WebDriver driver;
 	private ElementUtil elementUtil = new ElementUtil();
+	
 
 	public NavigateUtil(WebDriver driver) {
 
 		this.driver = driver;
 	}
 
-	private By allFilesTab = By.xpath("//span[text()='All ' and text()=' Files']");
+	private By allFilesTab = By.xpath("//span[@class='-text' and text()='Files']");
 	private By generalFiles = By.xpath("//a[text()='General Files']");
 	private By staffFilesFolder = By.xpath("//a[text()='Staff Files']");
 
@@ -40,7 +41,7 @@ public class NavigateUtil extends PageActions {
 		clickOn(driver, allFilesTab);
 		clickOn(driver, generalFiles);
 		refreshPage(driver);
-		sleep(10000);
+		sleep(5000);
 
 	}
 

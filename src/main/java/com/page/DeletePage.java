@@ -16,7 +16,7 @@ public class DeletePage extends PageActions{
 	
 	private By filesTab = By.xpath("//a[text()='Files']");
 	
-	private By option = By.xpath("//div[@class='-options -pointer']");
+	private By option = By.xpath("//div[@class='-options -pointer 1']");
 	private By viewArchivedFiles = By.xpath("//a[text()='View Archive']");
 	
 	private By deleteBtn = By.xpath("//button[contains(text(),'Delete')]");
@@ -34,9 +34,13 @@ public class DeletePage extends PageActions{
 	private By latestFolderName = By.xpath("//div[@class='table-cell -folder-empty']/following::a[1]");
 	private By latestFolderCB = By.xpath("//div[@class='table-cell -folder-empty']/preceding::input[@type='checkbox'][1]");
 	
+	private By processingContainer = By.xpath("//div[@class='upload-progress-container' and p[contains(text(),'processing')]]");
+	
 	public void clickLatestPDF_CB() {
 		
-		driver.findElement(LatestPDF_File_CB).click();
+//		driver.findElement(LatestPDF_File_CB).click();
+		
+		clickOn(driver, LatestPDF_File_CB);
 	}
 	
 
@@ -68,11 +72,25 @@ public class DeletePage extends PageActions{
 	}
 	
 	public void navToArchivedFiles() throws InterruptedException {
+//		
+//		driver.findElement(option).click();
+//		driver.findElement(viewArchivedFiles).click();
+//		driver.navigate().refresh();
 		
-		driver.findElement(option).click();
-		driver.findElement(viewArchivedFiles).click();
-		driver.navigate().refresh();
-		Thread.sleep(3000);
+		
+//		boolean isProcessingNotVisible = isElementNotDisplayed(driver, processingContainer);
+//		
+//		if(isProcessingNotVisible  = true) {
+//			
+//			System.out.println("Is Processing visible? : " + isProcessingNotVisible);
+			
+			clickOn(driver, option);
+			clickOn(driver, viewArchivedFiles);
+			refreshPage(driver);
+			sleep(3000);
+//		}
+		
+		
 	}
 	
 	public void delete() throws InterruptedException {
@@ -130,10 +148,12 @@ public class DeletePage extends PageActions{
 		driver.findElement(latestFolderCB).click();
 	}
 	
-	public void refresh() {
+	
+	public boolean isProcessingDisplayed() {
 		
-		driver.navigate().refresh();
+		return isElementDisplayed(driver, processingContainer);
 	}
+	
 	
 	
 }

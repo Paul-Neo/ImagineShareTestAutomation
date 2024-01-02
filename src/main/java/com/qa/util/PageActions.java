@@ -22,7 +22,7 @@ public class PageActions {
 	
 	public void sendKeys(WebDriver driver, By locator, String value) {
 		
-		new WebDriverWait(driver, 30).
+		new WebDriverWait(driver, 60).
 		until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
 		driver.findElement(locator).sendKeys(value);
 		
@@ -30,7 +30,7 @@ public class PageActions {
 	
 	public String getElementText(WebDriver driver, By locator) {
 		
-		new WebDriverWait(driver, 30).
+		new WebDriverWait(driver, 60).
 		until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
 		
 		return driver.findElement(locator).getText();
@@ -38,7 +38,7 @@ public class PageActions {
 	
 	public void clickOn(WebDriver driver, By locator) {
 		
-		new WebDriverWait(driver, 30).
+		new WebDriverWait(driver, 60).
 		until(ExpectedConditions.elementToBeClickable(driver.findElement(locator)));
 		
 		driver.findElement(locator).click();
@@ -47,7 +47,7 @@ public class PageActions {
 	
 	public void clearText(WebDriver driver, By locator) {
 		
-		new WebDriverWait(driver, 30).
+		new WebDriverWait(driver, 60).
 		until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
 		
 		driver.findElement(locator).clear();
@@ -56,7 +56,7 @@ public class PageActions {
 	
 	public boolean isElementDisplayed(WebDriver driver, By Locator) {
 		
-		new WebDriverWait(driver, 30).
+		new WebDriverWait(driver, 60).
 		until(ExpectedConditions.visibilityOf(driver.findElement(Locator)));
 		
 		return driver.findElement(Locator).isDisplayed();
@@ -65,10 +65,20 @@ public class PageActions {
 	
 	public boolean isElementEnabled(WebDriver driver, By Locator) {
 		
-		new WebDriverWait(driver, 30).
+		new WebDriverWait(driver, 60).
 		until(ExpectedConditions.visibilityOf(driver.findElement(Locator)));
 		
 		return driver.findElement(Locator).isEnabled();
+		
+	}
+	
+	
+	public boolean isElementNotDisplayed(WebDriver driver, By Locator) {
+		
+		new WebDriverWait(driver, 60).
+		until(ExpectedConditions.invisibilityOf(driver.findElement(Locator)));
+		
+		return driver.findElement(Locator).isDisplayed();
 		
 	}
 

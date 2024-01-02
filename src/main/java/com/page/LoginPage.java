@@ -49,7 +49,7 @@ public class LoginPage extends PageActions {
 
 	public void waitLoginPageToLoad() {
 
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
 	}
 
 	public void turnOn_TFA() throws InterruptedException {

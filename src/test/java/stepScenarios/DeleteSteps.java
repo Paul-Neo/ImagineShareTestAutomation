@@ -82,6 +82,8 @@ public class DeleteSteps {
 	public void click_archive() throws InterruptedException {
 	   
 		deletePage.clickArchive();
+//		Assert.assertTrue(deletePage.isProcessingDisplayed());
+		
 	   
 	}
 

@@ -10,7 +10,7 @@ And User Select a firm "Paul QA Test Firm"
 Then Profile firm should be "Paul QA Test Firm"
 
 @test1
-Scenario: Add New Tag
+Scenario: Add New Tag - Other
 Given User is on Firm Settings page
 #When User is on "Custom Tags" tab
 And User navigates to "Custom Tags" tab
@@ -22,7 +22,7 @@ And Click create custom tag button
 Then The new tag should be added on the custom tags list
 
 @test2
-Scenario: Add New Tag
+Scenario: Add New Tag - Year
 Given User is on Firm Settings page
 #When User is on "Custom Tags" tab
 And User navigates to "Custom Tags" tab

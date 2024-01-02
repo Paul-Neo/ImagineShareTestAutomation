@@ -3,7 +3,7 @@ package com.qa.util;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class RenameUtil {
+public class RenameUtil extends PageActions {
 
 	private WebDriver driver;
 	private GenerateRandomStrings generateRandomStrings = new GenerateRandomStrings();
@@ -24,12 +24,19 @@ public class RenameUtil {
 
 		String generatedText = generateRandomStrings.randomString(4);
 		
-		driver.findElement(fileSubtask).click();
-		driver.findElement(rename).click();
-		driver.findElement(renameInput).clear();
-		driver.findElement(renameInput).sendKeys("Renamed"+generatedText);
-		driver.findElement(save).click();
-		Thread.sleep(3000);
+//		driver.findElement(fileSubtask).click();
+//		driver.findElement(rename).click();
+//		driver.findElement(renameInput).clear();
+//		driver.findElement(renameInput).sendKeys("Renamed"+generatedText);
+//		driver.findElement(save).click();
+//		Thread.sleep(3000);
+		
+		clickOn(driver, fileSubtask);
+		clickOn(driver, rename);
+		clearText(driver, renameInput);
+		sendKeys(driver, renameInput, "Renamed" + generatedText);
+		clickOn(driver, save);
+		sleep(3000);
 		
 	}
 	

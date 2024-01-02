@@ -3,7 +3,7 @@ package com.qa.util;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class ToolBarButtonsUtil {
+public class ToolBarButtonsUtil extends PageActions{
 
 	private WebDriver driver;
 	
@@ -38,8 +38,8 @@ public class ToolBarButtonsUtil {
 		ScrollUtil scroll = new ScrollUtil(driver);
 		scroll.scrollPage(-1500);
 		
-		driver.findElement(archiveBtn).click();
-		Thread.sleep(3000);
+		clickOn(driver, archiveBtn);
+		sleep(20000);
 	}	
 	
 	public void selectLinkAction(By linkAction) throws InterruptedException {
@@ -71,6 +71,7 @@ public class ToolBarButtonsUtil {
 		scroll.scrollPage(-1500);
 		driver.findElement(newFileBtn).click();
 		driver.findElement(uploadNewFilesBtn).click();
+		
 
 	}
 	
@@ -101,11 +102,6 @@ public class ToolBarButtonsUtil {
 		Thread.sleep(3000);
 		
 	}
-	
-	
-
-	
-	
 	
 		
 }
