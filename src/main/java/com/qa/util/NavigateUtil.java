@@ -60,15 +60,24 @@ public class NavigateUtil extends PageActions {
 
 	public void navigateToClientWorkspace(String clientsName) throws InterruptedException {
 
-		driver.findElement(searchBox).sendKeys(clientsName);
-		driver.findElement(searchIcon).click();
-
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(goToClientWorkspace).click();
-
-		driver.navigate().refresh();
-		Thread.sleep(10000);
+//		driver.findElement(searchBox).sendKeys(clientsName);
+//		driver.findElement(searchIcon).click();
+//
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		driver.findElement(goToClientWorkspace).click();
+//
+//		driver.navigate().refresh();
+//		Thread.sleep(10000);
+		
+		
+		sendKeys(driver, searchBox, clientsName);
+		clickOn(driver, searchIcon);
+		clickOn(driver, goToClientWorkspace);
+		
+		refreshPage(driver);
+		sleep(5000);
 	}
+	
 
 	public void navigateToClientSettings(String clientsName) throws InterruptedException { //DEPRECATED
 

@@ -7,8 +7,9 @@ import org.openqa.selenium.WebDriver;
 import com.qa.util.CheckBoxUtil;
 import com.qa.util.ElementUtil;
 import com.qa.util.NavigateUtil;
+import com.qa.util.PageActions;
 
-public class DownloadPage {
+public class DownloadPage extends PageActions {
 
 	private WebDriver driver;
 	private ElementUtil elementUtil = new ElementUtil();
@@ -55,7 +56,9 @@ public class DownloadPage {
 			
 		NavigateUtil nav = new NavigateUtil(driver);
 		nav.navigateToClientWorkspace(clientName);
-		driver.findElement(filesTab).click();
+//		driver.findElement(filesTab).click();
+		
+		clickOn(driver, filesTab);
 		
 	}
 	
