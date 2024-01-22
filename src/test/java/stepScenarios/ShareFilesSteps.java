@@ -118,8 +118,8 @@ public class ShareFilesSteps {
 	@Then("Link should be displayed")
 	public void link_should_be_displayed() {
 
-//		String baseLink = "https://app.imaginetime.com/share";
-		String baseLink = "https://test-app.imaginetime.com";
+		String baseLink = "https://app.imaginetime.com";
+//		String baseLink = "https://test-app.imaginetime.com";
 		
 
 		// checks the beginning of the link.

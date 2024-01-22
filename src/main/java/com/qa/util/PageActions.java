@@ -1,5 +1,6 @@
 package com.qa.util;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -17,20 +18,24 @@ public class PageActions {
 	public void refreshPage(WebDriver driver) {
 		
 		driver.navigate().refresh();
-		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+//		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 	}
 	
 	public void sendKeys(WebDriver driver, By locator, String value) {
 		
-		new WebDriverWait(driver, 60).
+//		new WebDriverWait(driver, 240).
+//		until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
+//		driver.findElement(locator).sendKeys(value);
+		
+		new WebDriverWait(driver, Duration.ofSeconds(240)).
 		until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
 		driver.findElement(locator).sendKeys(value);
-		
+//		
 	}
 	
 	public String getElementText(WebDriver driver, By locator) {
 		
-		new WebDriverWait(driver, 60).
+		new WebDriverWait(driver, Duration.ofSeconds(240)).
 		until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
 		
 		return driver.findElement(locator).getText();
@@ -38,7 +43,7 @@ public class PageActions {
 	
 	public void clickOn(WebDriver driver, By locator) {
 		
-		new WebDriverWait(driver, 60).
+		new WebDriverWait(driver, Duration.ofSeconds(240)).
 		until(ExpectedConditions.elementToBeClickable(driver.findElement(locator)));
 		
 		driver.findElement(locator).click();
@@ -47,7 +52,7 @@ public class PageActions {
 	
 	public void clearText(WebDriver driver, By locator) {
 		
-		new WebDriverWait(driver, 60).
+		new WebDriverWait(driver, Duration.ofSeconds(240)).
 		until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
 		
 		driver.findElement(locator).clear();
@@ -56,7 +61,7 @@ public class PageActions {
 	
 	public boolean isElementDisplayed(WebDriver driver, By Locator) {
 		
-		new WebDriverWait(driver, 60).
+		new WebDriverWait(driver, Duration.ofSeconds(240)).
 		until(ExpectedConditions.visibilityOf(driver.findElement(Locator)));
 		
 		return driver.findElement(Locator).isDisplayed();
@@ -65,7 +70,7 @@ public class PageActions {
 	
 	public boolean isElementEnabled(WebDriver driver, By Locator) {
 		
-		new WebDriverWait(driver, 60).
+		new WebDriverWait(driver, Duration.ofSeconds(240)).
 		until(ExpectedConditions.visibilityOf(driver.findElement(Locator)));
 		
 		return driver.findElement(Locator).isEnabled();
@@ -75,7 +80,7 @@ public class PageActions {
 	
 	public boolean isElementNotDisplayed(WebDriver driver, By Locator) {
 		
-		new WebDriverWait(driver, 60).
+		new WebDriverWait(driver, Duration.ofSeconds(240)).
 		until(ExpectedConditions.invisibilityOf(driver.findElement(Locator)));
 		
 		return driver.findElement(Locator).isDisplayed();

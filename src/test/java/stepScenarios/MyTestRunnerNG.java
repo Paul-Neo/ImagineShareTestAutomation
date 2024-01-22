@@ -10,9 +10,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-		features = {"src/test/resources/stepScenarios/Download.feature"}, 
+		features = {"src/test/resources/stepScenarios/FolderTemplate.feature"}, 
 		glue = {"stepScenarios"},
-//		tags = "@test3",
+//		tags = "@CreateLinksRegressionTest",
 		plugin = { "pretty", 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"timeline:test-output-thread/",
@@ -27,7 +27,7 @@ import io.cucumber.testng.CucumberOptions;
 public class MyTestRunnerNG extends AbstractTestNGCucumberTests {
 
 	@Override
-	@DataProvider(parallel = true)
+	@DataProvider(parallel = false)
 	public Object[][] scenarios() {
 		return super.scenarios();
 	}

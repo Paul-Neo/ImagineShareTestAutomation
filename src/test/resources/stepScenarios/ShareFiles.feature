@@ -1,4 +1,5 @@
-Feature: Share Files
+@CreateLinksRegressionTest
+Feature: Share Files Feature
 
 Background:
 Given User has already logged in to Imagine Time

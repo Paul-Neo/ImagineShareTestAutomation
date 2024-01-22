@@ -1,4 +1,5 @@
-Feature: Request Files
+@CreateLinksRegressionTest
+Feature: Request Files Feature
 
 Background:
 Given User has already logged in to Imagine Time
@@ -30,14 +31,14 @@ Then A modal should be displayed with header message "Request files from Elavon"
 When User Select "Direct Link" in Link Settings
 And Toggle Expiration date, Add Instructions and Send Emails
 And User Enters the following Informations
-|Instructions					|Send Emails				|Email Message			|Recieve Emails								|
-|Please upload a file	|Paul Contact				|Test Message				|paul.napadao@narrasoft.com		|
+|Instructions					|Send Emails							|Email Message			|Recieve Emails								|
+|Please upload a file	|Paul Contact12345				|Test Message				|paul.napadao@narrasoft.com		|
 And Click Create request files link
 When User Click Copy Link
 Then Link should be displayed
 
 @test3
-Scenario: Add a new folder when choose a file upload location
+Scenario: Add a new folder when choosing a file upload location
 Given User is on Client Workspace "Avalon Systems"
 When User navigates to Files Tab
 And Select Request files

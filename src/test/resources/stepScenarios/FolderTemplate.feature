@@ -1,4 +1,5 @@
-Feature: Folder Template
+Feature: Folder Template Feature
+
 
 Background:
 Given User has already logged in to Imagine Time
@@ -12,9 +13,11 @@ Then Profile firm should be "Paul QA Test Firm"
 @test1
 Scenario: Add New Template then delete template
 Given User is on Firm Settings page
-When User is on "Folder Templates" tab
+#When User is on "Folder Templates" tab
+And User navigates to "Folder Templates" tab
 And Click New Template button
-Then Create Template window should be displayed with header message "Create Template"
+#Then Create Template window should be displayed with header message "Create Template"
+Then A modal should be displayed with header message "Create Template"
 When User Enters Template info
 |Description		|
 |For Test Only	|
@@ -31,6 +34,7 @@ Then Template should be deleted from the list
 Scenario: Apply Folder Template on General Files
 Given User is on General Folder
 When User Select Apply folder template
+#Then A modal should be displayed with header message "Apply folder template"
 Then A modal should be displayed with header message "Apply folder template"
 When User Click Select folder template button
 And User selects "Paul Template2" 

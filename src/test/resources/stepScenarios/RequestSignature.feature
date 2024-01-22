@@ -1,4 +1,5 @@
-Feature: Request Signature
+@CreateLinksRegressionTest
+Feature: Request Signature Feature
 
 Background:
 Given User has already logged in to Imagine Time
@@ -29,7 +30,7 @@ And Signer should be notified
 
 @test2
 Scenario: Search a file and request for a Joint request signature
-Given User is on All Client Workspaces page
+Given User is on "Workspaces" page
 When User search "Elavon Request Sig.pdf"
 And User Enter a client name in advance search "Elavon"
 And Select the expected file
@@ -71,7 +72,7 @@ And Signer should be notified
 
 @test4
 Scenario: Request Signature for doxc file
-Given User is on All Client Workspaces page
+Given User is on "Workspaces" page
 When User search "420 consulting.docx"
 And User Enter a client name in advance search "Franco Islaw"
 And Select the expected file

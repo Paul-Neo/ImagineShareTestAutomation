@@ -55,12 +55,12 @@ public class RequestFilesSteps {
 		List<Map<String, String>> toggleInfo =  dataTable.asMaps(String.class, String.class);
 		
 		String instruction	= toggleInfo.get(0).get("Instructions");
-		String sendMails = toggleInfo.get(0).get("Send Emails");
+//		String sendMails = toggleInfo.get(0).get("Send Emails");
 		String emailMessage = toggleInfo.get(0).get("Email Message");
 		String recieveEmails = toggleInfo.get(0).get("Recieve Emails");
 		
 		requestFilesPage.enterInstructions(instruction);
-		requestFilesPage.clickSendMailsDropDown(sendMails);
+//		requestFilesPage.clickSendMailsDropDown(sendMails);
 		
 		requestFilesPage.enterEmailMessage(emailMessage);
 		requestFilesPage.clickRecieveDropDown(recieveEmails);

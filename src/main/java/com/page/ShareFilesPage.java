@@ -13,9 +13,10 @@ import com.qa.factory.DriverFactory;
 import com.qa.util.CheckBoxUtil;
 import com.qa.util.DropDownUtil;
 import com.qa.util.ElementUtil;
+import com.qa.util.PageActions;
 import com.qa.util.ToolBarButtonsUtil;
 
-public class ShareFilesPage {
+public class ShareFilesPage extends PageActions{
 
 	private WebDriver driver;
 	private ElementUtil elementUtil = new ElementUtil();
@@ -82,15 +83,23 @@ public class ShareFilesPage {
 	}
 
 	public void selectFile(String fileName) throws InterruptedException {
-
-		driver.findElement(searchBox).sendKeys(fileName);
-		driver.findElement(applyFilterButton).click();
+//
+//		driver.findElement(searchBox).sendKeys(fileName);
+//		driver.findElement(applyFilterButton).click();
+		
+		sendKeys(driver, searchBox, fileName);
+		clickOn(driver, applyFilterButton);
+		
+		
 		Thread.sleep(5000);
 
 		By selectedFile = checkBoxUtil.getaPrecidingCheckBox(fileName);
 
-		driver.findElement(selectedFile).click();
+//		driver.findElement(selectedFile).click();
+		
+		clickOn(driver, selectedFile);
 		Thread.sleep(2000);
+		
 	}
 
 	public void selectShareFiles() throws InterruptedException {

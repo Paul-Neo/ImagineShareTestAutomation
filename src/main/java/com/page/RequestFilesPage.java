@@ -8,9 +8,10 @@ import org.openqa.selenium.WebDriver;
 import com.qa.factory.DriverFactory;
 import com.qa.util.DropDownUtil;
 import com.qa.util.GenerateRandomStrings;
+import com.qa.util.PageActions;
 import com.qa.util.ToolBarButtonsUtil;
 
-public class RequestFilesPage {
+public class RequestFilesPage extends PageActions{
 
 	private WebDriver driver;
 	
@@ -51,35 +52,48 @@ public class RequestFilesPage {
 	
 	public void clickCreateRequestFileButton() {
 		
-		driver.findElement(createRequestFilesButton).click();
+//		driver.findElement(createRequestFilesButton).click();
+		
+		clickOn(driver, createRequestFilesButton);
 	}
 	
 	public void clickFilesTab() throws InterruptedException {
 		
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		driver.findElement(filesTab).click();
-		Thread.sleep(2000);
+//		driver.findElement(filesTab).click();
+//		Thread.sleep(2000);
+		
+		clickOn(driver, filesTab);
 	}
 	
 	public void clickToggles() throws InterruptedException {
 		
-		driver.findElement(expirationToggle).click();
-		driver.findElement(instructionsToggle).click();
-		driver.findElement(sendEmailsToggle).click();
-		driver.findElement(receiveEmailsToggle).click();
-		Thread.sleep(3000);
+//		driver.findElement(expirationToggle).click();
+//		driver.findElement(instructionsToggle).click();
+//		driver.findElement(sendEmailsToggle).click();
+//		driver.findElement(receiveEmailsToggle).click();
+//		Thread.sleep(3000);
+		
+		clickOn(driver, expirationToggle);
+		clickOn(driver, instructionsToggle);
+		clickOn(driver, sendEmailsToggle);
+		clickOn(driver, receiveEmailsToggle);
 	}
 	
 	public void enterInstructions(String instructions) throws InterruptedException {
 		
-		driver.findElement(this.instructions).sendKeys(instructions);
-		Thread.sleep(2000);
+//		driver.findElement(this.instructions).sendKeys(instructions);
+//		Thread.sleep(2000);
+		
+		sendKeys(driver, this.instructions, instructions);
+		sleep(2000);
 	}
 	
 	public void enterEmailMessage(String emailMessage) throws InterruptedException {
 		
-		driver.findElement(this.emailMessage).sendKeys(emailMessage);
-		Thread.sleep(2000);
+//		driver.findElement(this.emailMessage).sendKeys(emailMessage);
+//		Thread.sleep(2000);
+		
+		sendKeys(driver, this.emailMessage, emailMessage);
 		
 	}
 	
@@ -98,20 +112,28 @@ public class RequestFilesPage {
 	
 	public void clickSelectFolderBtn() throws InterruptedException {
 		
-		driver.findElement(selectFolderBtn).click();
-		Thread.sleep(3000);
+//		driver.findElement(selectFolderBtn).click();
+//		Thread.sleep(3000);
+		
+		clickOn(driver, selectFolderBtn);
 	}
 	
 	public void addNewFolderDestination() throws InterruptedException {
 		
 		String newFolderName = generateRandomStrings.randomString(5);
-		driver.findElement(newFolderBtn).click();
-		Thread.sleep(2000);
-		driver.findElement(folderNameTxtfield).sendKeys(newFolderName);
-		driver.findElement(saveBtn).click();
-		Thread.sleep(2000);
-		driver.findElement(saveBtn).click();
-		Thread.sleep(2000);
+//		driver.findElement(newFolderBtn).click();
+//		Thread.sleep(2000);
+//		driver.findElement(folderNameTxtfield).sendKeys(newFolderName);
+//		driver.findElement(saveBtn).click();
+//		Thread.sleep(2000);
+//		driver.findElement(saveBtn).click();
+//		Thread.sleep(2000);
+		
+		clickOn(driver, newFolderBtn);
+		sendKeys(driver, folderNameTxtfield, newFolderName);
+		clickOn(driver, saveBtn);
+		sleep(2000);
+		clickOn(driver, saveBtn);
 		
 		
 	}

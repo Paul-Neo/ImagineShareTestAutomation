@@ -3,7 +3,7 @@ package com.qa.util;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class DropDownUtil {
+public class DropDownUtil extends PageActions{
 
 	private ElementUtil elementUtil = new ElementUtil();
 
@@ -42,8 +42,12 @@ public class DropDownUtil {
 		
 		By selectedValue = elementUtil.getDivXpathData(selected);
 		
-		driver.findElement(dropDown).click();
-		driver.findElement(selectedValue).click();
+//		driver.findElement(dropDown).click();
+//		driver.findElement(selectedValue).click();
+		
+		clickOn(driver, dropDown);
+		clickOn(driver, selectedValue);
+		
 		
 	}
 	
@@ -51,8 +55,12 @@ public class DropDownUtil {
 		
 		By selectedValue = elementUtil.getDivExactXpathData(selected);
 		
-		driver.findElement(dropDown).click();
-		driver.findElement(selectedValue).click();
+//		driver.findElement(dropDown).click();
+//		driver.findElement(selectedValue).click();
+		
+		clickOn(driver, dropDown);
+		System.out.println("XPATH = " + selectedValue);
+		clickOn(driver, selectedValue);
 		
 	}
 	
