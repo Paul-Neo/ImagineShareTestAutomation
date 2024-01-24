@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: Add New Client Feature
 
 Background:
@@ -28,14 +29,14 @@ Then Staff Notification should be displayed
 |View a signature request															|
 |Send a message																				|
 |Weekly reminder for incomplete signature requests		|
-Then A modal should be displayed with header message "Apply folder template"
-When User Click Select folder template button
-And User selects "Paul Template2" 
-And Click Done
-Then Selected template should be ready to apply
-When User click Apply Template button
-Then Folder template should be applied
-And Folders count should be correct
+#Then A modal should be displayed with header message "Apply folder template"
+#When User Click Select folder template button
+#And User selects "Paul Template2" 
+#And Click Done
+#Then Selected template should be ready to apply
+#When User click Apply Template button
+#Then Folder template should be applied
+#And Folders count should be correct
 #And Client should be added on the client list
 When User select a client
 #And Navigates to "Overview" tab

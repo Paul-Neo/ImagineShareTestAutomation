@@ -10,9 +10,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-		features = {"src/test/resources/stepScenarios/FolderTemplate.feature"}, 
+		features = {"src/test/resources/stepScenarios"}, 
 		glue = {"stepScenarios"},
-//		tags = "@CreateLinksRegressionTest",
+		tags = "@RegressionTest",
 		plugin = { "pretty", 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"timeline:test-output-thread/",

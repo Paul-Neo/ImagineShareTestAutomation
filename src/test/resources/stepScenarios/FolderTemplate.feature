@@ -1,3 +1,4 @@
+@RegressionTest
 Feature: Folder Template Feature
 
 
