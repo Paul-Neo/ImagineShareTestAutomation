@@ -1,7 +1,5 @@
 package com.qa.util;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -81,14 +79,18 @@ public class NavigateUtil extends PageActions {
 
 	public void navigateToClientSettings(String clientsName) throws InterruptedException { //DEPRECATED
 
-		driver.findElement(searchBox).sendKeys(clientsName);
-		driver.findElement(searchIcon).click();
+//		driver.findElement(searchBox).sendKeys(clientsName);
+//		driver.findElement(searchIcon).click();
+//
+//		driver.findElement(goToClientSettings).click();
+		
+		sendKeys(driver, searchBox, clientsName);
+		clickOn(driver, searchIcon);
+		clickOn(driver, goToClientSettings);
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(goToClientSettings).click();
-
-		driver.navigate().refresh();
-		Thread.sleep(8000);
+		refreshPage(driver);
+		sleep(5000);
+		
 	}
 
 	public void clickSelectedTab(String tabName) throws InterruptedException {
@@ -104,8 +106,11 @@ public class NavigateUtil extends PageActions {
 
 		driver.findElement(profileDropDown).click();
 		driver.findElement(myProfile).click();
-		driver.navigate().refresh();
-		Thread.sleep(10000);
+		
+		
+		clickOn(driver, profileDropDown);
+		clickOn(driver, myProfile);
+		refreshPage(driver);
 	}
 
 	public void LogOut() throws InterruptedException {

@@ -1,9 +1,7 @@
 package com.qa.factory;
-
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -27,8 +25,15 @@ public class DriverFactory {
 
 		if (browser.equals("chrome")) {
 			
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.addArguments("--headless=new");
+			System.out.println("Headless Execution");
+			
+			
 			WebDriverManager.chromedriver().setup();
 			tlDriver.set(new ChromeDriver());
+			
+			
 			
 		} else if (browser.equals("firefox")) {
 
@@ -41,7 +46,8 @@ public class DriverFactory {
 
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().window().maximize();
-		getDriver().manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		
+//		getDriver().manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		return getDriver();
 	}
 

@@ -7,8 +7,8 @@ Given User has already logged in to Imagine Time
 |paul.napadao@narrasoft.com	|Pnnwfh2021!|
 When User gets the title of the page
 Then Title page should be "Select Your Account"
-And User Select a firm "Paul QA Test Firm"
-Then Profile firm should be "Paul QA Test Firm"
+And User Select a firm "Paul QA Test Firm (Demo)"
+Then Profile firm should be "Paul QA Test Firm (Demo)"
 
 @test1
 Scenario: Add New Client and delete client
@@ -17,8 +17,8 @@ When User clicks new client button
 And Clicks Create new client
 Then A modal should be displayed with header message "New client"
 When User enters client information
-|Assign Staff			|Engagement Types	|
-|Paul Napadao			|1040							|
+|Assign Staff					|Engagement Types	|
+|Paul Neo Napadao			|1040							|
 And Click Next
 Then Staff Notification should be displayed
 |Upload a file																				|

@@ -10,16 +10,14 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-		features = {"src/test/resources/stepScenarios"}, 
+		features = {"src/test/resources/stepScenarios/AddNewClient.feature"}, 
 		glue = {"stepScenarios"},
-		tags = "@RegressionTest",
+		tags = "@test1",
 		plugin = { "pretty", 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"timeline:test-output-thread/",
 				"rerun:failedScenarios/failedScenarios.txt"
 				},
-		
-		//test 123
 
 		monochrome = true
 )

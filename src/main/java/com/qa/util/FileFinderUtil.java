@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class FileFinderUtil {
+public class FileFinderUtil extends PageActions{
 
 	private WebDriver driver;
 	private CheckBoxUtil checkBoxUtil = new CheckBoxUtil();
@@ -164,7 +164,7 @@ public class FileFinderUtil {
 
 		selectedValue = elementUtil.get_a_XpathData(expectedValue);
 
-		By clientName = By.xpath("//h1[@class='-visible']");
+		By clientName = By.xpath("//h1[@class='-tab-name -visible']");
 		String expectedClientName = "";
 
 		List<String> lists = new ArrayList<>();
@@ -183,11 +183,19 @@ public class FileFinderUtil {
 
 				if (currentValue.equals(expectedValue)) {
 
-					if (driver.findElement(selectedValue).isDisplayed()) {
-
-						driver.findElement(selectedValue).click();
-						expectedClientName = driver.findElement(clientName).getText();
+//					if (driver.findElement(selectedValue).isDisplayed()) {
+					
+					if (isElementDisplayed(driver, selectedValue)) {
+						
+//						driver.findElement(selectedValue).click();
+					
+						clickOn(driver, selectedValue);
+						
+//						expectedClientName = driver.findElement(clientName).getText();
+						
+						expectedClientName = getElementText(driver, clientName);
 						selectedClientNotFound = false;
+						
 						break;
 					}
 
@@ -195,7 +203,9 @@ public class FileFinderUtil {
 
 					counter = 0;
 					System.out.println("Clicking next button");
-					driver.findElement(nextPageButton).click();
+					clickOn(driver, nextPageButton);
+					
+//					driver.findElement(nextPageButton).click();
 				}
 
 			}
