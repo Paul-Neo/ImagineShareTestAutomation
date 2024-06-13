@@ -261,6 +261,5 @@ public class AddNewClientSteps {
 		Assert.assertTrue(expectedFullAddress.equals(actualFullAddress));
 		
 	}
-	
 
 }
